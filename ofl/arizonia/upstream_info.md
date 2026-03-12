@@ -1,14 +1,13 @@
-# Arizonia — Source Metadata Investigation
+# Arizonia — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/googlefonts/arizonia
-- **Commit**: `e135e3351c17de6f0f12066e98d7af9abe1cd76e`
-- **Status**: present
+- **Commit**: e135e3351c17de6f0f12066e98d7af9abe1cd76e
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the googlefonts/arizonia repository on GitHub, with a specific commit hash and a config yaml reference.
 
-## Notes
-Designer: Robert Leuschke. Category: HANDWRITING. Subsets: latin, latin-ext, vietnamese.
+## Status
+- **Category**: WITH_SOURCE

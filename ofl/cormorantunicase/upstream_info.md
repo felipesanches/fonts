@@ -1,10 +1,13 @@
-## Cormorant Unicase
+# Cormorant Unicase — Source Investigation
 
-**Repo:** https://github.com/CatharsisFonts/Cormorant
-**Commit:** cc1bfb51ce6568cb3abf9199ab718d543f6fa189
-**Config:** sources/build.yaml
-**Branch:** master
-**Designer:** Christian Thalmann
-**License:** OFL
-**Category:** Serif — Unicase sub-family; 5 weights (Light, Regular, Medium, SemiBold, Bold)
-**Subsets:** cyrillic, cyrillic-ext, latin, latin-ext, vietnamese
+**Model**: Claude Opus 4.6
+
+## Source Repository
+- **URL**: https://github.com/CatharsisFonts/Cormorant
+- **Commit**: cc1bfb51ce6568cb3abf9199ab718d543f6fa189
+
+## Findings
+The METADATA.pb contained a source block pointing to the CatharsisFonts/Cormorant repository on GitHub, sharing the same repository and commit as Cormorant SC.
+
+## Status
+- **Category**: WITH_SOURCE

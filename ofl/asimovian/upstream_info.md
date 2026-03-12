@@ -1,14 +1,13 @@
-# Asimovian — Source Metadata Investigation
+# Asimovian — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/carolinashort/asimovian
-- **Commit**: `ae24db36d32c554da5a4a831663700c18d1360cf`
-- **Status**: present
+- **Commit**: ae24db36d32c554da5a4a831663700c18d1360cf
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the carolinashort/asimovian repository on GitHub, with a specific commit hash and a config yaml reference.
 
-## Notes
-Designer: Carolina Short. Category: SANS_SERIF. Subsets: latin, latin-ext, vietnamese.
+## Status
+- **Category**: WITH_SOURCE

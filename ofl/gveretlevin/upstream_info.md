@@ -1,13 +1,14 @@
-# Gveret Levin — Source Investigation
-
+# Gveret Levin — Source Metadata Investigation
 **Model**: Claude Opus 4.6
+**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/AlefAlefAlef/gveret-levin
-- **Commit**: b383a9c00863837b1b88b4d0365f43a304007dae
+- **Commit**: `b383a9c00863837b1b88b4d0365f43a304007dae`
+- **Status**: present
 
-## Findings
-The METADATA.pb contained a source block pointing to the AlefAlefAlef/gveret-levin GitHub repository at a specific commit on the master branch, with a config.yaml reference.
+## What Was Done
+The existing source metadata was reviewed. A source block with repository URL and commit was found.
 
-## Status
-- **Category**: WITH_SOURCE
+## Notes
+Designer: AlefAlefAlef. Category: HANDWRITING. Subsets: hebrew, latin.

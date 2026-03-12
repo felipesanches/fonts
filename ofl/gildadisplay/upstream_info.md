@@ -1,14 +1,13 @@
-# Gilda Display — Source Metadata Investigation
+# Gilda Display — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/etunni/gilda-display
-- **Commit**: `640bdfd3d2ee3b533d1f88687a9e4541136254e0`
-- **Status**: present
+- **Commit**: 640bdfd3d2ee3b533d1f88687a9e4541136254e0
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found.
+## Findings
+The METADATA.pb contained a source block pointing to the etunni/gilda-display repository with a specific commit but no config path specified.
 
-## Notes
-Designer: Eduardo Tunni. Category: SERIF. Subsets: latin, latin-ext.
+## Status
+- **Category**: WITH_SOURCE

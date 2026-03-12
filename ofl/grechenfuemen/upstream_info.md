@@ -1,13 +1,14 @@
-# Grechen Fuemen — Source Investigation
-
+# Grechen Fuemen — Source Metadata Investigation
 **Model**: Claude Opus 4.6
+**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/googlefonts/grechen-fuemen
-- **Commit**: 4e4ac4caeac05708e6b3a05f0d91d1bb0476c045
+- **Commit**: `4e4ac4caeac05708e6b3a05f0d91d1bb0476c045`
+- **Status**: present
 
-## Findings
-The METADATA.pb contained a source block pointing to the googlefonts/grechen-fuemen GitHub repository at a specific commit on the master branch, with a config.yml reference.
+## What Was Done
+The existing source metadata was reviewed. A source block with repository URL and commit was found.
 
-## Status
-- **Category**: WITH_SOURCE
+## Notes
+Designer: Robert Leuschke. Category: HANDWRITING. Subsets: latin, latin-ext, vietnamese.

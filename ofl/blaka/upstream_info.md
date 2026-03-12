@@ -1,17 +1,13 @@
-# Blaka
+# Blaka — Source Investigation
 
-**Designer:** Mohamed Gaber
-**License:** OFL
-**Category:** Display
-**Primary Script:** Arabic
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/Gue3bara/Blaka
+- **Commit**: 7f264eee862d3e94c2cb6a728c6429c2f3b9adc3
 
-**Repo:** https://github.com/Gue3bara/Blaka
-**Commit:** 7f264eee862d3e94c2cb6a728c6429c2f3b9adc3
-**Branch:** master
-**Config:** sources/blakaregular.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the Gue3bara/Blaka repository on GitHub, with a specific commit hash and a config yaml reference.
 
-## Notes
-
-Fonts were sourced from the Gue3bara GitHub repository at the listed commit. Blaka, Blaka Hollow, and Blaka Ink share the same upstream repository.
+## Status
+- **Category**: WITH_SOURCE

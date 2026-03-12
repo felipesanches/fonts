@@ -7,7 +7,7 @@
 - **Commit**: N/A
 
 ## Findings
-No METADATA.pb file was present in this family directory. The directory was marked as EARLY_ACCESS and contained a single variable font file (PodkovaVFBeta.ttf). This appeared to be an early beta release of the Podkova variable font. No source block or upstream repository information was available.
+No METADATA.pb file was found for this family. The directory contained only font files, a description, and an EARLY_ACCESS.category marker, indicating this was an early access/beta variable font without source metadata.
 
 ## Status
 - **Category**: NO_SOURCE

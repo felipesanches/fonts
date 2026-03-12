@@ -1,14 +1,13 @@
-# Aubrey — Source Metadata Investigation
+# Aubrey — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/cyrealtype/Aubrey
-- **Commit**: `1946b0d99c0fec87702a59afc8b5b941a32e0171`
-- **Status**: present
+- **Commit**: 1946b0d99c0fec87702a59afc8b5b941a32e0171
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the cyrealtype/Aubrey repository on GitHub, with a specific commit hash and a config yaml reference.
 
-## Notes
-Designer: Cyreal. Category: DISPLAY. Subsets: latin.
+## Status
+- **Category**: WITH_SOURCE

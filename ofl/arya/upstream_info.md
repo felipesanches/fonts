@@ -1,14 +1,13 @@
-# Arya — Source Metadata Investigation
+# Arya — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/etunni/Arya
-- **Commit**: `103dc785f25067abe0e63de7b8e839e1863877a9`
-- **Status**: present
+- **Commit**: 103dc785f25067abe0e63de7b8e839e1863877a9
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the etunni/Arya repository on GitHub, with a specific commit hash but no config yaml or file mappings.
 
-## Notes
-Designer: Eduardo Tunni. Category: SANS_SERIF. Subsets: devanagari, latin, latin-ext.
+## Status
+- **Category**: WITH_SOURCE

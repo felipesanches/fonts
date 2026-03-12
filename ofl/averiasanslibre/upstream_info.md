@@ -1,14 +1,13 @@
-# Averia Sans Libre — Source Metadata Investigation
+# Averia Sans Libre — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
-- **URL**: No source block present
-- **Commit**: `N/A`
-- **Status**: absent
+- **URL**: No public repository found
+- **Commit**: N/A
 
-## What Was Done
-The existing source metadata was reviewed. No source block was found in METADATA.pb.
+## Findings
+No source repository was listed in METADATA.pb. The font was attributed to Dan Sayers and had no source block.
 
-## Notes
-Designer: Dan Sayers. Category: DISPLAY. Subsets: latin.
+## Status
+- **Category**: NO_SOURCE

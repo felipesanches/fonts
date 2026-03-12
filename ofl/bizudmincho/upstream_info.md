@@ -1,16 +1,13 @@
-# BIZ UDMincho
+# BIZ UDMincho — Source Investigation
 
-**Designer:** Type Bank Co., Morisawa Inc.
-**License:** OFL
-**Category:** Serif
-**Primary Script:** Japanese
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/googlefonts/morisawa-biz-ud-mincho
+- **Commit**: c30a6221b1f3d09afae9137ffe73c7cbec649947
 
-**Repo:** https://github.com/googlefonts/morisawa-biz-ud-mincho
-**Commit:** c30a6221b1f3d09afae9137ffe73c7cbec649947
-**Branch:** main
+## Findings
+The METADATA.pb contained a source block pointing to the googlefonts/morisawa-biz-ud-mincho repository on GitHub, with a specific commit hash but no config yaml reference.
 
-## Notes
-
-Fonts were sourced from the googlefonts GitHub repository at the listed commit. BIZ UDMincho and BIZ UDPMincho share the same upstream repository.
+## Status
+- **Category**: WITH_SOURCE

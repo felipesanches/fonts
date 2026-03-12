@@ -1,15 +1,13 @@
-# Bungee Color
+# Bungee Color — Source Investigation
 
-**Designer:** David Jonathan Ross
-**License:** OFL
-**Category:** Display / Sans Serif
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/djrrb/Bungee
+- **Commit**: bb29250eb071b59c4e48f44cf146943e2aafae61
 
-**Repo:** https://github.com/djrrb/Bungee
-**Commit:** bb29250eb071b59c4e48f44cf146943e2aafae61
-**Branch:** master
+## Findings
+The METADATA.pb contained a source block pointing to the djrrb/Bungee repository on GitHub with a specific commit hash.
 
-## Notes
-
-Color font variant sourced from the djrrb GitHub repository at the listed commit. No archive or file mapping was specified in METADATA.pb.
+## Status
+- **Category**: WITH_SOURCE

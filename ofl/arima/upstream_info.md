@@ -1,14 +1,13 @@
-# Arima — Source Metadata Investigation
+# Arima — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/NDISCOVER/Arima-Font
-- **Commit**: `c5fd72960f129076fbf3759d6d777cedcbceb468`
-- **Status**: present
+- **Commit**: c5fd72960f129076fbf3759d6d777cedcbceb468
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the NDISCOVER/Arima-Font repository on GitHub, with a specific commit hash and a config yaml reference.
 
-## Notes
-Designer: Natanael Gama, Joana Correia, Rosalie Wagner. Category: DISPLAY. Subsets: greek, greek-ext, latin, latin-ext, malayalam.
+## Status
+- **Category**: WITH_SOURCE

@@ -1,16 +1,13 @@
-# Brawler
+# Brawler — Source Investigation
 
-**Designer:** Cyreal
-**License:** OFL
-**Category:** Serif
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/cyrealtype/Brawler
+- **Commit**: a8e1fc6a4c43dedc38394c4f4086f526b72e852d
 
-**Repo:** https://github.com/cyrealtype/Brawler
-**Commit:** a8e1fc6a4c43dedc38394c4f4086f526b72e852d
-**Branch:** master
-**Config:** sources/config.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the cyrealtype/Brawler repository on GitHub with a specific commit hash and config yaml reference.
 
-## Notes
-
-Fonts were sourced from the cyrealtype GitHub repository at the listed commit. Includes Regular and Bold.
+## Status
+- **Category**: WITH_SOURCE

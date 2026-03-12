@@ -1,13 +1,14 @@
-# GungsuhChe — Source Investigation
-
+# GungsuhChe — Source Metadata Investigation
 **Model**: Claude Opus 4.6
+**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/googlefonts/batang
-- **Commit**: 6c1e09f93204c963881afbb4e25699095565f2e5
+- **Commit**: `6c1e09f93204c963881afbb4e25699095565f2e5`
+- **Status**: present
 
-## Findings
-The METADATA.pb contained a source block pointing to the googlefonts/batang GitHub repository (shared with Batang and Gungsuh) at a specific commit on the main branch, with file mappings but no config.yaml reference.
+## What Was Done
+The existing source metadata was reviewed. A source block with repository URL and commit was found. Shares the same repository as Gungsuh.
 
-## Status
-- **Category**: WITH_SOURCE
+## Notes
+Designer: HanYang I&C Co. Category: SERIF. Subsets: cyrillic, greek, korean, latin, latin-ext.

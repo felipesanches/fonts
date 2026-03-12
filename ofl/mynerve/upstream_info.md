@@ -1,7 +1,13 @@
-Font was designed by Carolina Short. Source files were taken from the GitHub repository at https://github.com/carolinashort/MyNerve at commit `4220ec76c588d97b43757c5332b0aa45ed9a52f3` (branch: main). The font covers Greek and Latin scripts. The binary was copied from `fonts/ttf/`. Built using `sources/config.yaml`.
+# Mynerve — Source Investigation
 
-**Repo:** https://github.com/carolinashort/MyNerve
-**Commit:** 4220ec76c588d97b43757c5332b0aa45ed9a52f3
-**Config:** sources/config.yaml
-**Status:** Binary copy from upstream with config
-**Confidence:** High
+**Model**: Claude Opus 4.6
+
+## Source Repository
+- **URL**: https://github.com/carolinashort/MyNerve
+- **Commit**: 4220ec76c588d97b43757c5332b0aa45ed9a52f3
+
+## Findings
+The METADATA.pb contained a source block pointing to the carolinashort/MyNerve GitHub repository at a specific commit on the main branch, with a config.yaml reference.
+
+## Status
+- **Category**: WITH_SOURCE

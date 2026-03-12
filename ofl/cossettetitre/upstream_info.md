@@ -1,10 +1,13 @@
-## Cossette Titre
+# Cossette Titre — Source Investigation
 
-**Repo:** https://github.com/googlefonts/cossette-fonts
-**Commit:** ee99cea3c23039e31865c3c37bd7d716278e546b
-**Config:** sources/config-titre.yaml
-**Branch:** main
-**Designer:** Cossette
-**License:** OFL
-**Category:** Sans-Serif — display/title variant; Regular + Bold; same upstream repo as Cossette Texte
-**Subsets:** latin, latin-ext
+**Model**: Claude Opus 4.6
+
+## Source Repository
+- **URL**: https://github.com/googlefonts/cossette-fonts
+- **Commit**: ee99cea3c23039e31865c3c37bd7d716278e546b
+
+## Findings
+The METADATA.pb contained a source block pointing to the googlefonts/cossette-fonts repository on GitHub, sharing the same repository and commit as Cossette Texte.
+
+## Status
+- **Category**: WITH_SOURCE

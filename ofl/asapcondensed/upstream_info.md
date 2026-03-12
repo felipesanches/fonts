@@ -1,14 +1,13 @@
-# Asap Condensed — Source Metadata Investigation
+# Asap Condensed — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/Omnibus-Type/Asap
-- **Commit**: `927ab390d4ece9eaa70a3b16a6124baa9192e34c`
-- **Status**: present
+- **Commit**: 927ab390d4ece9eaa70a3b16a6124baa9192e34c
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb. Shares the same upstream repo as Asap but at a different commit.
+## Findings
+The METADATA.pb contained a source block pointing to the Omnibus-Type/Asap repository on GitHub (shared with the Asap family but at a different commit), with a specific commit hash and a config yaml reference.
 
-## Notes
-Designer: Omnibus-Type. Category: SANS_SERIF. Subsets: latin, latin-ext, vietnamese.
+## Status
+- **Category**: WITH_SOURCE

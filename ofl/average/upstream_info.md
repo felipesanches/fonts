@@ -1,14 +1,13 @@
-# Average — Source Metadata Investigation
+# Average — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/etunni/average
-- **Commit**: `6583341221fb0625ba1b9c3ee2a7490d57df951f`
-- **Status**: present
+- **Commit**: 6583341221fb0625ba1b9c3ee2a7490d57df951f
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the etunni/average repository on GitHub, with a specific commit hash but no config yaml reference.
 
-## Notes
-Designer: Eduardo Tunni. Category: SERIF. Subsets: latin, latin-ext.
+## Status
+- **Category**: WITH_SOURCE

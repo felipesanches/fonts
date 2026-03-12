@@ -11,4 +11,4 @@
 The existing source metadata was reviewed. No source block was found in METADATA.pb.
 
 ## Notes
-Designer: JIKJI SOFT. Category: HANDWRITING. Subsets: korean, latin. Includes Light, Regular, Bold weights.
+Designer: JIKJI SOFT. Category: HANDWRITING. Subsets: korean, latin. Includes Light, Regular, Bold.

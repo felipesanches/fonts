@@ -1,17 +1,13 @@
-# Bricolage Grotesque
+# Bricolage Grotesque — Source Investigation
 
-**Designer:** Mathieu Triay
-**License:** OFL
-**Category:** Sans Serif / Display
-**Variable Axes:** opsz (12–96), wdth (75–100), wght (200–800)
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/ateliertriay/bricolage
+- **Commit**: 84745e5b96261ae5f8c6c856e262fe78d1d6efdd
 
-**Repo:** https://github.com/ateliertriay/bricolage
-**Commit:** 84745e5b96261ae5f8c6c856e262fe78d1d6efdd
-**Branch:** main
-**Config:** sources/config.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the ateliertriay/bricolage repository on GitHub with a specific commit hash and config yaml reference.
 
-## Notes
-
-Variable font with optical size, width, and weight axes. Sourced from the ateliertriay GitHub repository at the listed commit.
+## Status
+- **Category**: WITH_SOURCE

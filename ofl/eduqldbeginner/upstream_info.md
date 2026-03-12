@@ -1,19 +1,13 @@
-# Edu QLD Beginner
+# Edu QLD Beginner — Source Investigation
 
-**Designer**: Tina Anderson, Corey Anderson
-**License**: OFL
-**Category**: Handwriting
-**Date Added**: 2022-06-22
-
-**Model**: Claude Sonnet 4.6
+**Model**: Claude Opus 4.6
 
 ## Source Repository
+- **URL**: https://github.com/MezMerrit/AU-School-Handwriting-Fonts
+- **Commit**: 1dd726bde8004743529cbeaab84ce993caf98f78
 
-- **Repo**: https://github.com/MezMerrit/AU-School-Handwriting-Fonts
-- **Commit**: `1dd726bde8004743529cbeaab84ce993caf98f78`
-- **Branch**: main
-- **Config**: `QLD-School-Fonts/sources/config.yaml`
+## Findings
+The METADATA.pb contained a source block pointing to the MezMerrit/AU-School-Handwriting-Fonts repository on GitHub with a specific commit hash and config yaml reference. This used a different commit than Edu NSW ACT Foundation from the same repository.
 
-## Summary
-
-Edu QLD Beginner was designed by Tina Anderson and Corey Anderson. It was published as a variable font with a wght axis (400–700) covering Latin subsets. The font file was sourced from `QLD-School-Fonts/fonts/variable/EduQLDBeginner[wght].ttf`. Part of a suite of Australian state school handwriting fonts hosted in the MezMerrit/AU-School-Handwriting-Fonts repository.
+## Status
+- **Category**: WITH_SOURCE

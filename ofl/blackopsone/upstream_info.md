@@ -1,15 +1,13 @@
-# Black Ops One
+# Black Ops One — Source Investigation
 
-**Designer:** James Grieshaber, Eben Sorkin
-**License:** OFL
-**Category:** Display
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/SorkinType/Black-Ops
+- **Commit**: c955bed3517ad3d8606a8b0105d27538309fb70d
 
-**Repo:** https://github.com/SorkinType/Black-Ops
-**Commit:** c955bed3517ad3d8606a8b0105d27538309fb70d
-**Branch:** main
+## Findings
+The METADATA.pb contained a source block pointing to the SorkinType/Black-Ops repository on GitHub, with a specific commit hash but no config yaml reference.
 
-## Notes
-
-Fonts were sourced from the SorkinType GitHub repository at the listed commit.
+## Status
+- **Category**: WITH_SOURCE

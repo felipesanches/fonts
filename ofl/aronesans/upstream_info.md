@@ -1,14 +1,13 @@
-# AR One Sans — Source Metadata Investigation
+# AR One Sans — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/niteeshy/ar-one-sans
-- **Commit**: `6dc5e6850f2ced9f28e733c9a7860c54246e17a8`
-- **Status**: present
+- **Commit**: 6dc5e6850f2ced9f28e733c9a7860c54246e17a8
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the niteeshy/ar-one-sans repository on GitHub, with a specific commit hash and a config yaml reference.
 
-## Notes
-Designer: Niteesh Yadav. Category: SANS_SERIF. Subsets: latin, latin-ext, vietnamese.
+## Status
+- **Category**: WITH_SOURCE

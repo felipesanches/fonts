@@ -1,14 +1,13 @@
-# Geologica — Source Metadata Investigation
+# Geologica — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/googlefonts/geologica
-- **Commit**: `685f38d7c9e86b0c8530204c97ddcaf6558dd17b`
-- **Status**: present
+- **Commit**: 685f38d7c9e86b0c8530204c97ddcaf6558dd17b
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found.
+## Findings
+The METADATA.pb contained a source block pointing to the googlefonts/geologica repository with a specific commit and config at sources/config.yaml.
 
-## Notes
-Designer: Monokrom, Sindre Bremnes, Frode Helland. Category: SANS_SERIF. Subsets: cyrillic, cyrillic-ext, greek, latin, latin-ext, vietnamese. Variable font (CRSV, SHRP, slnt, wght axes).
+## Status
+- **Category**: WITH_SOURCE

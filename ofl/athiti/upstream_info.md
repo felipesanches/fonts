@@ -1,14 +1,13 @@
-# Athiti — Source Metadata Investigation
+# Athiti — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/cadsondemak/athiti
-- **Commit**: `541c0b5034964f8db50ef52921fede1422194abe`
-- **Status**: present
+- **Commit**: 541c0b5034964f8db50ef52921fede1422194abe
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the cadsondemak/athiti repository on GitHub, with a specific commit hash but no config yaml or file mappings.
 
-## Notes
-Designer: Cadson Demak. Category: SANS_SERIF. Subsets: latin, latin-ext, thai, vietnamese.
+## Status
+- **Category**: WITH_SOURCE

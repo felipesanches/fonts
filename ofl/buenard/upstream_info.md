@@ -1,17 +1,13 @@
-# Buenard
+# Buenard — Source Investigation
 
-**Designer:** Gustavo Ibarra
-**License:** OFL
-**Category:** Serif
-**Variable Axes:** wght (400–700)
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/googlefonts/buenard
+- **Commit**: cf400a29bbb4c8d850c221aa5b9835e8783648fb
 
-**Repo:** https://github.com/googlefonts/buenard
-**Commit:** cf400a29bbb4c8d850c221aa5b9835e8783648fb
-**Branch:** main
-**Config:** sources/config.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the googlefonts/buenard repository on GitHub with a specific commit hash and config yaml reference.
 
-## Notes
-
-Variable font sourced from the googlefonts GitHub repository at the listed commit.
+## Status
+- **Category**: WITH_SOURCE

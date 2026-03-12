@@ -1,13 +1,14 @@
-# Grand Hotel — Source Investigation
-
+# Grand Hotel — Source Metadata Investigation
 **Model**: Claude Opus 4.6
+**Date**: 2026-03-12
 
 ## Source Repository
-- **URL**: No public repository found
+- **URL**: No source block present
 - **Commit**: N/A
+- **Status**: absent
 
-## Findings
-No source repository was listed in METADATA.pb. The font was designed by Astigmatic and had no source block.
+## What Was Done
+The existing source metadata was reviewed. No source block was found in METADATA.pb.
 
-## Status
-- **Category**: NO_SOURCE
+## Notes
+Designer: Astigmatic. Category: HANDWRITING. Subsets: latin, latin-ext.

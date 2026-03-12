@@ -1,14 +1,13 @@
-# Girassol — Source Metadata Investigation
+# Girassol — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/liamspradlin/Girassol-Display
-- **Commit**: `cc8fa1b5a1afc28520fdc0ccc36256db243d9dfa`
-- **Status**: present
+- **Commit**: cc8fa1b5a1afc28520fdc0ccc36256db243d9dfa
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found.
+## Findings
+The METADATA.pb contained a source block pointing to the liamspradlin/Girassol-Display repository with a specific commit but no file mappings or config path.
 
-## Notes
-Designer: Liam Spradlin. Category: DISPLAY. Subsets: latin, latin-ext.
+## Status
+- **Category**: WITH_SOURCE

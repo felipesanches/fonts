@@ -1,14 +1,13 @@
-# Gasoek One — Source Metadata Investigation
+# Gasoek One — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/JAMO-TYPEFACE/Gasoek
-- **Commit**: `f6b875c95ad933c5f937c2494ae2337f5aef2694`
-- **Status**: present
+- **Commit**: f6b875c95ad933c5f937c2494ae2337f5aef2694
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found.
+## Findings
+The METADATA.pb contained a source block pointing to the JAMO-TYPEFACE/Gasoek repository with a specific commit and config at Sources/config.yaml.
 
-## Notes
-Designer: Jiashuo Zhang, JAMO. Category: SANS_SERIF. Subsets: korean, latin, latin-ext.
+## Status
+- **Category**: WITH_SOURCE

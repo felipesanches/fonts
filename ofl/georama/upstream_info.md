@@ -1,14 +1,13 @@
-# Georama — Source Metadata Investigation
+# Georama — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/productiontype/Georama
-- **Commit**: `1b063b6256c228a56d13b8b2f8f1d807f41467f8`
-- **Status**: present
+- **Commit**: 1b063b6256c228a56d13b8b2f8f1d807f41467f8
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found.
+## Findings
+The METADATA.pb contained a source block pointing to the productiontype/Georama repository with a specific commit and config at sources/builder.yaml.
 
-## Notes
-Designer: Production Type. Category: SANS_SERIF. Subsets: latin, latin-ext, vietnamese. Variable font (wdth, wght axes), includes italic.
+## Status
+- **Category**: WITH_SOURCE

@@ -1,16 +1,13 @@
-# Bytesized
+# Bytesized — Source Investigation
 
-**Designer:** Baltdev
-**License:** OFL
-**Category:** Sans Serif
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/balt-dev/bytesized-gf
+- **Commit**: 11abbf2db0602d93f35ec9d493a074e384f0cdb3
 
-**Repo:** https://github.com/balt-dev/bytesized-gf
-**Commit:** 11abbf2db0602d93f35ec9d493a074e384f0cdb3
-**Branch:** main
-**Config:** sources/config.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the balt-dev/bytesized-gf repository on GitHub with a specific commit hash and config yaml reference.
 
-## Notes
-
-Fonts were sourced from the upstream GitHub repository at the listed commit.
+## Status
+- **Category**: WITH_SOURCE

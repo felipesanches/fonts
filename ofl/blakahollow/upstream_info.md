@@ -1,17 +1,13 @@
-# Blaka Hollow
+# Blaka Hollow — Source Investigation
 
-**Designer:** Mohamed Gaber
-**License:** OFL
-**Category:** Display
-**Primary Script:** Arabic
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/Gue3bara/Blaka
+- **Commit**: 7f264eee862d3e94c2cb6a728c6429c2f3b9adc3
 
-**Repo:** https://github.com/Gue3bara/Blaka
-**Commit:** 7f264eee862d3e94c2cb6a728c6429c2f3b9adc3
-**Branch:** master
-**Config:** sources/blakahollow.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the Gue3bara/Blaka repository on GitHub (shared with the Blaka family at the same commit), with a specific commit hash and a config yaml reference.
 
-## Notes
-
-Hollow variant. Sourced from the same Gue3bara repository as Blaka at the same commit.
+## Status
+- **Category**: WITH_SOURCE

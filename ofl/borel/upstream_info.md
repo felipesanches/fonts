@@ -1,16 +1,13 @@
-# Borel
+# Borel — Source Investigation
 
-**Designer:** Rosalie Wagner
-**License:** OFL
-**Category:** Handwriting
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/RosaWagner/Borel
+- **Commit**: 68b8266ec6b70c4753b46753c8b103d2ee50b7c8
 
-**Repo:** https://github.com/RosaWagner/Borel
-**Commit:** 68b8266ec6b70c4753b46753c8b103d2ee50b7c8
-**Branch:** main
-**Config:** Borel/sources/config.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the RosaWagner/Borel repository on GitHub with a specific commit hash and config yaml reference.
 
-## Notes
-
-Fonts were sourced from the RosaWagner GitHub repository at the listed commit.
+## Status
+- **Category**: WITH_SOURCE

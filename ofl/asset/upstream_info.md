@@ -1,14 +1,13 @@
-# Asset — Source Metadata Investigation
+# Asset — Source Investigation
+
 **Model**: Claude Opus 4.6
-**Date**: 2026-03-12
 
 ## Source Repository
 - **URL**: https://github.com/SorkinType/Asset
-- **Commit**: `8b65aa032ccd4cd76c6e1e6e28bad4601210c8fe`
-- **Status**: present
+- **Commit**: 8b65aa032ccd4cd76c6e1e6e28bad4601210c8fe
 
-## What Was Done
-The existing source metadata was reviewed. A source block with repository URL and commit was found in METADATA.pb.
+## Findings
+The METADATA.pb contained a source block pointing to the SorkinType/Asset repository on GitHub, with a specific commit hash and a config yaml reference.
 
-## Notes
-Designer: Riccardo De Franceschi, Eben Sorkin. Category: DISPLAY. Subsets: cyrillic-ext, latin, latin-ext, math.
+## Status
+- **Category**: WITH_SOURCE

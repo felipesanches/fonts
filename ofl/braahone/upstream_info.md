@@ -1,16 +1,13 @@
-# Braah One
+# Braah One — Source Investigation
 
-**Designer:** Ashish Kumar
-**License:** OFL
-**Category:** Sans Serif / Display
-**Primary Script:** Gurmukhi
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/artandtype/Braah
+- **Commit**: 2b7ba2ea006af5a55313158531b6f0b71eca5ff8
 
-**Repo:** https://github.com/artandtype/Braah
-**Commit:** 2b7ba2ea006af5a55313158531b6f0b71eca5ff8
-**Branch:** master
+## Findings
+The METADATA.pb contained a source block pointing to the artandtype/Braah repository on GitHub with a specific commit hash.
 
-## Notes
-
-Fonts were sourced from the artandtype GitHub repository at the listed commit.
+## Status
+- **Category**: WITH_SOURCE

@@ -1,14 +1,13 @@
-# Black And White Picture
+# Black And White Picture — Source Investigation
 
-**Designer:** AsiaSoft Inc.
-**License:** OFL
-**Category:** Display
-**Primary Script:** Korean
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: No public repository found
+- **Commit**: N/A
 
-No source repository was listed in METADATA.pb.
+## Findings
+No source repository was listed in METADATA.pb. The font was attributed to AsiaSoft Inc. and had no source block.
 
-## Notes
-
-Copyright states: "Copyright (c) 1992-2018 AsiaSoft Inc. Seoul Korea All Rights Reserved." No upstream repository or commit was recorded in METADATA.pb.
+## Status
+- **Category**: NO_SOURCE

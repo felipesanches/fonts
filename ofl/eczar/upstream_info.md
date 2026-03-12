@@ -1,19 +1,13 @@
-# Eczar
+# Eczar — Source Investigation
 
-**Designer**: Rosetta, Vaibhav Singh
-**License**: OFL
-**Category**: Serif
-**Date Added**: 2015-06-03
-
-**Model**: Claude Sonnet 4.6
+**Model**: Claude Opus 4.6
 
 ## Source Repository
+- **URL**: https://github.com/rosettatype/eczar
+- **Commit**: f248ec9c0c5e3a9442d22824cc1cba6c713725d5
 
-- **Repo**: https://github.com/rosettatype/eczar
-- **Commit**: `f248ec9c0c5e3a9442d22824cc1cba6c713725d5`
-- **Branch**: master
-- **Config**: `sources/builder.yaml`
+## Findings
+The METADATA.pb contained a source block pointing to the rosettatype/eczar repository on GitHub with a specific commit hash and config yaml reference.
 
-## Summary
-
-Eczar was designed by Vaibhav Singh at Rosetta Type Foundry. It was published as a variable font with a wght axis (400–800) covering the Devanagari script alongside Greek, Greek Extended, Latin, and Latin Extended subsets. The font file was sourced from `release/variable/Eczar[wght].ttf`. Primary script is Devanagari.
+## Status
+- **Category**: WITH_SOURCE

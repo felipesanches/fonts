@@ -1,18 +1,13 @@
-# Briem Hand
+# Briem Hand — Source Investigation
 
-**Designer:** Gunnlaugur SE Briem, Eben Sorkin
-**License:** OFL
-**Category:** Handwriting
-**Variable Axes:** wght (100–900)
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/SorkinType/Briem-Hand
+- **Commit**: 7b991840508c9a90632354034ed0a72002836c05
 
-**Repo:** https://github.com/SorkinType/Briem-Hand
-**Commit:** 7b991840508c9a90632354034ed0a72002836c05
-**Branch:** main
-**Config:** sources/config.yaml
-**Archive:** https://github.com/SorkinType/Briem-Hand/releases/download/v1.004/Briem-Hand-v1.004.zip
+## Findings
+The METADATA.pb contained a source block pointing to the SorkinType/Briem-Hand repository on GitHub with a specific commit hash and config yaml reference.
 
-## Notes
-
-Variable font sourced from the SorkinType GitHub repository at the listed commit.
+## Status
+- **Category**: WITH_SOURCE

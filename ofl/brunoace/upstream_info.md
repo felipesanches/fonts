@@ -1,16 +1,13 @@
-# Bruno Ace
+# Bruno Ace — Source Investigation
 
-**Designer:** Astigmatic
-**License:** OFL
-**Category:** Display / Sans Serif
+**Model**: Claude Opus 4.6
 
-## Upstream Source
+## Source Repository
+- **URL**: https://github.com/googlefonts/Bruno-ace
+- **Commit**: 58dc219db32ffd9eaf573f2dc3be2e342410e15a
 
-**Repo:** https://github.com/googlefonts/Bruno-ace
-**Commit:** 58dc219db32ffd9eaf573f2dc3be2e342410e15a
-**Branch:** main
-**Config:** sources/brunoace-regular.yaml
+## Findings
+The METADATA.pb contained a source block pointing to the googlefonts/Bruno-ace repository on GitHub with a specific commit hash and config yaml reference.
 
-## Notes
-
-Fonts were sourced from the googlefonts GitHub repository at the listed commit. Bruno Ace and Bruno Ace SC share the same upstream repository.
+## Status
+- **Category**: WITH_SOURCE
