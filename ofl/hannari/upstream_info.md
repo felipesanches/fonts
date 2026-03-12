@@ -1,0 +1,13 @@
+# Hannari — Source Investigation
+
+**Model**: Claude Opus 4.6
+
+## Source Repository
+- **URL**: No public repository found
+- **Commit**: N/A
+
+## Findings
+No METADATA.pb file was found for this family. The directory contained only font files, a description, and license, indicating this was an early access font without source metadata.
+
+## Status
+- **Category**: NO_SOURCE
