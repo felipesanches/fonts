@@ -1791,343 +1791,343 @@
     "castoro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "cause": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "name-table",
       "notes": "",
       "overrides": {}
     },
     "caveat": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "chakrapetch": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "changa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "changaone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "charissil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "charm": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "charmonman": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cherish": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cherrybombone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "chilanka": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "chirongoroundtc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "chironheihk": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "chironsunghk": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "chivo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "chivomono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "chocolateclassicalsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "chokokutai": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "chonburi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cinzel": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "cinzeldecorative": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "climatecrisis": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "coda": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "codystar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "coiny": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "comfortaa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "comforter": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "comforterbrush": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "comicneue": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "comicrelief": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "comme": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "commissioner": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "coralpixels": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "corinthia": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cormorantgaramond": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cormorantinfant": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cormorantsc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "cormorantunicase": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "cormorantupright": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "cossettetexte": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cossettetitre": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "courierprime": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "crimsonpro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "cuprum": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "cutive": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "cutivemono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "daibannasil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "damion": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
