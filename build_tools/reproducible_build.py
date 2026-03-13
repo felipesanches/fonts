@@ -348,6 +348,132 @@ def categorize_diff(differing_tables: set) -> str:
     return "compiler-version"
 
 
+def deep_font_analysis(reference_path: Path, built_path: Path) -> dict:
+    """Perform detailed structural analysis of font differences.
+
+    Goes beyond table-level comparison to identify root causes:
+    ttfautohint version, glyph coordinate differences, name changes, etc.
+    """
+    from fontTools.ttLib import TTFont
+
+    analysis = {
+        "ttfautohint": {"ref": "", "built": ""},
+        "glyph_stats": {},
+        "name_diffs": [],
+        "head_diffs": [],
+        "os2_diffs": [],
+        "root_cause": "",
+    }
+
+    try:
+        ref = TTFont(str(reference_path))
+        built = TTFont(str(built_path))
+    except Exception as e:
+        analysis["root_cause"] = f"font-load-error: {e}"
+        return analysis
+
+    try:
+        # Extract ttfautohint version from name ID 5 (version string)
+        for font, key in [(ref, "ref"), (built, "built")]:
+            for rec in font["name"].names:
+                if rec.nameID == 5 and rec.platformID == 3:
+                    val = rec.toUnicode()
+                    analysis["ttfautohint"][key] = val
+                    break
+
+        # Name table diff (semantic, not XML)
+        ref_names = {(r.nameID, r.platformID, r.platEncID, r.langID): r.toUnicode()
+                     for r in ref["name"].names}
+        built_names = {(r.nameID, r.platformID, r.platEncID, r.langID): r.toUnicode()
+                       for r in built["name"].names}
+        for k in sorted(set(ref_names) | set(built_names)):
+            rv = ref_names.get(k)
+            bv = built_names.get(k)
+            if rv != bv:
+                analysis["name_diffs"].append({
+                    "nameID": k[0], "platformID": k[1],
+                    "ref": rv or "<missing>", "built": bv or "<missing>",
+                })
+
+        # Head table diff
+        for attr in ["created", "modified", "fontRevision", "flags"]:
+            rv = getattr(ref["head"], attr, None)
+            bv = getattr(built["head"], attr, None)
+            if rv != bv:
+                analysis["head_diffs"].append({"field": attr, "ref": rv, "built": bv})
+
+        # OS/2 panose diff
+        if "OS/2" in ref and "OS/2" in built:
+            for attr in ["bFamilyType", "bSerifStyle", "bWeight", "bProportion",
+                         "bContrast", "bStrokeVariation", "bArmStyle",
+                         "bLetterForm", "bMidline", "bXHeight"]:
+                rv = getattr(ref["OS/2"].panose, attr, None)
+                bv = getattr(built["OS/2"].panose, attr, None)
+                if rv != bv:
+                    analysis["os2_diffs"].append({"field": attr, "ref": rv, "built": bv})
+
+        # Glyph coordinate analysis
+        ref_order = set(ref.getGlyphOrder())
+        built_order = set(built.getGlyphOrder())
+        common = ref_order & built_order
+        total = len(common)
+        diff_count = 0
+        rounding_only = 0
+        coord_count_diff = 0
+
+        if "glyf" in ref and "glyf" in built:
+            for gname in common:
+                rg = ref["glyf"].get(gname)
+                bg = built["glyf"].get(gname)
+                if rg is None and bg is None:
+                    continue
+                if rg is None or bg is None:
+                    diff_count += 1
+                    continue
+                rc = getattr(rg, "coordinates", None)
+                bc = getattr(bg, "coordinates", None)
+                if rc == bc:
+                    continue
+                diff_count += 1
+                if rc is not None and bc is not None:
+                    if len(rc) != len(bc):
+                        coord_count_diff += 1
+                    elif all(abs(ax - bx) <= 1 and abs(ay - by) <= 1
+                             for (ax, ay), (bx, by) in zip(rc, bc)):
+                        rounding_only += 1
+
+        analysis["glyph_stats"] = {
+            "total_glyphs": total,
+            "ref_only": len(ref_order - built_order),
+            "built_only": len(built_order - ref_order),
+            "coord_diffs": diff_count,
+            "rounding_only": rounding_only,
+            "coord_count_diffs": coord_count_diff,
+        }
+
+        # Determine root cause
+        ref_hint = analysis["ttfautohint"]["ref"]
+        built_hint = analysis["ttfautohint"]["built"]
+        hint_differs = ref_hint != built_hint and "ttfautohint" in ref_hint
+
+        if hint_differs and diff_count > 0 and diff_count == (rounding_only + coord_count_diff):
+            analysis["root_cause"] = "ttfautohint-version"
+        elif hint_differs and diff_count > 0:
+            analysis["root_cause"] = "ttfautohint-version + other"
+        elif diff_count > 0:
+            analysis["root_cause"] = "compiler-output-diff"
+        else:
+            analysis["root_cause"] = "metadata-only"
+
+    except Exception as e:
+        analysis["root_cause"] = f"analysis-error: {e}"
+    finally:
+        ref.close()
+        built.close()
+
+    return analysis
+
+
 def compare_fonts(reference_path: Path, built_path: Path) -> dict:
     """Compare two font files. Returns comparison result dict."""
     ref_hash = sha256_file(reference_path)
@@ -359,6 +485,7 @@ def compare_fonts(reference_path: Path, built_path: Path) -> dict:
         "byte_identical": ref_hash == built_hash,
         "differing_tables": [],
         "mismatch_category": "yes",
+        "analysis": {},
     }
 
     if result["byte_identical"]:
@@ -386,6 +513,14 @@ def compare_fonts(reference_path: Path, built_path: Path) -> dict:
 
     result["differing_tables"] = sorted(differing)
     result["mismatch_category"] = categorize_diff(differing)
+
+    # Deep structural analysis
+    print(f"    Running deep analysis...")
+    result["analysis"] = deep_font_analysis(reference_path, built_path)
+    root_cause = result["analysis"].get("root_cause", "")
+    if root_cause:
+        print(f"    Root cause: {root_cause}")
+
     return result
 
 
