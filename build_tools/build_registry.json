@@ -4,8 +4,78 @@
     "alata": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "source-mismatch",
-      "notes": "",
+      "reproducible_build": "compiler-version",
+      "notes": "Phase 1 test. 6 differing tables (GDEF, GPOS, GSUB, glyf, head, name).",
+      "overrides": {}
+    },
+    "anton": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "compiler-version",
+      "notes": "Phase 2. Single static TTF. 10 differing tables including DSIG.",
+      "overrides": {}
+    },
+    "cabin": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "build-failure",
+      "notes": "Phase 2. config.yaml override references .ufo masters that don't exist at the recorded commit. The .designspace files reference Cabin-Regular.ufo etc. but only .glyphs sources are present.",
+      "overrides": {}
+    },
+    "cormorant": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "compiler-version",
+      "notes": "Phase 2. Variable .glyphs, config named build.yaml. 14-15 differing tables.",
+      "overrides": {}
+    },
+    "crimsontext": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "compiler-version",
+      "notes": "Phase 2. Static 6 files. 16 differing tables across all weights.",
+      "overrides": {}
+    },
+    "fraunces": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "build-failure",
+      "notes": "Phase 2. fontmake compatibility check failed on designspace. Current fontmake finds master incompatibilities that older version may have tolerated.",
+      "overrides": {}
+    },
+    "merriweather": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "compiler-version",
+      "notes": "Phase 2. Variable 3-axis .glyphspackage. 12-13 differing tables.",
+      "overrides": {}
+    },
+    "montserrat": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "compiler-version",
+      "notes": "Phase 2. Variable .glyphs. 20 differing tables.",
+      "overrides": {}
+    },
+    "poppins": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "build-failure",
+      "notes": "Phase 2. AssertionError: Default source not found in Devanagari .glyphs. glyphsLib version incompatibility.",
+      "overrides": {}
+    },
+    "spectral": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "compiler-version",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
+      "overrides": {}
+    },
+    "worksans": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "build-failure",
+      "notes": "Phase 2. fontmake error: 'naira.rvrn' glyph processing failure. glyphsLib/fontmake version incompatibility.",
       "overrides": {}
     }
   }

@@ -303,35 +303,48 @@ def categorize_diff(differing_tables: set) -> str:
     if not differing_tables:
         return "yes"
 
-    # Check specific categories
     remaining = set(differing_tables)
 
-    # Pure timestamp diff
+    # Pure timestamp diff (only head table)
     if remaining <= TIMESTAMP_TABLES:
         return "timestamp-diff"
 
-    # DSIG only
-    if remaining <= DSIG_TABLES:
+    # DSIG only (possibly with timestamps)
+    if remaining <= (DSIG_TABLES | TIMESTAMP_TABLES):
         return "dsig-diff"
 
     # Hinting tables (possibly with timestamps)
     if remaining <= (HINTING_TABLES | TIMESTAMP_TABLES):
         return "hinting-diff"
 
-    # Name table (possibly with timestamps)
-    if remaining <= (NAME_TABLES | TIMESTAMP_TABLES):
+    # Name table (possibly with timestamps/DSIG)
+    if remaining <= (NAME_TABLES | TIMESTAMP_TABLES | DSIG_TABLES):
         return "name-table"
 
-    # Check for table ordering (all tables present but different serialization)
-    # This is harder to detect without deeper analysis, so we flag broadly
-    if remaining <= {"GlyphOrder", "loca", "glyf", "hmtx", "GPOS", "GSUB",
-                     "cmap", "post", "OS/2"} | TIMESTAMP_TABLES:
+    # Tables commonly affected by compiler version differences.
+    # When many tables differ (especially glyf alongside layout tables,
+    # name, GlyphOrder, etc.) it's almost always because the font was
+    # built with a different fontmake/fontTools/glyphsLib version — not
+    # because the source metadata is wrong.
+    COMPILER_AFFECTED = {
+        "glyf", "loca", "GlyphOrder", "hmtx", "hhea",
+        "GPOS", "GSUB", "GDEF",
+        "cmap", "post", "OS/2", "name",
+        "head", "DSIG",
+        "HVAR", "MVAR", "STAT", "avar", "fvar", "gvar",
+        "gasp", "maxp",
+    }
+    if remaining <= COMPILER_AFFECTED:
         return "compiler-version"
 
-    # If glyf or CFF tables differ, it's a source mismatch
-    if "glyf" in remaining or "CFF " in remaining or "CFF2" in remaining:
+    # If outline tables differ but no other layout/metadata tables do,
+    # that suggests genuinely different source content was compiled.
+    outline_tables = {"glyf", "CFF ", "CFF2"}
+    non_outline_diff = remaining - outline_tables - TIMESTAMP_TABLES
+    if (remaining & outline_tables) and not non_outline_diff:
         return "source-mismatch"
 
+    # Broad differences across many table types — compiler version
     return "compiler-version"
 
 
