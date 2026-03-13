@@ -622,15 +622,23 @@ def find_built_font(source_dir: Path, source_file: str) -> Path | None:
 
     gftools-builder typically outputs to fonts/ subdirectory or the path
     specified in config.yaml. We search for the filename.
+
+    Note: gftools-builder runs with cwd=source_dir, so relative output
+    paths like '../fonts/ttf/' resolve to source_dir.parent / 'fonts/ttf/'.
     """
     filename = Path(source_file).name
 
-    # Common output locations
+    # Common output locations (both inside source_dir and its parent,
+    # since gftools-builder may use relative paths like '../fonts/')
     search_dirs = [
         source_dir / "fonts" / "ttf",
         source_dir / "fonts" / "variable",
         source_dir / "fonts" / "otf",
         source_dir / "fonts",
+        source_dir.parent / "fonts" / "ttf",
+        source_dir.parent / "fonts" / "variable",
+        source_dir.parent / "fonts" / "otf",
+        source_dir.parent / "fonts",
         source_dir,
     ]
 
@@ -639,9 +647,12 @@ def find_built_font(source_dir: Path, source_file: str) -> Path | None:
         if candidate.exists():
             return candidate
 
-    # Recursive fallback
+    # Recursive fallback — exclude directories like 'references/' that
+    # contain old reference builds, not our freshly built output
+    exclude_dirs = {"references", "ref", "old"}
     for match in source_dir.rglob(filename):
-        return match
+        if not any(part in exclude_dirs for part in match.parts):
+            return match
 
     return None
 
