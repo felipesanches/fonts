@@ -740,6 +740,17 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
     isolation = entry.get("isolation", "shared")
     build_result = run_build(source_dir, config_path, family, isolation, overrides)
     if build_result is None:
+        # Write a minimal report so the family is cached and not retried
+        report_path = WORKSPACE_DIR / family / "comparison_report.json"
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(json.dumps({
+            "family": family,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "source_commit": commit,
+            "repository_url": source_info["repository_url"],
+            "files": {},
+            "overall_status": "build-failure",
+        }, indent=2) + "\n", encoding="utf-8")
         return "build-failure"
 
     # Compare each file listed in source.files
