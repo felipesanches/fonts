@@ -808,19 +808,57 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
     return overall_status
 
 
+def scan_buildable_families() -> list:
+    """Scan all ofl/ families and return those with buildable source stanzas."""
+    import re
+    buildable = []
+    for family_dir in sorted(OFL_DIR.iterdir()):
+        if not family_dir.is_dir():
+            continue
+        pb = family_dir / "METADATA.pb"
+        if not pb.exists():
+            continue
+        text = pb.read_text(encoding="utf-8")
+        has_repo = bool(re.search(r'repository_url:\s*"https?://', text))
+        has_commit = bool(re.search(r'commit:\s*"[a-f0-9]{7,}"', text))
+        has_cfg = bool(re.search(r'config_yaml:\s*".+"', text))
+        has_override = (family_dir / "config.yaml").exists()
+        if has_repo and has_commit and (has_cfg or has_override):
+            buildable.append(family_dir.name)
+    return buildable
+
+
 def main():
     parser = argparse.ArgumentParser(description="Reproducible Font Build System")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--family", help="Build a single family")
     group.add_argument("--all", action="store_true", help="Build all enabled families")
+    group.add_argument("--batch", action="store_true",
+                       help="Auto-discover all buildable families, add to registry, and process")
     parser.add_argument("--force", action="store_true", help="Rebuild even if output exists")
+    parser.add_argument("--limit", type=int, default=0,
+                        help="Process at most N families (0=unlimited)")
 
     args = parser.parse_args()
 
     registry = load_registry()
 
     families_to_process = []
-    if args.all:
+    if args.batch:
+        buildable = scan_buildable_families()
+        print(f"Found {len(buildable)} buildable families")
+        for fam in buildable:
+            if fam not in registry["families"]:
+                registry["families"][fam] = {
+                    "enabled": True,
+                    "isolation": "shared",
+                    "reproducible_build": None,
+                    "notes": "",
+                    "overrides": {},
+                }
+        save_registry(registry)
+        families_to_process = buildable
+    elif args.all:
         families_to_process = [
             name for name, entry in registry["families"].items()
             if entry.get("enabled", False)
@@ -841,7 +879,30 @@ def main():
         print("No families to process.")
         return
 
-    print(f"Processing {len(families_to_process)} family(ies): {', '.join(families_to_process)}")
+    # Skip families with existing reports unless --force
+    # Policy: build artifacts in /mnt/shared/gfonts-repro-builds/ serve as a
+    # cache. Never rebuild a family that already has results — only use --force
+    # when explicitly needed (e.g., after a script change that affects analysis).
+    if not args.force:
+        original_count = len(families_to_process)
+        families_to_process = [
+            f for f in families_to_process
+            if not (WORKSPACE_DIR / f / "comparison_report.json").exists()
+        ]
+        skipped = original_count - len(families_to_process)
+        if skipped:
+            print(f"Skipping {skipped} families with existing reports (use --force to rebuild)")
+
+    # Apply --limit
+    if args.limit > 0 and len(families_to_process) > args.limit:
+        print(f"Limiting to first {args.limit} of {len(families_to_process)} families")
+        families_to_process = families_to_process[:args.limit]
+
+    if not families_to_process:
+        print("No new families to process.")
+        return
+
+    print(f"Processing {len(families_to_process)} family(ies)")
 
     for family in families_to_process:
         status = process_family(family, registry, force=args.force)
