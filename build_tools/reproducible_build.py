@@ -154,10 +154,15 @@ def download_source(owner: str, repo: str, commit: str, family: str) -> Path | N
     # Extract
     source_dir.mkdir(parents=True, exist_ok=True)
     print(f"  Extracting to {source_dir}")
-    with tarfile.open(tarball_path, "r:gz") as tar:
-        tar.extractall(path=source_dir, filter="data")
+    try:
+        with tarfile.open(tarball_path, "r:gz") as tar:
+            tar.extractall(path=source_dir, filter="data")
+    except OSError as e:
+        print(f"  Extraction failed: {e}")
+        tarball_path.unlink(missing_ok=True)
+        return None
 
-    tarball_path.unlink()
+    tarball_path.unlink(missing_ok=True)
 
     # GitHub tarballs extract to {repo}-{full_commit_hash}
     # Find the actual extracted directory
@@ -915,7 +920,7 @@ def main():
 
     print(f"Processing {len(families_to_process)} family(ies)")
 
-    for family in families_to_process:
+    for i, family in enumerate(families_to_process):
         status = process_family(family, registry, force=args.force)
 
         # Update registry
@@ -929,6 +934,20 @@ def main():
             }
         registry["families"][family]["reproducible_build"] = status
         save_registry(registry)
+
+        # Drop VFS caches every 5 families to prevent virtiofsd FD
+        # accumulation on virtiofs mounts.  This triggers FUSE FORGET
+        # messages so virtiofsd releases file descriptors for files
+        # that are no longer referenced by the guest kernel.
+        # Requires: echo 'fsanches ALL=(root) NOPASSWD: /usr/bin/tee /proc/sys/vm/drop_caches' | sudo tee /etc/sudoers.d/drop-caches
+        if (i + 1) % 5 == 0:
+            try:
+                subprocess.run(
+                    "echo 3 | sudo -n tee /proc/sys/vm/drop_caches",
+                    shell=True, capture_output=True, timeout=5,
+                )
+            except Exception:
+                pass  # Non-fatal if unavailable
 
     print(f"\n{'='*60}")
     print("Done. Registry updated.")
