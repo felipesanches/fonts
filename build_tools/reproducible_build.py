@@ -15,6 +15,7 @@ import argparse
 import hashlib
 import json
 import os
+import signal
 import shutil
 import subprocess
 import sys
@@ -24,6 +25,17 @@ import urllib.request
 import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
+
+# Download timeout in seconds (5 minutes per tarball)
+DOWNLOAD_TIMEOUT = 300
+
+
+class DownloadTimeout(Exception):
+    pass
+
+
+def _download_alarm_handler(signum, frame):
+    raise DownloadTimeout("Download stalled (timeout)")
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -146,9 +158,15 @@ def download_source(owner: str, repo: str, commit: str, family: str) -> Path | N
 
     print(f"  Downloading {tarball_url}")
     try:
+        old_handler = signal.signal(signal.SIGALRM, _download_alarm_handler)
+        signal.alarm(DOWNLOAD_TIMEOUT)
         urllib.request.urlretrieve(tarball_url, tarball_path)
-    except urllib.error.HTTPError as e:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_handler)
+    except (urllib.error.HTTPError, DownloadTimeout) as e:
+        signal.alarm(0)
         print(f"  Download failed: {e}")
+        tarball_path.unlink(missing_ok=True)
         return None
 
     # Extract
