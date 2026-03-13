@@ -197,6 +197,93 @@ def download_source(owner: str, repo: str, commit: str, family: str) -> Path | N
 
 
 # ---------------------------------------------------------------------------
+# Pre-build
+# ---------------------------------------------------------------------------
+
+def run_prebuild(source_dir: Path, prebuild_commands: list[str], family: str) -> bool:
+    """Run pre-build commands in the source directory.
+
+    Each command is executed as a shell command in the source directory.
+    Commands have access to the gftools venv (on PATH).
+    Returns True if all commands succeeded, False otherwise.
+    """
+    family_ws = WORKSPACE_DIR / family
+
+    env = os.environ.copy()
+    venv_bin = str(Path(GFTOOLS_BUILDER).parent)
+    env["PATH"] = venv_bin + ":" + env.get("PATH", "")
+    # Set VIRTUAL_ENV so tools that check it can find packages
+    env["VIRTUAL_ENV"] = str(Path(GFTOOLS_BUILDER).parent.parent)
+
+    for i, cmd in enumerate(prebuild_commands):
+        print(f"  Prebuild [{i+1}/{len(prebuild_commands)}]: {cmd}")
+        try:
+            result = subprocess.run(
+                cmd,
+                shell=True,
+                cwd=str(source_dir),
+                env=env,
+                capture_output=True,
+                text=True,
+                timeout=300,  # 5 minute timeout per command
+            )
+            if result.returncode != 0:
+                print(f"  Prebuild failed (exit {result.returncode})")
+                if result.stderr:
+                    print(f"  stderr: {result.stderr[-1000:]}")
+                # Save prebuild log
+                (family_ws / "prebuild_log.txt").write_text(
+                    f"Command: {cmd}\n\nSTDOUT:\n{result.stdout}\n\nSTDERR:\n{result.stderr}",
+                    encoding="utf-8",
+                )
+                return False
+        except subprocess.TimeoutExpired:
+            print(f"  Prebuild timed out: {cmd}")
+            return False
+
+    print(f"  Prebuild completed successfully")
+    return True
+
+
+def detect_prebuild(source_dir: Path) -> list[str]:
+    """Auto-detect pre-build commands from repo structure.
+
+    Looks for common patterns where sources need generation before
+    gftools-builder can work.
+    """
+    commands = []
+
+    # Check for requirements.txt — install deps first
+    req_file = source_dir / "requirements.txt"
+    if req_file.exists():
+        commands.append("pip install -r requirements.txt")
+
+    # Check for Makefile with specific targets
+    makefile = source_dir / "Makefile"
+    if makefile.exists():
+        content = makefile.read_text(errors="replace")
+        # Look for targets that generate sources (not the full build)
+        if "venv:" in content or "venv/" in content:
+            commands.append("make venv")
+        if "build:" in content:
+            commands.append("make build")
+        elif "all:" in content:
+            commands.append("make")
+
+    # Check for build.sh
+    build_sh = source_dir / "build.sh"
+    if build_sh.exists():
+        commands.append("bash build.sh")
+
+    # Check for build.py
+    build_py = source_dir / "build.py"
+    if build_py.exists():
+        commands.append("python3 build.py")
+
+    return commands
+
+
+# ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
 
@@ -655,11 +742,15 @@ def find_built_font(source_dir: Path, source_file: str) -> Path | None:
     # since gftools-builder may use relative paths like '../fonts/')
     search_dirs = [
         source_dir / "fonts" / "ttf",
+        source_dir / "fonts" / "TTF",
         source_dir / "fonts" / "variable",
+        source_dir / "fonts" / "VF",
         source_dir / "fonts" / "otf",
         source_dir / "fonts",
         source_dir.parent / "fonts" / "ttf",
+        source_dir.parent / "fonts" / "TTF",
         source_dir.parent / "fonts" / "variable",
+        source_dir.parent / "fonts" / "VF",
         source_dir.parent / "fonts" / "otf",
         source_dir.parent / "fonts",
         source_dir,
@@ -670,12 +761,15 @@ def find_built_font(source_dir: Path, source_file: str) -> Path | None:
         if candidate.exists():
             return candidate
 
-    # Recursive fallback — exclude directories like 'references/' that
-    # contain old reference builds, not our freshly built output
+    # Recursive fallback — walk the tree instead of rglob to avoid
+    # glob interpretation of bracket characters in filenames like
+    # Font[wght,wdth].ttf
     exclude_dirs = {"references", "ref", "old"}
-    for match in source_dir.rglob(filename):
-        if not any(part in exclude_dirs for part in match.parts):
-            return match
+    for dirpath, dirnames, filenames in os.walk(source_dir):
+        if any(part in exclude_dirs for part in Path(dirpath).parts):
+            continue
+        if filename in filenames:
+            return Path(dirpath) / filename
 
     return None
 
@@ -748,6 +842,25 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
 
     print(f"  Source dir: {source_dir}")
 
+    # Run pre-build commands if specified in registry or auto-detected
+    prebuild_commands = entry.get("prebuild", [])
+    if prebuild_commands:
+        print(f"  Running {len(prebuild_commands)} prebuild command(s)...")
+        if not run_prebuild(source_dir, prebuild_commands, family):
+            # Write failure report
+            report_path = WORKSPACE_DIR / family / "comparison_report.json"
+            report_path.parent.mkdir(parents=True, exist_ok=True)
+            report_path.write_text(json.dumps({
+                "family": family,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+                "source_commit": commit,
+                "repository_url": source_info["repository_url"],
+                "files": {},
+                "overall_status": "build-failure",
+                "notes": "prebuild failed",
+            }, indent=2) + "\n", encoding="utf-8")
+            return "build-failure"
+
     # Find config.yaml
     config_path = find_config_yaml(source_dir, config_yaml_path, family)
     if config_path is None:
@@ -775,38 +888,67 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
     file_results = {}
     overall_categories = set()
 
-    for file_mapping in source_info.get("files", []):
-        source_file = file_mapping.get("source_file", "")
-        dest_file = file_mapping.get("dest_file", "")
+    file_mappings = source_info.get("files", [])
 
-        if not dest_file or not source_file:
-            continue
+    if file_mappings:
+        # Use explicit file mappings from METADATA.pb
+        for file_mapping in file_mappings:
+            source_file = file_mapping.get("source_file", "")
+            dest_file = file_mapping.get("dest_file", "")
 
-        # Skip non-font files
-        if not dest_file.endswith((".ttf", ".otf")):
-            continue
+            if not dest_file or not source_file:
+                continue
 
-        reference_path = family_dir / dest_file
-        if not reference_path.exists():
-            print(f"  Reference file not found: {reference_path}")
-            file_results[dest_file] = {"error": "reference file not found"}
-            continue
+            # Skip non-font files
+            if not dest_file.endswith((".ttf", ".otf")):
+                continue
 
-        # Find the built font
-        built_path = find_built_font(source_dir, source_file)
-        if built_path is None:
-            print(f"  Built file not found for: {source_file}")
-            file_results[dest_file] = {"error": "built file not found"}
-            overall_categories.add("build-failure")
-            continue
+            reference_path = family_dir / dest_file
+            if not reference_path.exists():
+                print(f"  Reference file not found: {reference_path}")
+                file_results[dest_file] = {"error": "reference file not found"}
+                continue
 
-        print(f"  Comparing: {dest_file}")
-        print(f"    Reference: {reference_path}")
-        print(f"    Built:     {built_path}")
+            # Find the built font
+            built_path = find_built_font(source_dir, source_file)
+            if built_path is None:
+                print(f"  Built file not found for: {source_file}")
+                file_results[dest_file] = {"error": "built file not found"}
+                overall_categories.add("build-failure")
+                continue
 
-        comparison = compare_fonts(reference_path, built_path)
-        file_results[dest_file] = comparison
-        overall_categories.add(comparison["mismatch_category"])
+            print(f"  Comparing: {dest_file}")
+            print(f"    Reference: {reference_path}")
+            print(f"    Built:     {built_path}")
+
+            comparison = compare_fonts(reference_path, built_path)
+            file_results[dest_file] = comparison
+            overall_categories.add(comparison["mismatch_category"])
+    else:
+        # Auto-discover: match reference fonts in family_dir to built fonts
+        print("  No file mappings in METADATA.pb — auto-discovering fonts")
+        ref_fonts = sorted(
+            p for p in family_dir.iterdir()
+            if p.suffix in (".ttf", ".otf") and p.is_file()
+        )
+        if not ref_fonts:
+            print("  No reference font files found in family directory")
+        for ref_path in ref_fonts:
+            dest_file = ref_path.name
+            built_path = find_built_font(source_dir, dest_file)
+            if built_path is None:
+                print(f"  Built file not found for: {dest_file}")
+                file_results[dest_file] = {"error": "built file not found"}
+                overall_categories.add("build-failure")
+                continue
+
+            print(f"  Comparing: {dest_file}")
+            print(f"    Reference: {ref_path}")
+            print(f"    Built:     {built_path}")
+
+            comparison = compare_fonts(ref_path, built_path)
+            file_results[dest_file] = comparison
+            overall_categories.add(comparison["mismatch_category"])
 
     # Determine overall status
     if not file_results:

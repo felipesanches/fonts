@@ -18,9 +18,13 @@
     "cabin": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Phase 2. config.yaml override references .ufo masters that don't exist at the recorded commit. The .designspace files reference Cabin-Regular.ufo etc. but only .glyphs sources are present.",
-      "overrides": {}
+      "reproducible_build": "yes",
+      "notes": "Prebuild: glyphs2ufo generates .ufo from .glyphs for both roman and italic",
+      "overrides": {},
+      "prebuild": [
+        "glyphs2ufo sources/CabinRegular_v3001.glyphs --generate-GDEF",
+        "glyphs2ufo sources/CabinItalic_v3001.glyphs --generate-GDEF"
+      ]
     },
     "cormorant": {
       "enabled": true,
@@ -81,9 +85,12 @@
     "42dotsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
-      "overrides": {}
+      "reproducible_build": "compiler-version",
+      "notes": "Prebuild: glyphs2ufo generates .ufo masters from .glyphspackage",
+      "overrides": {},
+      "prebuild": [
+        "glyphs2ufo sources/42dotSans.glyphspackage -m sources/masters"
+      ]
     },
     "abeezee": {
       "enabled": true,
@@ -711,9 +718,12 @@
     "astasans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
-      "overrides": {}
+      "reproducible_build": "compiler-version",
+      "notes": "Prebuild: glyphs2ufo generates .ufo masters from .glyphspackage",
+      "overrides": {},
+      "prebuild": [
+        "glyphs2ufo sources/AstaSans.glyphspackage -m sources/masters"
+      ]
     },
     "athiti": {
       "enabled": true,
@@ -1678,15 +1688,21 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
-      "overrides": {}
+      "notes": "Prebuild: makenormal.py strips Color layers from .glyphs for non-color build",
+      "overrides": {},
+      "prebuild": [
+        "python3 scripts/makenormal.py sources/Cairo.glyphs sources/CairoNormal.glyphs"
+      ]
     },
     "cairoplay": {
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
-      "overrides": {}
+      "notes": "Prebuild: same as cairo (shared repo)",
+      "overrides": {},
+      "prebuild": [
+        "python3 scripts/makenormal.py sources/Cairo.glyphs sources/CairoNormal.glyphs"
+      ]
     },
     "caladea": {
       "enabled": true,
