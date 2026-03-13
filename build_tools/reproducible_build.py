@@ -359,6 +359,7 @@ def deep_font_analysis(reference_path: Path, built_path: Path) -> dict:
     analysis = {
         "ttfautohint": {"ref": "", "built": ""},
         "glyph_stats": {},
+        "metrics": {},
         "name_diffs": [],
         "head_diffs": [],
         "os2_diffs": [],
@@ -411,6 +412,98 @@ def deep_font_analysis(reference_path: Path, built_path: Path) -> dict:
                 bv = getattr(built["OS/2"].panose, attr, None)
                 if rv != bv:
                     analysis["os2_diffs"].append({"field": attr, "ref": rv, "built": bv})
+
+        # Metrics analysis (advance widths, line spacing)
+        # This determines text reflow risk: if metrics match, a rebuild
+        # will not cause text to reflow on existing websites.
+        metrics = {
+            "hmtx_identical": True,
+            "hmtx_total": 0,
+            "hmtx_diffs": 0,
+            "hmtx_max_delta": 0,
+            "hmtx_diff_glyphs": [],
+            "line_metrics_identical": True,
+            "line_metrics_diffs": [],
+            "reflow_risk": "none",
+        }
+
+        # Compare advance widths (hmtx table)
+        # Distinguish between:
+        # - shared_width_diffs: glyphs present in both fonts with different widths (reflow risk)
+        # - glyph_name_changes: glyphs present in only one font (renamed, not reflow risk)
+        if "hmtx" in ref and "hmtx" in built:
+            ref_hmtx = ref["hmtx"].metrics
+            built_hmtx = built["hmtx"].metrics
+            common_glyphs = set(ref_hmtx.keys()) & set(built_hmtx.keys())
+            ref_only = set(ref_hmtx.keys()) - set(built_hmtx.keys())
+            built_only = set(built_hmtx.keys()) - set(ref_hmtx.keys())
+            metrics["hmtx_total"] = len(set(ref_hmtx.keys()) | set(built_hmtx.keys()))
+            max_delta = 0
+            diff_glyphs = []
+            shared_diffs = 0
+
+            for gname in sorted(common_glyphs):
+                ref_w, ref_lsb = ref_hmtx[gname]
+                built_w, built_lsb = built_hmtx[gname]
+                if ref_w != built_w:
+                    delta = abs(ref_w - built_w)
+                    max_delta = max(max_delta, delta)
+                    shared_diffs += 1
+                    if len(diff_glyphs) < 10:
+                        diff_glyphs.append({
+                            "glyph": gname,
+                            "ref_width": ref_w,
+                            "built_width": built_w,
+                            "delta": delta,
+                        })
+
+            metrics["hmtx_shared_width_diffs"] = shared_diffs
+            metrics["hmtx_glyph_name_changes"] = len(ref_only) + len(built_only)
+            metrics["hmtx_diffs"] = shared_diffs
+            metrics["hmtx_max_delta"] = max_delta
+            metrics["hmtx_diff_glyphs"] = diff_glyphs
+            metrics["hmtx_identical"] = shared_diffs == 0
+
+        # Compare vertical metrics (hhea + OS/2) — affects line spacing
+        line_metrics_fields = []
+        if "hhea" in ref and "hhea" in built:
+            for attr in ["ascent", "descent", "lineGap"]:
+                rv = getattr(ref["hhea"], attr, None)
+                bv = getattr(built["hhea"], attr, None)
+                if rv != bv:
+                    line_metrics_fields.append({
+                        "table": "hhea", "field": attr,
+                        "ref": rv, "built": bv,
+                    })
+
+        if "OS/2" in ref and "OS/2" in built:
+            for attr in ["sTypoAscender", "sTypoDescender", "sTypoLineGap",
+                         "usWinAscent", "usWinDescent"]:
+                rv = getattr(ref["OS/2"], attr, None)
+                bv = getattr(built["OS/2"], attr, None)
+                if rv != bv:
+                    line_metrics_fields.append({
+                        "table": "OS/2", "field": attr,
+                        "ref": rv, "built": bv,
+                    })
+
+        metrics["line_metrics_diffs"] = line_metrics_fields
+        metrics["line_metrics_identical"] = len(line_metrics_fields) == 0
+
+        # Classify reflow risk
+        # Only shared-glyph width changes cause reflow. Glyph name changes
+        # (glyphs in one font but not the other) don't affect existing text
+        # because those glyphs wouldn't be referenced by cmap.
+        if metrics["hmtx_diffs"] == 0 and metrics["line_metrics_identical"]:
+            metrics["reflow_risk"] = "none"
+        elif metrics["hmtx_diffs"] == 0 and not metrics["line_metrics_identical"]:
+            metrics["reflow_risk"] = "line-spacing-only"
+        elif metrics["hmtx_diffs"] > 0 and metrics["hmtx_max_delta"] <= 1:
+            metrics["reflow_risk"] = "minimal"
+        else:
+            metrics["reflow_risk"] = "high"
+
+        analysis["metrics"] = metrics
 
         # Glyph coordinate analysis
         ref_order = set(ref.getGlyphOrder())
