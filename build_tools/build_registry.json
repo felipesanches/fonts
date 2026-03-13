@@ -669,14 +669,14 @@
     "asap": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "asapcondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
@@ -725,112 +725,112 @@
     "atkinsonhyperlegible": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "atkinsonhyperlegiblemono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "atkinsonhyperlegiblenext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "atma": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "aubrey": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "average": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "azeretmono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "b612": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "b612mono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "babylonica": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "bacasimeantique": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "badeendisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "badscript": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "bagelfatone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "bahiana": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "bahianita": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
