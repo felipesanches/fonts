@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "families": {
+    "alata": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "source-mismatch",
+      "notes": "",
+      "overrides": {}
+    }
+  }
+}
