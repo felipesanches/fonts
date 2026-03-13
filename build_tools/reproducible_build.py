@@ -939,12 +939,12 @@ def main():
         # accumulation on virtiofs mounts.  This triggers FUSE FORGET
         # messages so virtiofsd releases file descriptors for files
         # that are no longer referenced by the guest kernel.
-        # Requires: echo 'fsanches ALL=(root) NOPASSWD: /usr/bin/tee /proc/sys/vm/drop_caches' | sudo tee /etc/sudoers.d/drop-caches
+        # Requires /usr/local/sbin/drop-caches installed with NOPASSWD sudo.
         if (i + 1) % 5 == 0:
             try:
                 subprocess.run(
-                    "echo 3 | sudo -n tee /proc/sys/vm/drop_caches",
-                    shell=True, capture_output=True, timeout=5,
+                    ["sudo", "-n", "/usr/local/sbin/drop-caches"],
+                    capture_output=True, timeout=5,
                 )
             except Exception:
                 pass  # Non-fatal if unavailable
