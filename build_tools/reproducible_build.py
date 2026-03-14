@@ -18,6 +18,7 @@ import os
 import signal
 import shutil
 import subprocess
+import time
 import sys
 import tarfile
 import tempfile
@@ -860,6 +861,7 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
                 "files": {},
                 "overall_status": "build-failure",
                 "notes": "prebuild failed",
+                "build_time_seconds": 0,
             }, indent=2) + "\n", encoding="utf-8")
             return "build-failure"
 
@@ -869,9 +871,12 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
         print(f"  No config.yaml found — cannot build")
         return "build-failure"
 
-    # Build
+    # Build (timed)
     isolation = entry.get("isolation", "shared")
+    build_start = time.monotonic()
     build_result = run_build(source_dir, config_path, family, isolation, overrides)
+    build_elapsed = time.monotonic() - build_start
+    print(f"  Build time: {build_elapsed:.1f}s")
     if build_result is None:
         # Write a minimal report so the family is cached and not retried
         report_path = WORKSPACE_DIR / family / "comparison_report.json"
@@ -883,6 +888,7 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
             "repository_url": source_info["repository_url"],
             "files": {},
             "overall_status": "build-failure",
+            "build_time_seconds": round(build_elapsed, 1),
         }, indent=2) + "\n", encoding="utf-8")
         return "build-failure"
 
@@ -984,6 +990,7 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
         "repository_url": source_info["repository_url"],
         "files": file_results,
         "overall_status": overall_status,
+        "build_time_seconds": round(build_elapsed, 1),
     }
 
     report_path.parent.mkdir(parents=True, exist_ok=True)
