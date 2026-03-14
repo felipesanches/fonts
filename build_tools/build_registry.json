@@ -5627,658 +5627,658 @@
     "notosanssylotinagri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanssymbols": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanssymbols2": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanssyriac": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "notosanssyriaceastern": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "notosanstagalog": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstagbanwa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstaile": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstaitham": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstaiviet": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstakri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstamil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "notosanstamilsupplement": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstangsa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstelugu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "notosansthaana": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosansthai": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosansthailooped": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanstifinagh": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "notosanstirhuta": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosansugaritic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosansvai": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosansvithkuqi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "notosanswancho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanswarangciti": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosansyi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notosanszanabazarsquare": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserif": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "notoserifahom": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifarmenian": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifbalinese": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifbengali": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifdevanagari": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifdivesakuru": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifdogra": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifethiopic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifgeorgian": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifgrantha": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifgujarati": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifgurmukhi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifhebrew": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifhentaigana": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifkannada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifkhitansmallscript": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifkhmer": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifkhojki": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoseriflao": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifmakasar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifmalayalam": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifolduyghur": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoseriforiya": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifottomansiyaq": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifsinhala": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoseriftamil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "notoseriftangut": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoseriftelugu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifthai": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoseriftibetan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoseriftodhri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoseriftoto": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoserifvithkuqi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "notoserifyezidi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "nototraditionalnushu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "notoznamennymusicalnotation": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "nunito": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "nunitosans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "odibeesans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "odormeanchey": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "offside": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "oi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "ojuju": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "ole": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "onest": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "ooohbaby": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "opensans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "orbit": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "orbitron": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "orienta": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "oswald": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "otomanopeeone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "outfit": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "overpass": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "overpassmono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "oxanium": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "pacifico": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "padyakkeexpandedone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "palettemosaic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "pangolin": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "paprika": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "parastoo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "parkinsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "passionsconflict": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "pathwayextreme": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "pathwaygothicone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
