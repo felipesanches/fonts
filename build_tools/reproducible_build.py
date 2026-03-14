@@ -21,6 +21,7 @@ import subprocess
 import sys
 import tarfile
 import tempfile
+import http.client
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -163,7 +164,8 @@ def download_source(owner: str, repo: str, commit: str, family: str) -> Path | N
         urllib.request.urlretrieve(tarball_url, tarball_path)
         signal.alarm(0)
         signal.signal(signal.SIGALRM, old_handler)
-    except (urllib.error.HTTPError, DownloadTimeout) as e:
+    except (urllib.error.HTTPError, urllib.error.URLError, DownloadTimeout,
+            http.client.IncompleteRead, ConnectionError, OSError) as e:
         signal.alarm(0)
         print(f"  Download failed: {e}")
         tarball_path.unlink(missing_ok=True)
