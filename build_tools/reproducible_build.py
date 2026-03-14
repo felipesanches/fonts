@@ -1032,6 +1032,8 @@ def main():
     group.add_argument("--batch", action="store_true",
                        help="Auto-discover all buildable families, add to registry, and process")
     parser.add_argument("--force", action="store_true", help="Rebuild even if output exists")
+    parser.add_argument("--retry-category", type=str, default="",
+                        help="Retry all families with this failure_category (implies --force for those families)")
     parser.add_argument("--limit", type=int, default=0,
                         help="Process at most N families (0=unlimited)")
 
@@ -1074,6 +1076,21 @@ def main():
     if not families_to_process:
         print("No families to process.")
         return
+
+    # Filter by failure category if --retry-category is specified
+    if args.retry_category:
+        cat = args.retry_category
+        families_to_process = [
+            f for f in families_to_process
+            if isinstance(registry["families"].get(f), dict)
+            and registry["families"][f].get("failure_category") == cat
+        ]
+        print(f"Filtered to {len(families_to_process)} families with failure_category='{cat}'")
+        if not families_to_process:
+            print("No families match that category.")
+            return
+        # Implies --force for these families
+        args.force = True
 
     # Skip families with existing reports unless --force
     # Policy: build artifacts in /mnt/shared/gfonts-repro-builds/ serve as a
