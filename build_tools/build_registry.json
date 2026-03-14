@@ -3562,315 +3562,315 @@
     "julee": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "jura": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "k2d": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kablammo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kadwa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kaiseidecol": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kaiseiharunoumi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kaiseiopti": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kaiseitokumin": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kalam": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kalnia": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kalniaglaze": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kameron": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kanit": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kantumruypro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kapakana": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "karantina": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "karla": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "katibeh": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kavivanar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kavoon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kdamthmorpro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "khula": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kings": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kiteone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kiwimaru": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kleeone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "knewave": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kodchasan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kodemono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "koho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kohsantepheap": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kolkerbrush": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "konkhmersleokchher": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "koulen": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kreon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "krub": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kulimpark": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kumbhsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "kurale": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "labrada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "lacquer": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "lakkireddy": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "lancelot": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "langar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
