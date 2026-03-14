@@ -3646,665 +3646,665 @@
     "kameron": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "kanit": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "kantumruypro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "kapakana": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "karantina": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "karla": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "katibeh": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "kavivanar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "kavoon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "kdamthmorpro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "khula": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "kings": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "kiteone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "kiwimaru": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "kleeone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "knewave": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "kodchasan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "kodemono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "koho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "kohsantepheap": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "kolkerbrush": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "konkhmersleokchher": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "koulen": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "kreon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "krub": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "kulimpark": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "kumbhsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "kurale": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "labrada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lacquer": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lakkireddy": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lancelot": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "langar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lateef": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lavishlyyours": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "leaguegothic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "leaguespartan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lemon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lemonada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lexend": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lexenddeca": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lexendexa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lexendgiga": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lexendmega": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lexendpeta": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lexendtera": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lexendzetta": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "librebaskerville": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "timestamp-diff",
       "notes": "",
       "overrides": {}
     },
     "librebodoni": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "librefranklin": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "licorice": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lifesavers": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lilex": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lindenhill": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "linefont": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lineseedjp": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lisubosa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "liter": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "literata": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "liujianmaocao": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "livvic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "lobster": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "londrinaoutline": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "londrinashadow": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "londrinasketch": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "londrinasolid": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "longcang": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lora": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lovelight": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "loversquarrel": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lugrasimo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "lumanosimo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lunasima": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "luxuriousroman": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "luxuriousscript": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lxgwmarkergothic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lxgwwenkaimonotc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "lxgwwenkaitc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "mada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "madimione": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "maitree": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "majormonodisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "mako": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "mali": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "mallanna": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
     "maname": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "manjari": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "metadata-stanza-wrong",
       "notes": "",
       "overrides": {}
     },
     "manrope": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "mansalva": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "manuale": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "manufacturingconsent": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "marhey": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "markazitext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "markoone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "martel": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
