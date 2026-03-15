@@ -228,11 +228,9 @@
     "abhayalibre": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -540,7 +538,8 @@
       "source_format": [
         ".glyphs"
       ],
-      "failure_category": "fontmake-error-other"
+      "failure_category": "feature-error",
+      "failure_message": "Feature syntax: Expected quote to terminate string"
     },
     "alegreyasans": {
       "enabled": true,
@@ -1004,8 +1003,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Tarball only contains build-env and docs, no source files"
+      "failure_category": "no-source-files",
+      "failure_message": "Tarball only contains build-env and docs"
     },
     "andika": {
       "enabled": true,
@@ -1399,11 +1398,9 @@
     "arsenalsc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2495,8 +2492,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "feature-error",
+      "failure_message": "Unknown glyph class @_A_1st in features.fea",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -2531,14 +2528,13 @@
     "bigshouldersdisplaysc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "Config uses ../Big-Shoulders/ paths that resolve incorrectly",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ],
-      "failure_category": "ninja-missing-source"
+      ]
     },
     "bigshouldersinline": {
       "enabled": true,
@@ -2569,11 +2565,9 @@
     "bigshouldersinlinedisplaysc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2593,11 +2587,9 @@
     "bigshouldersinlinetextsc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2632,11 +2624,9 @@
     "bigshouldersstencildisplaysc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2656,11 +2646,9 @@
     "bigshouldersstenciltextsc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2680,11 +2668,9 @@
     "bigshoulderstextsc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2730,8 +2716,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "naming-mismatch",
+      "failure_message": "Build succeeds but produces BioRhyme not BioRhymeExpanded",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -2777,8 +2763,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "interpolation-error",
+      "failure_message": "Can't multiply sequence by non-int of type float",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2886,7 +2872,8 @@
       "reproducible_build": "build-failure",
       "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
       "overrides": {},
-      "failure_category": "no-final-targets"
+      "failure_category": "download-stall",
+      "failure_message": "Large repo 128MB tarball stalls over virtiofs"
     },
     "bitcountsingle": {
       "enabled": true,
@@ -2898,7 +2885,8 @@
       "source_format": [
         ".designspace"
       ],
-      "failure_category": "no-final-targets"
+      "failure_category": "download-stall",
+      "failure_message": "Large repo 128MB tarball stalls over virtiofs"
     },
     "bitcountsingleink": {
       "enabled": true,
@@ -2906,7 +2894,8 @@
       "reproducible_build": "build-failure",
       "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
       "overrides": {},
-      "failure_category": "no-final-targets"
+      "failure_category": "download-stall",
+      "failure_message": "Large repo 128MB tarball stalls over virtiofs"
     },
     "bitter": {
       "enabled": true,
@@ -3199,8 +3188,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "ufolib-error",
+      "failure_message": "Missing value for key com.typemytype.robofont.layerData",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -3347,8 +3336,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "open-contour",
+      "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -3428,8 +3417,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "open-contour",
+      "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -3562,8 +3551,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "missing-glyph",
+      "failure_message": "Missing glyph la-deva in features.fea",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -3680,8 +3669,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "missing-glyph",
+      "failure_message": "Missing glyph zhe-cy.loclBGR.alt",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -3777,8 +3766,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "cmap-collision",
+      "failure_message": "Cannot map LtnSmAEgAlef.SngStory to U+A7BB",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -3997,11 +3986,9 @@
     "cinzeldecorative": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -4032,8 +4019,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "cmap-collision",
+      "failure_message": "Cannot map uni021A to U+021A; missing commaaccentcomb",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -4609,8 +4596,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "naming-mismatch",
+      "failure_message": "Build succeeds but produces Dhyana.ttf not Dhyana-Regular.ttf",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -5551,8 +5538,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "nanoemoji-error",
+      "failure_message": "Unsupported COLR format 5",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -5580,11 +5567,9 @@
     "fragmentmonosc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -5822,8 +5807,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "open-contour",
+      "failure_message": "Unhandled open contour in glyph bn_nya",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -6406,8 +6391,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "missing-glyph",
+      "failure_message": "LLa_.glif referenced in contents.plist but missing",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -6502,11 +6487,9 @@
     "harmattan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7682,8 +7665,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "glyphslib-bug",
+      "failure_message": "int has no attribute replace in _to_filename",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -7899,8 +7882,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
+      "failure_category": "legacy-source-format",
+      "failure_message": "Superpolator .sp3 file, no designspace",
       "config_yaml_source": "override",
       "source_format": [
         ".sp3"
@@ -8253,11 +8236,9 @@
     "lateef": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -9216,8 +9197,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "instance-ufo-naming",
+      "failure_message": "splitInterpolable bug: roman instances lost",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -10188,8 +10169,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file"
+      "failure_category": "broken-subset-ufo",
+      "failure_message": "Missing metainfo.plist in subset-files UFOs"
     },
     "notosansadlam": {
       "enabled": true,
@@ -10239,11 +10220,9 @@
     "notosansarabic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error"
+      "overrides": {}
     },
     "notosansarmenian": {
       "enabled": true,
@@ -10611,8 +10590,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file"
+      "failure_category": "procedural-source",
+      "failure_message": "Procedurally generated font, no .glyphs in repo"
     },
     "notosansegyptianhieroglyphs": {
       "enabled": true,
@@ -10925,11 +10904,10 @@
     "notosanskannada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError"
+      "build_timeout": 1800
     },
     "notosanskawi": {
       "enabled": true,
@@ -10997,8 +10975,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError"
+      "failure_category": "subset-merge-error",
+      "failure_message": "Could not find master in Noto Sans for wdth:5.0"
     },
     "notosanskhudawadi": {
       "enabled": true,
@@ -11168,11 +11146,10 @@
     "notosansmalayalam": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError"
+      "build_timeout": 1800
     },
     "notosansmandaic": {
       "enabled": true,
@@ -11237,11 +11214,9 @@
     "notosansmath": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error"
+      "overrides": {}
     },
     "notosansmayannumerals": {
       "enabled": true,
@@ -12192,11 +12167,10 @@
     "notosanstamil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError"
+      "build_timeout": 1800
     },
     "notosanstamilsupplement": {
       "enabled": true,
@@ -12231,11 +12205,10 @@
     "notosanstelugu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError"
+      "build_timeout": 1800
     },
     "notosansthaana": {
       "enabled": true,
@@ -12812,8 +12785,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file"
+      "failure_category": "broken-subset-ufo",
+      "failure_message": "Missing metainfo.plist in subset-files UFOs"
     },
     "notoseriftangut": {
       "enabled": true,
@@ -16338,11 +16311,9 @@
     "roboto": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-type-error",
-      "failure_message": "fontmake TypeError",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -16914,11 +16885,9 @@
     "ruwudu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -17080,8 +17049,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "babelfont-error",
+      "failure_message": "Instance.__init__() unexpected keyword styleName",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17090,11 +17059,9 @@
     "scheherazadenew": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -18255,8 +18222,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
+      "failure_category": "babelfont-error",
+      "failure_message": "Instance.__init__() unexpected keyword styleName",
       "config_yaml_source": "upstream",
       "source_format": [
         ".sfd"
