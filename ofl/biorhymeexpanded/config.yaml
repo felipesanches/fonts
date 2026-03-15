@@ -1,0 +1,26 @@
+sources:
+  - sources/BioRhyme.glyphs
+familyName: BioRhyme Expanded
+buildVariable: false
+buildOTF: false
+instances:
+  BioRhymeExpanded-ExtraLight.ttf:
+    coordinates:
+      wdth: 125
+      wght: 200
+  BioRhymeExpanded-Light.ttf:
+    coordinates:
+      wdth: 125
+      wght: 300
+  BioRhymeExpanded-Regular.ttf:
+    coordinates:
+      wdth: 125
+      wght: 400
+  BioRhymeExpanded-Bold.ttf:
+    coordinates:
+      wdth: 125
+      wght: 700
+  BioRhymeExpanded-ExtraBold.ttf:
+    coordinates:
+      wdth: 125
+      wght: 800

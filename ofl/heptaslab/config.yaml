@@ -1,2 +1,5 @@
 sources:
   - sources/HeptaSlab.glyphs
+buildStatic: false
+buildOTF: false
+checkCompatibility: false

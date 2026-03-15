@@ -844,15 +844,29 @@ def find_built_font(source_dir: Path, source_file: str) -> Path | None:
         if candidate.exists():
             return candidate
 
+    # Try without "-Regular" suffix (gftools-builder sometimes omits it)
+    alt_filename = None
+    if "-Regular." in filename:
+        alt_filename = filename.replace("-Regular.", ".")
+    for alt in ([alt_filename] if alt_filename else []):
+        for d in search_dirs:
+            candidate = d / alt
+            if candidate.exists():
+                return candidate
+
     # Recursive fallback — walk the tree instead of rglob to avoid
     # glob interpretation of bracket characters in filenames like
     # Font[wght,wdth].ttf
+    search_names = {filename}
+    if alt_filename:
+        search_names.add(alt_filename)
     exclude_dirs = {"references", "ref", "old"}
     for dirpath, dirnames, filenames in os.walk(source_dir):
         if any(part in exclude_dirs for part in Path(dirpath).parts):
             continue
-        if filename in filenames:
-            return Path(dirpath) / filename
+        for name in search_names:
+            if name in filenames:
+                return Path(dirpath) / name
 
     return None
 

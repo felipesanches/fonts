@@ -1,2 +1,4 @@
 sources:
   - sources/Comfortaa.glyphs
+buildStatic: false
+buildOTF: false

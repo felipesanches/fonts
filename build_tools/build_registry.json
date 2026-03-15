@@ -859,11 +859,9 @@
     "amaranth": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -927,11 +925,9 @@
     "amiriquran": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphspackage"
@@ -4593,11 +4589,9 @@
     "dhyana": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "naming-mismatch",
-      "failure_message": "Build succeeds but produces Dhyana.ttf not Dhyana-Regular.ttf",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -8191,11 +8185,9 @@
     "lakkireddy": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
