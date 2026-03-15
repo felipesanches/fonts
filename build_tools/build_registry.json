@@ -530,15 +530,17 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Deep incompatibility with current tools - needs older fontmake/ufo2ft/glyphsLib",
+      "notes": "Italic glyphs kaiSymbol/kappa.sups have different contour segment counts across masters. Unfixable without source changes. Feature quote fix applied but cu2qu still fails.",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
       ],
-      "failure_category": "tool-version-incompatibility",
-      "failure_message": "Feature syntax: Expected quote to terminate string",
-      "prebuild": []
+      "failure_category": "master-incompatibility",
+      "failure_message": "Feature syntax error (extra quote in ss05 name) + incompatible italic glyphs",
+      "prebuild": [
+        "cd sources && python3 << 'PYEOF'\nimport glob\nfor f in glob.glob('*.glyphs'):\n    data = open(f).read()\n    data = data.replace('adscript iota\\\\\"', 'adscript iota')\n    open(f, 'w').write(data)\nprint('Fixed extra quote in feature names')\nPYEOF"
+      ]
     },
     "alegreyasans": {
       "enabled": true,
@@ -2758,9 +2760,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "glyphsLib interpolation: can not multiply sequence by float. Deep tool incompatibility.",
+      "notes": "glyphsLib interpolation fails: a kern/position value is tuple instead of number. Source data issue.",
       "overrides": {},
-      "failure_category": "tool-version-incompatibility",
+      "failure_category": "source-data-corruption",
       "failure_message": "Can't multiply sequence by non-int of type float",
       "config_yaml_source": "override",
       "source_format": [
@@ -6552,7 +6554,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Duplicate master locations for smart components in Glyphs source (Locations must be unique).",
+      "notes": "19 incompatible glyphs across masters. Using checkCompatibility: false in config.",
       "overrides": {},
       "failure_category": "master-incompatibility",
       "failure_message": "Designspace instance generation failed",
@@ -7667,7 +7669,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Single instance at weight 50, needs Light+Bold instances added. Deep glyphsLib compat issue.",
+      "notes": "Broken axis mapping (both instances at user 400) + integer instance name. Prebuild fixes name but mapping conflict makes interpolation fail.",
       "overrides": {},
       "failure_category": "glyphslib-bug",
       "failure_message": "int has no attribute replace in _to_filename",
@@ -13609,10 +13611,10 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Duplicate master locations + widespread glyph compatibility errors across masters.",
+      "notes": "Duplicate master locations + smart component errors. Source-level fix required upstream.",
       "overrides": {},
       "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
+      "failure_message": "Locations must be unique + smart component model error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -13620,9 +13622,9 @@
     },
     "playfairdisplaysc": {
       "enabled": true,
-      "isolation": "shared",
+      "isolation": "custom",
       "reproducible_build": "build-failure",
-      "notes": "Same issues as playfairdisplay - shared source files.",
+      "notes": "Same source as playfairdisplay — same incompatibility issues.",
       "overrides": {},
       "failure_category": "master-incompatibility",
       "failure_message": "Master compatibility check failed",
@@ -17960,10 +17962,10 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Italic source has ExtraBold master/instance weight mapping conflict. Source-level fix needed.",
+      "notes": "Italic source has incompatible masters — instance UFO generation fails. Source fix needed upstream.",
       "overrides": {},
       "failure_category": "master-incompatibility",
-      "failure_message": "Config.yaml references nonexistent source file",
+      "failure_message": "Italic instance UFO generation fails: incompatible designspace",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"

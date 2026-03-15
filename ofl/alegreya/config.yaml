@@ -2,3 +2,4 @@ buildVariable: true
 sources:
   - sources/Alegreya.glyphs
   - sources/Alegreya_Italic.glyphs
+checkCompatibility: false

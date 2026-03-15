@@ -411,6 +411,9 @@ def run_build(source_dir: Path, config_path: Path, family: str,
             subprocess.run([venv_python, "-m", "venv", str(venv_dir)], check=True)
             pip = str(venv_dir / "bin" / "pip")
             subprocess.run([pip, "install", "--upgrade", "pip"], check=True)
+            # Install gftools first (provides gftools-builder entry point),
+            # then override specific deps with pinned versions
+            subprocess.run([pip, "install", "gftools"], check=True)
             subprocess.run([pip, "install"] + overrides["requirements"], check=True)
         builder_cmd = str(venv_dir / "bin" / "gftools-builder")
     else:
