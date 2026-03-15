@@ -1,4 +1,4 @@
 sources:
-  - sources/glyphs/Abhaya-Masters.glyphs
+  - sources/AbhayaLibre.glyphs
 buildStatic: true
 buildVariable: false

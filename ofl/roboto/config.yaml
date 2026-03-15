@@ -2,4 +2,5 @@ sources:
   - sources/Roboto.designspace
 familyName: Roboto
 buildVariable: true
+buildStatic: false
 buildOTF: false

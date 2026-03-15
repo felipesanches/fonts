@@ -1,5 +1,6 @@
 sources:
-  - source/lateef-edit.designspace
+  - source/lateef.designspace
 familyName: Lateef
 buildStatic: true
+buildVariable: false
 buildOTF: false

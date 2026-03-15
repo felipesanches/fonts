@@ -1,3 +1,4 @@
 buildVariable: false
 sources:
   - LakkiReddy.ufo
+removeOutlineOverlaps: false
