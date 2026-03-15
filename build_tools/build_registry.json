@@ -2712,7 +2712,7 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "naming-mismatch",
+      "failure_category": "output-filename-mismatch",
       "failure_message": "Build succeeds but produces BioRhyme not BioRhymeExpanded",
       "config_yaml_source": "upstream",
       "source_format": [
@@ -4052,7 +4052,7 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
+      "failure_category": "axis-mismatch",
       "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
@@ -4118,7 +4118,7 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
+      "failure_category": "legacy-source-format",
       "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
@@ -5855,7 +5855,7 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
+      "failure_category": "no-instances-defined",
       "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
@@ -6544,7 +6544,7 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
+      "failure_category": "master-incompatibility",
       "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
@@ -10967,7 +10967,7 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "subset-merge-error",
+      "failure_category": "single-master-static",
       "failure_message": "Could not find master in Noto Sans for wdth:5.0"
     },
     "notosanskhudawadi": {
@@ -18158,7 +18158,7 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
+      "failure_category": "custom-build-pipeline",
       "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
