@@ -1128,14 +1128,19 @@ def process_family(family: str, registry: dict, force: bool = False,
             print(f"  No config.yaml found — cannot build")
             return "build-failure"
 
-        # Build (timed)
-        isolation = entry.get("isolation", "shared")
-        build_timeout = entry.get("build_timeout", 600)
-        build_start = time.monotonic()
-        build_result = run_build(source_dir, config_path, family, isolation, overrides,
-                                 build_timeout=build_timeout)
-        build_elapsed = time.monotonic() - build_start
-        print(f"  Build time: {build_elapsed:.1f}s")
+        # Build (timed) — or skip if upstream ships pre-built fonts
+        if entry.get("skip_build"):
+            print(f"  Skipping build (skip_build=true) — using pre-built fonts from source tree")
+            build_result = source_dir
+            build_elapsed = 0.0
+        else:
+            isolation = entry.get("isolation", "shared")
+            build_timeout = entry.get("build_timeout", 600)
+            build_start = time.monotonic()
+            build_result = run_build(source_dir, config_path, family, isolation, overrides,
+                                     build_timeout=build_timeout)
+            build_elapsed = time.monotonic() - build_start
+            print(f"  Build time: {build_elapsed:.1f}s")
     if build_result is None:
         # Write a minimal report so the family is cached and not retried
         report_path = WORKSPACE_DIR / family / "comparison_report.json"

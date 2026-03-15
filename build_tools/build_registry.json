@@ -160,7 +160,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -2871,8 +2871,8 @@
     "bitcountpropsingleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "untested",
-      "notes": "Prebuild: patch designspace rules processing from last to first",
+      "reproducible_build": "name-table",
+      "notes": "Upstream repo ships pre-built variable fonts; gftools-builder cannot build from template designspace",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
@@ -2881,13 +2881,14 @@
       "prebuild": [
         "sed -i 's/processing=\"last\"/processing=\"first\"/g' sources/Bitcount_Template.designspace"
       ],
-      "build_timeout": 3600
+      "build_timeout": 3600,
+      "skip_build": true
     },
     "bitcountsingle": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Prebuild: patch designspace rules processing from last to first",
+      "reproducible_build": "yes",
+      "notes": "Upstream repo ships pre-built variable fonts; gftools-builder cannot build from template designspace",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
@@ -2896,13 +2897,14 @@
       "prebuild": [
         "sed -i 's/processing=\"last\"/processing=\"first\"/g' sources/Bitcount_Template.designspace"
       ],
-      "build_timeout": 3600
+      "build_timeout": 3600,
+      "skip_build": true
     },
     "bitcountsingleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "untested",
-      "notes": "Prebuild: patch designspace rules processing from last to first",
+      "reproducible_build": "name-table",
+      "notes": "Upstream repo ships pre-built variable fonts; gftools-builder cannot build from template designspace",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
@@ -2911,7 +2913,8 @@
       "prebuild": [
         "sed -i 's/processing=\"last\"/processing=\"first\"/g' sources/Bitcount_Template.designspace"
       ],
-      "build_timeout": 3600
+      "build_timeout": 3600,
+      "skip_build": true
     },
     "bitter": {
       "enabled": true,
@@ -10615,10 +10618,10 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "legacy-no-modern-source",
-      "notes": "Procedurally generated font \u2014 sources are Python scripts, not .glyphs/.ufo. Fonts shipped from release archive (archive_url). No standard build pipeline possible.",
+      "notes": "Procedurally generated font — sources are Python scripts, not .glyphs/.ufo. Fonts shipped from release archive (archive_url). No standard build pipeline possible.",
       "overrides": {},
       "failure_category": "procedural-generation",
-      "failure_message": "No .glyphs/.ufo sources in repo \u2014 font is procedurally generated"
+      "failure_message": "No .glyphs/.ufo sources in repo — font is procedurally generated"
     },
     "notosansegyptianhieroglyphs": {
       "enabled": true,
@@ -13649,7 +13652,7 @@
       "enabled": true,
       "isolation": "custom",
       "reproducible_build": "build-failure",
-      "notes": "Same source as playfairdisplay \u2014 same incompatibility issues.",
+      "notes": "Same source as playfairdisplay — same incompatibility issues.",
       "overrides": {},
       "failure_category": "master-incompatibility",
       "failure_message": "Master compatibility check failed",
