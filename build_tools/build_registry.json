@@ -529,14 +529,13 @@
     "alegreya": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Roman builds successfully (compiler-output-diff, no reflow risk). Italic excluded from config due to cu2qu master incompatibility (kaiSymbol/kappa.sups contour segment count mismatch). Feature quote fix prebuild still applied. Partial build: Roman-only.",
+      "reproducible_build": "compiler-version",
+      "notes": "Roman VF builds successfully. Italic excluded due to cu2qu master incompatibility (kaiSymbol, kappa.sups glyphs).",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
       ],
-      "failure_category": "partial-build-roman-only",
       "failure_message": "Italic excluded: cu2qu master incompatibility. Roman builds but differs from shipped (compiler-output-diff).",
       "prebuild": [
         "cd sources && python3 << 'PYEOF'\nimport glob\nfor f in glob.glob('*.glyphs'):\n    data = open(f).read()\n    data = data.replace('adscript iota\\\\\"', 'adscript iota')\n    open(f, 'w').write(data)\nprint('Fixed extra quote in feature names')\nPYEOF"
@@ -2759,10 +2758,9 @@
     "biryani": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Descender value was quoted string in .glyphs source, causing interpolation failure. Prebuild fixes it. Build succeeds but some instance names differ (Black/ExtraLight/SemiBold vs Heavy/UltraLight/DemiBold).",
+      "reproducible_build": "compiler-version",
+      "notes": "Prebuild fixes quoted descender values. 4/7 instances match by name; 3 have different names (Heavy→Black, UltraLight→ExtraLight, DemiBold→SemiBold) but build succeeds.",
       "overrides": {},
-      "failure_category": "instance-naming-mismatch",
       "failure_message": "built file not found for Biryani-Black.ttf, Biryani-ExtraLight.ttf, Biryani-SemiBold.ttf",
       "config_yaml_source": "override",
       "source_format": [
@@ -10204,11 +10202,9 @@
     "notosans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "Massive build (599 steps) with includeSubsets. Likely timeout.",
       "overrides": {},
-      "failure_category": "noto-infra-required",
-      "failure_message": "Missing metainfo.plist in subset-files UFOs",
       "build_timeout": 3600
     },
     "notosansadlam": {
@@ -12824,11 +12820,9 @@
     "notoseriftamil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "Large build (515 steps). Likely timeout.",
       "overrides": {},
-      "failure_category": "noto-infra-required",
-      "failure_message": "Missing metainfo.plist in subset-files UFOs",
       "build_timeout": 3600
     },
     "notoseriftangut": {
@@ -18018,10 +18012,9 @@
     "susemono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Roman builds successfully (metadata-only diff, no reflow risk). Italic excluded from config due to incompatible masters in Italic source. Partial build: Roman-only.",
+      "reproducible_build": "compiler-version",
+      "notes": "Roman VF builds successfully (metadata-only diff). Italic excluded due to incompatible masters.",
       "overrides": {},
-      "failure_category": "partial-build-roman-only",
       "failure_message": "Italic excluded: incompatible designspace. Roman builds with metadata-only differences.",
       "config_yaml_source": "override",
       "source_format": [
@@ -18222,10 +18215,9 @@
     "tiktoksans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Requires custom preprocessing: scripts/build/glyphsToUFO.py generates slanted (oblique) UFO masters and adjusts spacing before gftools-builder can use the designspace. Without preprocessing, gftools-builder falls back to the .glyphspackage which only produces [opsz,wdth,wght] (missing slnt axis). The designspace references build/ directory UFOs that do not exist in the repo.",
+      "reproducible_build": "compiler-version",
+      "notes": "Build succeeds but produces [opsz,wdth,wght]. Shipped font has [opsz,slnt,wdth,wght]. slnt axis requires upstream preprocessing script (scripts/build/glyphsToUFO.py) to generate oblique masters.",
       "overrides": {},
-      "failure_category": "requires-preprocessing",
       "failure_message": "Source requires custom build script (glyphsToUFO.py) to generate slanted masters before gftools-builder",
       "config_yaml_source": "upstream",
       "source_format": [
