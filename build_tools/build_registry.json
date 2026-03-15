@@ -6583,11 +6583,20 @@
     "heptaslab": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "19 incompatible glyphs across masters. Using checkCompatibility: false in config.",
+      "reproducible_build": "compiler-version",
+      "notes": "HeptaSlab has 4 masters with bracket layers. 19 glyphs have incompatible contour structures between light/heavy masters. Prebuild replaces base glyphs with compatible bracket alternates.",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Designspace instance generation failed",
+      "prebuild": [
+        "python3 /mnt/shared/google/fonts/build_tools/prebuilds/heptaslab_prebuild.py"
+      ],
+      "build_environment": {
+        "fontmake": "3.11.1",
+        "fonttools": "4.61.1",
+        "glyphsLib": "6.12.7",
+        "gftools": "0.9.100.dev4",
+        "ufo2ft": "3.7.0",
+        "ttfautohint-py": "0.6.0"
+      },
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -13638,11 +13647,21 @@
     "playfairdisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Duplicate master locations + smart component errors. Source-level fix required upstream.",
+      "reproducible_build": "pending",
+      "notes": "Prebuild: remove duplicate smart component layers and add missing axis mappings. Upstream repo clauseggers/Playfair, shared with playfairdisplaysc.",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Locations must be unique + smart component model error",
+      "prebuild": [
+        "python3 /mnt/shared/google/fonts/build_tools/prebuilds/playfair_prebuild.py"
+      ],
+      "build_timeout": 1800,
+      "build_environment": {
+        "fontmake": "3.11.1",
+        "fonttools": "4.61.1",
+        "glyphsLib": "6.12.7",
+        "gftools": "0.9.100.dev4",
+        "ufo2ft": "3.7.0",
+        "ttfautohint-py": "0.6.0"
+      },
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -13650,12 +13669,22 @@
     },
     "playfairdisplaysc": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Same source as playfairdisplay — same incompatibility issues.",
+      "notes": "Same upstream source as playfairdisplay (clauseggers/Playfair). Build fails due to multiple source issues: duplicate smart component layers, missing 'Thinning' axis in smart component mapping, duplicate brace layer locations.",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
+      "prebuild": [
+        "python3 /mnt/shared/google/fonts/build_tools/prebuilds/playfair_prebuild.py"
+      ],
+      "build_timeout": 1800,
+      "build_environment": {
+        "fontmake": "3.11.1",
+        "fonttools": "4.61.1",
+        "glyphsLib": "6.12.7",
+        "gftools": "0.9.100.dev4",
+        "ufo2ft": "3.7.0",
+        "ttfautohint-py": "0.6.0"
+      },
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"

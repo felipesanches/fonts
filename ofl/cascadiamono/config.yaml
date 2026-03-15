@@ -1,4 +1,5 @@
 buildVariable: true
+buildStatic: false
 sources:
-  - sources/CascadiaCode_variable.designspace
-  - sources/CascadiaCode_variable_italic.designspace
+  - sources/CascadiaMono.designspace
+  - sources/CascadiaMono-Italic.designspace

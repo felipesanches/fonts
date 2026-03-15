@@ -1,5 +1,5 @@
 sources:
-  - sources/HeptaSlab.glyphs
+  - sources/master_ufo/HeptaSlab.designspace
 buildStatic: false
 buildOTF: false
 checkCompatibility: false
