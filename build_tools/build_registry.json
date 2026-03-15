@@ -534,21 +534,20 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "AddExtremes filter not available in current ufo2ft",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "failure_category": "fontmake-error-other"
     },
     "alegreyasans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -557,11 +556,9 @@
     "alegreyasanssc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -876,11 +873,9 @@
     "amarna": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -1264,11 +1259,9 @@
     "anybody": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -1496,11 +1489,9 @@
     "asimovian": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -2255,11 +2246,9 @@
     "belanosima": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -2539,11 +2528,9 @@
     "bigshouldersdisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2553,12 +2540,13 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Config uses ../Big-Shoulders/ paths that resolve incorrectly",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "failure_category": "ninja-missing-source"
     },
     "bigshouldersinline": {
       "enabled": true,
@@ -2578,11 +2566,9 @@
     "bigshouldersinlinedisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2604,11 +2590,9 @@
     "bigshouldersinlinetext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2645,11 +2629,9 @@
     "bigshouldersstencildisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2671,11 +2653,9 @@
     "bigshouldersstenciltext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2697,11 +2677,9 @@
     "bigshoulderstext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2817,21 +2795,17 @@
     "bitcount": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream"
     },
     "bitcountgriddouble": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2840,11 +2814,9 @@
     "bitcountgriddoubleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2853,11 +2825,9 @@
     "bitcountgridsingle": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2866,11 +2836,9 @@
     "bitcountgridsingleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2879,11 +2847,9 @@
     "bitcountink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2892,11 +2858,9 @@
     "bitcountpropdouble": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2905,11 +2869,9 @@
     "bitcountpropdoubleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2918,11 +2880,9 @@
     "bitcountpropsingle": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -2932,26 +2892,29 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
-      "overrides": {}
+      "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
+      "overrides": {},
+      "failure_category": "no-final-targets"
     },
     "bitcountsingle": {
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
-      ]
+      ],
+      "failure_category": "no-final-targets"
     },
     "bitcountsingleink": {
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
-      "overrides": {}
+      "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
+      "overrides": {},
+      "failure_category": "no-final-targets"
     },
     "bitter": {
       "enabled": true,
@@ -3008,8 +2971,8 @@
     "bizudpmincho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "yes",
+      "notes": "No source directory found",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
@@ -3328,20 +3291,16 @@
     "brunoace": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined"
+      "overrides": {}
     },
     "brunoacesc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "no-final-targets",
-      "failure_message": "No final build targets determined"
+      "overrides": {}
     },
     "brygada1918": {
       "enabled": true,
@@ -3530,11 +3489,9 @@
     "cactusclassicalserif": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".ufo"
@@ -3990,11 +3947,9 @@
     "chocolateclassicalsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-missing-source",
-      "failure_message": "ninja: source file missing (likely sibling repo reference)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".ufo"
@@ -4601,11 +4556,9 @@
     "delagothicone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -4813,11 +4766,9 @@
     "dongle": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "override",
       "source_format": [
         ".zip"
@@ -6296,11 +6247,9 @@
     "gowunbatang": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "override",
       "source_format": [
         ".zip"
@@ -6320,11 +6269,9 @@
     "graduate": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -6346,11 +6293,9 @@
     "grandstander": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "config_yaml path Sources/config.yaml does not exist; repo predates gftools-builder conventions"
+      "overrides": {}
     },
     "grapenuts": {
       "enabled": true,
@@ -6666,11 +6611,9 @@
     "hinamincho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -7187,11 +7130,9 @@
     "intelonemono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -8992,11 +8933,9 @@
     "lxgwmarkergothic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".ufo"
@@ -10043,11 +9982,9 @@
     "museomoderno": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -10056,11 +9993,9 @@
     "mynerve": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -10102,11 +10037,9 @@
     "nerkoone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "legacy-source-format",
-      "failure_message": "SFD/VFB source format not fully supported",
       "config_yaml_source": "override",
       "source_format": [
         ".sfd"
@@ -13352,11 +13285,9 @@
     "overpass": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -13365,11 +13296,9 @@
     "overpassmono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -17484,11 +17413,9 @@
     "sigmar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -17516,11 +17443,9 @@
     "signikanegative": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -17769,11 +17694,9 @@
     "sono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -18269,11 +18192,9 @@
     "tektur": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -18340,11 +18261,9 @@
     "tiltneon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -18372,11 +18291,9 @@
     "tiltwarp": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-type-error",
-      "failure_message": "fontmake TypeError",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -18736,11 +18653,9 @@
     "uoqmunthenkhung": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".ufo"
@@ -18805,11 +18720,9 @@
     "vazirmatn": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -19010,11 +18923,9 @@
     "wavefont": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
