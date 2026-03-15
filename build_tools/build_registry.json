@@ -13647,8 +13647,8 @@
     "playfairdisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "pending",
-      "notes": "Prebuild: remove duplicate smart component layers and add missing axis mappings. Upstream repo clauseggers/Playfair, shared with playfairdisplaysc.",
+      "reproducible_build": "build-failure",
+      "notes": "Prebuild fixes: (1) remove duplicate smart component layers with timestamp suffixes, (2) add missing smart component axis mappings to partSelection blocks, (3) fix wrong pole values causing duplicate locations. After prebuild, build still fails with glyph compatibility errors: ~50 glyphs have differing contour/component counts across optical size masters (bhook, bstroke, q, u, many Cyrillic glyphs). Both Roman and Italic affected. Source at commit 80a3341 requires Glyphs 3 smart component resolution that fontmake/glyphsLib cannot reproduce.",
       "overrides": {},
       "prebuild": [
         "python3 /mnt/shared/google/fonts/build_tools/prebuilds/playfair_prebuild.py"
@@ -13671,7 +13671,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Same upstream source as playfairdisplay (clauseggers/Playfair). Build fails due to multiple source issues: duplicate smart component layers, missing 'Thinning' axis in smart component mapping, duplicate brace layer locations.",
+      "notes": "Same upstream source as playfairdisplay (clauseggers/Playfair). Same build failures apply. See playfairdisplay notes.",
       "overrides": {},
       "prebuild": [
         "python3 /mnt/shared/google/fonts/build_tools/prebuilds/playfair_prebuild.py"
