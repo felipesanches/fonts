@@ -164,7 +164,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -5056,8 +5056,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "hb-subset-missing",
-      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -5076,8 +5074,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "hb-subset-missing",
-      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -5096,8 +5092,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "hb-subset-missing",
-      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -5116,8 +5110,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "hb-subset-missing",
-      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -5133,11 +5125,9 @@
     "eduauvicwantpre": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "hb-subset-missing",
-      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -14168,8 +14158,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14188,8 +14176,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14208,8 +14194,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14228,8 +14212,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14248,8 +14230,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14268,8 +14248,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14288,8 +14266,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14308,8 +14284,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14328,8 +14302,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14348,8 +14320,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14368,8 +14338,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14388,8 +14356,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14408,8 +14374,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14428,8 +14392,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14448,8 +14410,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14468,8 +14428,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14488,8 +14446,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14508,8 +14464,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14528,8 +14482,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14548,8 +14500,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14568,8 +14518,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14588,8 +14536,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14608,8 +14554,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14628,8 +14572,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14648,8 +14590,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14668,8 +14608,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14688,8 +14626,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14708,8 +14644,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14728,8 +14662,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14748,8 +14680,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14768,8 +14698,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14788,8 +14716,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14808,8 +14734,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14828,8 +14752,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14848,8 +14770,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14868,8 +14788,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14888,8 +14806,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14908,8 +14824,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14928,8 +14842,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14948,8 +14860,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14968,8 +14878,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -14988,8 +14896,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15008,8 +14914,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15028,8 +14932,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15048,8 +14950,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15068,8 +14968,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15088,8 +14986,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15108,8 +15004,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15128,8 +15022,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15148,8 +15040,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15168,8 +15058,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15188,8 +15076,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15208,8 +15094,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15228,8 +15112,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15248,8 +15130,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15268,8 +15148,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15288,8 +15166,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15308,8 +15184,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15328,8 +15202,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15348,8 +15220,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15368,8 +15238,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15388,8 +15256,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15408,8 +15274,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15428,8 +15292,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15448,8 +15310,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15468,8 +15328,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15488,8 +15346,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15508,8 +15364,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15528,8 +15382,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15548,8 +15400,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15568,8 +15418,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15588,8 +15436,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15608,8 +15454,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15628,8 +15472,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15648,8 +15490,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15668,8 +15508,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15688,8 +15526,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15708,8 +15544,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15728,8 +15562,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15748,8 +15580,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15768,8 +15598,6 @@
       "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15788,8 +15616,6 @@
       "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15808,8 +15634,6 @@
       "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15828,8 +15652,6 @@
       "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15848,8 +15670,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15868,8 +15688,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15888,8 +15706,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15908,8 +15724,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15928,8 +15742,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15948,8 +15760,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15968,8 +15778,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -15988,8 +15796,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16008,8 +15814,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16028,8 +15832,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16048,8 +15850,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16068,8 +15868,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16088,8 +15886,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16108,8 +15904,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16128,8 +15922,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16148,8 +15940,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16168,8 +15958,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16188,8 +15976,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16208,8 +15994,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [
@@ -16228,8 +16012,6 @@
       "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": "glyphspackage",
       "requires": [

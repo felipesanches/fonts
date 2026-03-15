@@ -1215,6 +1215,10 @@ def main():
                 "overrides": {},
             }
         registry["families"][family]["reproducible_build"] = status
+        # Clear failure fields when build succeeds
+        if status and status != "build-failure":
+            registry["families"][family].pop("failure_category", None)
+            registry["families"][family].pop("failure_message", None)
         save_registry(registry)
 
         # Drop VFS caches every 5 families to prevent virtiofsd FD
