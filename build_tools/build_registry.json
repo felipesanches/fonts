@@ -530,14 +530,14 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Italic glyphs kaiSymbol/kappa.sups have different contour segment counts across masters. Unfixable without source changes. Feature quote fix applied but cu2qu still fails.",
+      "notes": "Roman builds successfully (compiler-output-diff, no reflow risk). Italic excluded from config due to cu2qu master incompatibility (kaiSymbol/kappa.sups contour segment count mismatch). Feature quote fix prebuild still applied. Partial build: Roman-only.",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
       ],
-      "failure_category": "master-incompatibility",
-      "failure_message": "Feature syntax error (extra quote in ss05 name) + incompatible italic glyphs",
+      "failure_category": "partial-build-roman-only",
+      "failure_message": "Italic excluded: cu2qu master incompatibility. Roman builds but differs from shipped (compiler-output-diff).",
       "prebuild": [
         "cd sources && python3 << 'PYEOF'\nimport glob\nfor f in glob.glob('*.glyphs'):\n    data = open(f).read()\n    data = data.replace('adscript iota\\\\\"', 'adscript iota')\n    open(f, 'w').write(data)\nprint('Fixed extra quote in feature names')\nPYEOF"
       ]
@@ -2868,33 +2868,47 @@
     "bitcountpropsingleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Template designspace has 0 sources/instances. Requires custom Bitcount build pipeline not supported by gftools-builder.",
-      "overrides": {},
-      "failure_category": "custom-build-pipeline",
-      "failure_message": "Large repo 128MB tarball stalls over virtiofs"
-    },
-    "bitcountsingle": {
-      "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Template designspace has 0 sources/instances. Requires custom Bitcount build pipeline not supported by gftools-builder.",
+      "reproducible_build": "untested",
+      "notes": "Prebuild: patch designspace rules processing from last to first",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
       ],
-      "failure_category": "custom-build-pipeline",
-      "failure_message": "Large repo 128MB tarball stalls over virtiofs"
+      "prebuild": [
+        "sed -i 's/processing=\"last\"/processing=\"first\"/g' sources/Bitcount_Template.designspace"
+      ],
+      "build_timeout": 3600
+    },
+    "bitcountsingle": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "untested",
+      "notes": "Prebuild: patch designspace rules processing from last to first",
+      "overrides": {},
+      "config_yaml_source": "override",
+      "source_format": [
+        ".designspace"
+      ],
+      "prebuild": [
+        "sed -i 's/processing=\"last\"/processing=\"first\"/g' sources/Bitcount_Template.designspace"
+      ],
+      "build_timeout": 3600
     },
     "bitcountsingleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Template designspace has 0 sources/instances. Requires custom Bitcount build pipeline not supported by gftools-builder.",
+      "reproducible_build": "untested",
+      "notes": "Prebuild: patch designspace rules processing from last to first",
       "overrides": {},
-      "failure_category": "custom-build-pipeline",
-      "failure_message": "Large repo 128MB tarball stalls over virtiofs"
+      "config_yaml_source": "override",
+      "source_format": [
+        ".designspace"
+      ],
+      "prebuild": [
+        "sed -i 's/processing=\"last\"/processing=\"first\"/g' sources/Bitcount_Template.designspace"
+      ],
+      "build_timeout": 3600
     },
     "bitter": {
       "enabled": true,
@@ -7668,18 +7682,16 @@
     "kalam": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Broken axis mapping (both instances at user 400) + integer instance name. Prebuild fixes name but mapping conflict makes interpolation fail.",
       "overrides": {},
-      "failure_category": "glyphslib-bug",
-      "failure_message": "int has no attribute replace in _to_filename",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
       ],
+      "notes": "Prebuild: fix instances (integer name, broken axis mapping) and add proper Light/Regular/Bold with correct weight mapping",
       "prebuild": [
-        "python3 << 'PYEOF'\nimport glob\nfrom glyphsLib import GSFont\n\nfor f in glob.glob('*.glyphs') + glob.glob('sources/*.glyphs') + glob.glob('masters/*.glyphs'):\n    font = GSFont(f)\n    \n    # Remove degenerate wdth axis\n    wdth_idx = None\n    for i, axis in enumerate(font.axes):\n        if axis.axisTag == 'wdth':\n            wdth_idx = i\n            break\n    if wdth_idx is not None:\n        del font.axes[wdth_idx]\n        for master in font.masters:\n            master.axes = list(master.axes[:wdth_idx]) + list(master.axes[wdth_idx+1:])\n        for inst in font.instances:\n            inst.axes = list(inst.axes[:wdth_idx]) + list(inst.axes[wdth_idx+1:])\n        print(f'Removed degenerate wdth axis from {f}')\n    \n    # Fix integer instance name\n    for inst in font.instances:\n        if isinstance(inst.name, int):\n            inst.name = 'Regular'\n            print(f'Fixed integer instance name')\n    \n    font.save(f)\n    print(f'Saved {f}')\nPYEOF"
-      ]
+        "python3 << 'PYEOF2'\nfrom glyphsLib import GSFont, GSInstance, GSCustomParameter\n\nfont = GSFont('masters/Kalam.glyphs')\n\n# Remove degenerate wdth axis (both masters have same width value)\nwdth_idx = None\nfor i, axis in enumerate(font.axes):\n    if axis.axisTag == 'wdth':\n        wdth_idx = i\n        break\nif wdth_idx is not None:\n    del font.axes[wdth_idx]\n    for master in font.masters:\n        master.axes = list(master.axes[:wdth_idx]) + list(master.axes[wdth_idx+1:])\n    print('Removed degenerate wdth axis')\n\n# Replace instances with proper Light/Regular/Bold\n# Masters: Light=0, Bold=100 in design space\nfont.instances = []\nfor name, design_weight in [('Kalam Light', 0), ('Kalam Regular', 50), ('Kalam Bold', 100)]:\n    inst = GSInstance()\n    inst.name = name\n    inst.axes = [design_weight]\n    font.instances.append(inst)\n\n# Add axis mapping: design -> user coords\n# 0->300 (Light), 50->400 (Regular), 100->700 (Bold)\nfont.customParameters.append(GSCustomParameter('Axis Mappings', {\n    'wght': {'0': 300, '50': 400, '100': 700}\n}))\n\nfont.save('masters/Kalam.glyphs')\nprint('Patched Kalam.glyphs: fixed instances and axis mapping')\nPYEOF2"
+      ],
+      "reproducible_build": "build-failure"
     },
     "kalnia": {
       "enabled": true,
@@ -17962,11 +17974,11 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Italic source has incompatible masters — instance UFO generation fails. Source fix needed upstream.",
+      "notes": "Roman builds successfully (metadata-only diff, no reflow risk). Italic excluded from config due to incompatible masters in Italic source. Partial build: Roman-only.",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Italic instance UFO generation fails: incompatible designspace",
-      "config_yaml_source": "upstream",
+      "failure_category": "partial-build-roman-only",
+      "failure_message": "Italic excluded: incompatible designspace. Roman builds with metadata-only differences.",
+      "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
       ]

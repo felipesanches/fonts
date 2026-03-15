@@ -875,6 +875,37 @@ def find_built_font(source_dir: Path, source_file: str) -> Path | None:
             if name in filenames:
                 return Path(dirpath) / name
 
+    # Axis-bracket fallback: gftools-builder may produce a filename with
+    # different axis tags than expected (e.g. Font[wdth,wght].ttf when we
+    # look for Font[wght].ttf) because the source defines axes that end up
+    # with no variation in the output.  Match by family-name prefix and
+    # suffix, preferring files in standard output dirs.
+    import re
+    bracket_match = re.match(r'^(.+?)(?:-([A-Za-z]+))?\[.*\](\.ttf|\.otf)$', filename)
+    if bracket_match:
+        prefix = bracket_match.group(1)          # e.g. "Alegreya"
+        style = bracket_match.group(2) or ""     # e.g. "Italic" or ""
+        ext = bracket_match.group(3)             # e.g. ".ttf"
+        bracket_pattern = re.compile(
+            re.escape(prefix)
+            + (re.escape(f'-{style}') if style else '')
+            + r'\[.*\]'
+            + re.escape(ext)
+            + '$'
+        )
+        # Search standard dirs first, then walk
+        for d in search_dirs:
+            if d.is_dir():
+                for f in sorted(d.iterdir()):
+                    if bracket_pattern.match(f.name):
+                        return f
+        for dirpath, dirnames, filenames_list in os.walk(source_dir):
+            if any(part in exclude_dirs for part in Path(dirpath).parts):
+                continue
+            for f in sorted(filenames_list):
+                if bracket_pattern.match(f):
+                    return Path(dirpath) / f
+
     return None
 
 
@@ -1033,7 +1064,42 @@ def process_family(family: str, registry: dict, force: bool = False,
             cache_dir = UPSTREAM_CACHE / owner / repo
             if cache_dir.exists():
                 print(f"  Found cached repo at {cache_dir}")
-            return "metadata-stanza-wrong"
+                # Create source dir from cached repo using git archive
+                family_ws = WORKSPACE_DIR / family
+                family_ws.mkdir(parents=True, exist_ok=True)
+                source_parent = family_ws / "source"
+                source_parent.mkdir(parents=True, exist_ok=True)
+                target_dir = source_parent / f"{repo}-{commit}"
+                if not target_dir.exists():
+                    target_dir.mkdir(parents=True, exist_ok=True)
+                    try:
+                        # First fetch to make sure we have the commit
+                        subprocess.run(
+                            ["git", "fetch", "origin"],
+                            cwd=str(cache_dir), capture_output=True, timeout=120
+                        )
+                        result = subprocess.run(
+                            ["git", "archive", "--format=tar", commit],
+                            cwd=str(cache_dir),
+                            capture_output=True,
+                            timeout=120,
+                        )
+                        if result.returncode == 0:
+                            subprocess.run(
+                                ["tar", "xf", "-"],
+                                input=result.stdout,
+                                cwd=str(target_dir),
+                                capture_output=True,
+                                timeout=120,
+                            )
+                            print(f"  Extracted source from cache to {target_dir}")
+                            source_dir = target_dir
+                        else:
+                            print(f"  git archive failed: {result.stderr.decode()[:500]}")
+                    except (subprocess.TimeoutExpired, OSError) as e:
+                        print(f"  Cache extraction failed: {e}")
+            if source_dir is None:
+                return "metadata-stanza-wrong"
 
         print(f"  Source dir: {source_dir}")
 
