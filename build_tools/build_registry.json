@@ -3412,18 +3412,17 @@
     "briemhand": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
       ],
       "requires": [
         "fontprimer"
-      ]
+      ],
+      "build_environment": "gftools 0.9.78 + fontprimer 0.2.2 + babelfont 3.1.3"
     },
     "brunoace": {
       "enabled": true,
@@ -5054,66 +5053,82 @@
     "eduauvicwantarrows": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
+      "failure_category": "hb-subset-missing",
+      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
       ],
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pyftfeatfreeze",
+        "hb-subset"
+      ],
+      "build_timeout": 900,
+      "monorepo_group": "eduauvicwant"
     },
     "eduauvicwantdots": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
+      "failure_category": "hb-subset-missing",
+      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
       ],
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pyftfeatfreeze",
+        "hb-subset"
+      ],
+      "build_timeout": 900,
+      "monorepo_group": "eduauvicwant"
     },
     "eduauvicwantguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
+      "failure_category": "hb-subset-missing",
+      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
       ],
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pyftfeatfreeze",
+        "hb-subset"
+      ],
+      "build_timeout": 900,
+      "monorepo_group": "eduauvicwant"
     },
     "eduauvicwanthand": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
+      "failure_category": "hb-subset-missing",
+      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
       ],
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pyftfeatfreeze",
+        "hb-subset"
+      ],
+      "build_timeout": 900,
+      "monorepo_group": "eduauvicwant"
     },
     "eduauvicwantpre": {
       "enabled": true,
@@ -5121,15 +5136,19 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontprimer-missing",
-      "failure_message": "No module named 'fontprimer'",
+      "failure_category": "hb-subset-missing",
+      "failure_message": "hb-subset binary not found (harfbuzz CLI tools not installed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
       ],
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pyftfeatfreeze",
+        "hb-subset"
+      ],
+      "build_timeout": 900,
+      "monorepo_group": "eduauvicwant"
     },
     "edunswactfoundation": {
       "enabled": true,
@@ -14146,1666 +14165,2082 @@
     "playwritear": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritearguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteat": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteatguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteaunsw": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteaunswguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteauqld": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteauqldguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteausa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteausaguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteautas": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteautasguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteauvic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteauvicguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritebevlg": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritebevlgguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritebewal": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritebewalguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritebr": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritebrguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteca": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritecaguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritecl": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteclguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteco": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritecoguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritecu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritecuguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritecz": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteczguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedegrund": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedegrundguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedela": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedelaguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedesas": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedesasguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedeva": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedevaguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedkloopet": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedkloopetguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedkuloopet": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritedkuloopetguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritees": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteesdeco": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteesdecoguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteesguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritefrmoderne": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritefrmoderneguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritefrtrad": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritefrtradguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritegbj": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritegbjguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritegbs": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritegbsguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritehr": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritehrguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritehrlijeva": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritehrlijevaguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritehu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritehuguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteid": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteidguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteie": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteieguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritein": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteinguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteis": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteisguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteitmoderna": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteitmodernaguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteittrad": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteittradguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritemx": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritemxguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritengmodern": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritengmodernguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritenl": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritenlguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteno": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritenoguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritenz": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritenzbasic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritenzbasicguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritenzguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritepe": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritepeguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritepl": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteplguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritept": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteptguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritero": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteroguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritesk": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteskguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritetz": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritetzguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteusmodern": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteusmodernguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteustrad": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteustradguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritevn": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritevnguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwriteza": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "playwritezaguides": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "failure_category": "fontprimer-missing",
       "failure_message": "No module named 'fontprimer'",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphspackage"
-      ],
+      "source_format": "glyphspackage",
       "requires": [
-        "fontprimer"
-      ]
+        "fontprimer",
+        "pendot"
+      ],
+      "prebuild": [
+        "python3 scripts/generate-guideline-source.py"
+      ],
+      "build_timeout": 1800,
+      "monorepo_group": "playwrite"
     },
     "plusjakartasans": {
       "enabled": true,

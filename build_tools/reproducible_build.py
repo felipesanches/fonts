@@ -214,9 +214,13 @@ def run_prebuild(source_dir: Path, prebuild_commands: list[str], family: str) ->
 
     env = os.environ.copy()
     venv_bin = str(Path(GFTOOLS_BUILDER).parent)
-    env["PATH"] = venv_bin + ":" + env.get("PATH", "")
+    local_bin = str(Path.home() / ".local" / "bin")
+    env["PATH"] = venv_bin + ":" + local_bin + ":" + env.get("PATH", "")
     # Set VIRTUAL_ENV so tools that check it can find packages
     env["VIRTUAL_ENV"] = str(Path(GFTOOLS_BUILDER).parent.parent)
+    # Ensure locally-built libraries (e.g. harfbuzz) are found
+    local_lib = str(Path.home() / ".local" / "lib")
+    env["LD_LIBRARY_PATH"] = local_lib + ":" + env.get("LD_LIBRARY_PATH", "")
 
     for i, cmd in enumerate(prebuild_commands):
         print(f"  Prebuild [{i+1}/{len(prebuild_commands)}]: {cmd}")
@@ -318,7 +322,7 @@ def find_config_yaml(source_dir: Path, config_yaml_rel: str, family: str) -> Pat
 
 
 def run_build(source_dir: Path, config_path: Path, family: str,
-              isolation: str, overrides: dict) -> Path | None:
+              isolation: str, overrides: dict, build_timeout: int = 600) -> Path | None:
     """Run gftools-builder. Returns the build output directory or None."""
     family_ws = WORKSPACE_DIR / family
     build_dir = family_ws / "build"
@@ -348,7 +352,11 @@ def run_build(source_dir: Path, config_path: Path, family: str,
     env = os.environ.copy()
     # Ensure the venv bin dir is on PATH so fontmake/ninja are found
     venv_bin = str(Path(builder_cmd).parent)
-    env["PATH"] = venv_bin + ":" + env.get("PATH", "")
+    local_bin = str(Path.home() / ".local" / "bin")
+    env["PATH"] = venv_bin + ":" + local_bin + ":" + env.get("PATH", "")
+    # Ensure locally-built libraries (e.g. harfbuzz) are found
+    local_lib = str(Path.home() / ".local" / "lib")
+    env["LD_LIBRARY_PATH"] = local_lib + ":" + env.get("LD_LIBRARY_PATH", "")
     try:
         result = subprocess.run(
             [builder_cmd, str(config_in_source)],
@@ -356,7 +364,7 @@ def run_build(source_dir: Path, config_path: Path, family: str,
             env=env,
             capture_output=True,
             text=True,
-            timeout=600,  # 10 minute timeout
+            timeout=build_timeout,
         )
         if result.returncode != 0:
             print(f"  Build failed (exit {result.returncode})")
@@ -832,51 +840,127 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
         print(f"  Already processed: {existing.get('overall_status', 'unknown')}")
         return existing.get("overall_status", "unknown")
 
-    # Download source
-    source_dir = download_source(owner, repo, commit, family)
-    if source_dir is None:
-        print(f"  Source download failed — checking upstream cache...")
-        cache_dir = UPSTREAM_CACHE / owner / repo
-        if cache_dir.exists():
-            print(f"  Found cached repo at {cache_dir}")
-            # Could search git history here for the right commit
-            # For now, mark as wrong metadata
-        return "metadata-stanza-wrong"
+    # Monorepo support: share download + build across families in same group
+    monorepo_group = entry.get("monorepo_group")
+    if monorepo_group:
+        shared_ws = WORKSPACE_DIR / f"_monorepo_{monorepo_group}"
+        shared_source = shared_ws / "source" / f"{repo}-{commit}"
+        shared_built_marker = shared_ws / "build_complete"
 
-    print(f"  Source dir: {source_dir}")
+        if shared_built_marker.exists():
+            # Monorepo already built — reuse output
+            print(f"  Monorepo '{monorepo_group}' already built, reusing output")
+            source_dir = shared_source
+            build_elapsed = 0.0
+            build_result = source_dir  # Signal success
+        else:
+            # First family in monorepo group — download + build
+            source_dir = download_source(owner, repo, commit, f"_monorepo_{monorepo_group}")
+            if source_dir is None:
+                print(f"  Source download failed")
+                return "metadata-stanza-wrong"
 
-    # Run pre-build commands if specified in registry or auto-detected
-    prebuild_commands = entry.get("prebuild", [])
-    if prebuild_commands:
-        print(f"  Running {len(prebuild_commands)} prebuild command(s)...")
-        if not run_prebuild(source_dir, prebuild_commands, family):
-            # Write failure report
-            report_path = WORKSPACE_DIR / family / "comparison_report.json"
-            report_path.parent.mkdir(parents=True, exist_ok=True)
-            report_path.write_text(json.dumps({
-                "family": family,
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-                "source_commit": commit,
-                "repository_url": source_info["repository_url"],
-                "files": {},
-                "overall_status": "build-failure",
-                "notes": "prebuild failed",
-                "build_time_seconds": 0,
-            }, indent=2) + "\n", encoding="utf-8")
+            print(f"  Source dir: {source_dir}")
+
+            # Run pre-build commands
+            prebuild_commands = entry.get("prebuild", [])
+            if prebuild_commands:
+                print(f"  Running {len(prebuild_commands)} prebuild command(s)...")
+                if not run_prebuild(source_dir, prebuild_commands, f"_monorepo_{monorepo_group}"):
+                    report_path = WORKSPACE_DIR / family / "comparison_report.json"
+                    report_path.parent.mkdir(parents=True, exist_ok=True)
+                    report_path.write_text(json.dumps({
+                        "family": family,
+                        "timestamp": datetime.now(timezone.utc).isoformat(),
+                        "source_commit": commit,
+                        "repository_url": source_info["repository_url"],
+                        "files": {},
+                        "overall_status": "build-failure",
+                        "notes": "prebuild failed",
+                        "build_time_seconds": 0,
+                    }, indent=2) + "\n", encoding="utf-8")
+                    return "build-failure"
+
+            # Find config and build
+            config_path = find_config_yaml(source_dir, config_yaml_path, f"_monorepo_{monorepo_group}")
+            if config_path is None:
+                print(f"  No config.yaml found — cannot build")
+                return "build-failure"
+
+            isolation = entry.get("isolation", "shared")
+            build_timeout = entry.get("build_timeout", 600)
+            build_start = time.monotonic()
+            build_result = run_build(source_dir, config_path, f"_monorepo_{monorepo_group}",
+                                     isolation, overrides, build_timeout=build_timeout)
+            build_elapsed = time.monotonic() - build_start
+            print(f"  Build time: {build_elapsed:.1f}s")
+
+            if build_result is None:
+                report_path = WORKSPACE_DIR / family / "comparison_report.json"
+                report_path.parent.mkdir(parents=True, exist_ok=True)
+                report_path.write_text(json.dumps({
+                    "family": family,
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "source_commit": commit,
+                    "repository_url": source_info["repository_url"],
+                    "files": {},
+                    "overall_status": "build-failure",
+                    "build_time_seconds": round(build_elapsed, 1),
+                }, indent=2) + "\n", encoding="utf-8")
+                return "build-failure"
+
+            # Mark monorepo as built
+            shared_built_marker.write_text(
+                f"Built at {datetime.now(timezone.utc).isoformat()}\n"
+                f"Build time: {build_elapsed:.1f}s\n",
+                encoding="utf-8",
+            )
+    else:
+        # Standard (non-monorepo) flow
+        # Download source
+        source_dir = download_source(owner, repo, commit, family)
+        if source_dir is None:
+            print(f"  Source download failed — checking upstream cache...")
+            cache_dir = UPSTREAM_CACHE / owner / repo
+            if cache_dir.exists():
+                print(f"  Found cached repo at {cache_dir}")
+            return "metadata-stanza-wrong"
+
+        print(f"  Source dir: {source_dir}")
+
+        # Run pre-build commands if specified in registry or auto-detected
+        prebuild_commands = entry.get("prebuild", [])
+        if prebuild_commands:
+            print(f"  Running {len(prebuild_commands)} prebuild command(s)...")
+            if not run_prebuild(source_dir, prebuild_commands, family):
+                report_path = WORKSPACE_DIR / family / "comparison_report.json"
+                report_path.parent.mkdir(parents=True, exist_ok=True)
+                report_path.write_text(json.dumps({
+                    "family": family,
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "source_commit": commit,
+                    "repository_url": source_info["repository_url"],
+                    "files": {},
+                    "overall_status": "build-failure",
+                    "notes": "prebuild failed",
+                    "build_time_seconds": 0,
+                }, indent=2) + "\n", encoding="utf-8")
+                return "build-failure"
+
+        # Find config.yaml
+        config_path = find_config_yaml(source_dir, config_yaml_path, family)
+        if config_path is None:
+            print(f"  No config.yaml found — cannot build")
             return "build-failure"
 
-    # Find config.yaml
-    config_path = find_config_yaml(source_dir, config_yaml_path, family)
-    if config_path is None:
-        print(f"  No config.yaml found — cannot build")
-        return "build-failure"
-
-    # Build (timed)
-    isolation = entry.get("isolation", "shared")
-    build_start = time.monotonic()
-    build_result = run_build(source_dir, config_path, family, isolation, overrides)
-    build_elapsed = time.monotonic() - build_start
-    print(f"  Build time: {build_elapsed:.1f}s")
+        # Build (timed)
+        isolation = entry.get("isolation", "shared")
+        build_timeout = entry.get("build_timeout", 600)
+        build_start = time.monotonic()
+        build_result = run_build(source_dir, config_path, family, isolation, overrides,
+                                 build_timeout=build_timeout)
+        build_elapsed = time.monotonic() - build_start
+        print(f"  Build time: {build_elapsed:.1f}s")
     if build_result is None:
         # Write a minimal report so the family is cached and not retried
         report_path = WORKSPACE_DIR / family / "comparison_report.json"
@@ -1027,7 +1111,7 @@ def scan_buildable_families() -> list:
 def main():
     parser = argparse.ArgumentParser(description="Reproducible Font Build System")
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("--family", help="Build a single family")
+    group.add_argument("--family", nargs="+", help="Build one or more families")
     group.add_argument("--all", action="store_true", help="Build all enabled families")
     group.add_argument("--batch", action="store_true",
                        help="Auto-discover all buildable families, add to registry, and process")
@@ -1062,16 +1146,17 @@ def main():
             if entry.get("enabled", False)
         ]
     else:
-        families_to_process = [args.family]
+        families_to_process = args.family
         # Auto-add to registry if not present
-        if args.family not in registry["families"]:
-            registry["families"][args.family] = {
-                "enabled": True,
-                "isolation": "shared",
-                "reproducible_build": None,
-                "notes": "",
-                "overrides": {},
-            }
+        for fam in families_to_process:
+            if fam not in registry["families"]:
+                registry["families"][fam] = {
+                    "enabled": True,
+                    "isolation": "shared",
+                    "reproducible_build": None,
+                    "notes": "",
+                    "overrides": {},
+                }
 
     if not families_to_process:
         print("No families to process.")
