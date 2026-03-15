@@ -16352,11 +16352,9 @@
     "robotoserif": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError"
+      "overrides": {}
     },
     "rock3d": {
       "enabled": true,
