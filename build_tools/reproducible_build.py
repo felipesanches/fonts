@@ -21,6 +21,7 @@ import subprocess
 import time
 import sys
 import tarfile
+
 import tempfile
 import http.client
 import urllib.request
@@ -40,17 +41,80 @@ def _download_alarm_handler(signum, frame):
     raise DownloadTimeout("Download stalled (timeout)")
 
 # ---------------------------------------------------------------------------
-# Paths
+# Paths — configurable via environment variables.
+# Auto-detects google/fonts repo from script location. Other paths can be
+# overridden with env vars if the default layout doesn't match your setup.
 # ---------------------------------------------------------------------------
 
-GOOGLE_FONTS_DIR = Path("/mnt/shared/google/fonts")
+# Auto-detect google/fonts repo root from this script's location
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_DEFAULT_GOOGLE_FONTS = _SCRIPT_DIR.parent  # build_tools/ -> google/fonts/
+
+GOOGLE_FONTS_DIR = Path(os.environ.get("GOOGLE_FONTS_DIR", str(_DEFAULT_GOOGLE_FONTS)))
 OFL_DIR = GOOGLE_FONTS_DIR / "ofl"
 BUILD_TOOLS_DIR = GOOGLE_FONTS_DIR / "build_tools"
 REGISTRY_PATH = BUILD_TOOLS_DIR / "build_registry.json"
-WORKSPACE_DIR = Path("/mnt/shared/gfonts-repro-builds")
-GFTOOLS_BUILDER = "/mnt/shared/gftools/venv/bin/gftools-builder"
-GFTOOLS_PYTHON = "/mnt/shared/gftools/venv/bin/python"
-UPSTREAM_CACHE = Path("/mnt/shared/upstream_repos/fontc_crater_cache")
+
+def _find_workspace() -> Path:
+    """Find or create the build workspace directory."""
+    env_val = os.environ.get("REPRO_BUILD_WORKSPACE")
+    if env_val:
+        return Path(env_val)
+    # Search parent directories for existing workspace
+    for parent in [GOOGLE_FONTS_DIR.parent, GOOGLE_FONTS_DIR.parent.parent]:
+        candidate = parent / "gfonts-repro-builds"
+        if candidate.exists():
+            return candidate
+    # Default: sibling of google/fonts repo
+    return GOOGLE_FONTS_DIR.parent / "gfonts-repro-builds"
+
+
+WORKSPACE_DIR = _find_workspace()
+
+
+def _find_gftools_builder() -> str:
+    """Find gftools-builder, checking env var, PATH, and common venv locations."""
+    env_val = os.environ.get("GFTOOLS_BUILDER")
+    if env_val:
+        return env_val
+    on_path = shutil.which("gftools-builder")
+    if on_path:
+        return on_path
+    # Search common venv locations relative to google/fonts repo
+    search_roots = [GOOGLE_FONTS_DIR.parent, GOOGLE_FONTS_DIR.parent.parent]
+    candidates = [root / "gftools" / "venv" / "bin" / "gftools-builder"
+                  for root in search_roots]
+    candidates.append(Path.home() / ".local" / "bin" / "gftools-builder")
+    for candidate in candidates:
+        if candidate.exists():
+            return str(candidate)
+    return "gftools-builder"  # hope it's on PATH at runtime
+
+
+GFTOOLS_BUILDER = _find_gftools_builder()
+GFTOOLS_PYTHON = os.environ.get("GFTOOLS_PYTHON",
+                                 str(Path(GFTOOLS_BUILDER).parent / "python"))
+def _find_upstream_cache() -> Path:
+    """Find the upstream repo cache directory."""
+    env_val = os.environ.get("UPSTREAM_CACHE")
+    if env_val:
+        return Path(env_val)
+    for parent in [GOOGLE_FONTS_DIR.parent, GOOGLE_FONTS_DIR.parent.parent]:
+        candidate = parent / "upstream_repos" / "fontc_crater_cache"
+        if candidate.exists():
+            return candidate
+    return GOOGLE_FONTS_DIR.parent / "upstream_repos" / "fontc_crater_cache"
+
+
+UPSTREAM_CACHE = _find_upstream_cache()
+
+# Add gftools venv to sys.path so fontTools and other font packages are available
+# without requiring system-wide installation.
+import glob as _glob
+_gftools_venv = str(Path(GFTOOLS_BUILDER).resolve().parent.parent)
+_venv_site = _glob.glob(os.path.join(_gftools_venv, "lib", "python*", "site-packages"))
+if _venv_site and _venv_site[0] not in sys.path:
+    sys.path.insert(0, _venv_site[0])
 
 # Tables that only contain timestamps
 TIMESTAMP_TABLES = {"head"}
@@ -1178,7 +1242,7 @@ def main():
         args.force = True
 
     # Skip families with existing reports unless --force
-    # Policy: build artifacts in /mnt/shared/gfonts-repro-builds/ serve as a
+    # Policy: build artifacts in WORKSPACE_DIR serve as a
     # cache. Never rebuild a family that already has results — only use --force
     # when explicitly needed (e.g., after a script change that affects analysis).
     if not args.force:
