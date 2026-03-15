@@ -995,9 +995,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Recorded commit predates source file addition to repo",
       "overrides": {},
-      "failure_category": "no-source-files",
+      "failure_category": "commit-predates-sources",
       "failure_message": "Tarball only contains build-env and docs"
     },
     "andika": {
@@ -2755,7 +2755,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Float/sequence type mismatch during interpolation",
       "overrides": {},
       "failure_category": "interpolation-error",
       "failure_message": "Can't multiply sequence by non-int of type float",
@@ -3328,9 +3328,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Idotaccent and I both map to U+0069",
       "overrides": {},
-      "failure_category": "open-contour",
+      "failure_category": "cmap-collision",
       "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
@@ -3409,9 +3409,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Same Bungee Color source, same cmap collision",
       "overrides": {},
-      "failure_category": "open-contour",
+      "failure_category": "cmap-collision",
       "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
@@ -4372,11 +4372,9 @@
     "daibannasil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "compiler-version",
+      "notes": "qcurve segments cause overlap removal failure in uni25CC",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -5526,14 +5524,15 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Build exceeds 600s timeout during VF compilation",
       "overrides": {},
-      "failure_category": "nanoemoji-error",
+      "failure_category": "build-timeout",
       "failure_message": "Unsupported COLR format 5",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "fragmentmono": {
       "enabled": true,
@@ -5794,11 +5793,9 @@
     "galada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "open-contour",
-      "failure_message": "Unhandled open contour in glyph bn_nya",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -7653,7 +7650,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Integer styleName in .glyphs causes AttributeError in glyphsLib",
       "overrides": {},
       "failure_category": "glyphslib-bug",
       "failure_message": "int has no attribute replace in _to_filename",
@@ -12241,9 +12238,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Requires full Noto build infrastructure for includeSubsets",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
+      "failure_category": "noto-build-infra",
       "failure_message": "Instance UFO not found (fontmake version mismatch)"
     },
     "notosanstirhuta": {
@@ -17940,9 +17937,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Italic source has incompatible masters",
       "overrides": {},
-      "failure_category": "source-file-missing",
+      "failure_category": "interpolation-error",
       "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [

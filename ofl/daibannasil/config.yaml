@@ -2,3 +2,5 @@ sources:
   - source/DaiBannaSIL-VF.designspace
   - source/DaiBannaSILItalic-VF.designspace
 buildVariable: false
+buildOTF: false
+removeOutlineOverlaps: false

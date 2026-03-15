@@ -1,2 +1,5 @@
 sources:
   - master/Galada.ufo
+buildVariable: false
+buildOTF: false
+removeOutlineOverlaps: false
