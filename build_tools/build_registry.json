@@ -164,7 +164,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -302,11 +302,9 @@
     "adventpro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -3656,8 +3654,8 @@
       "prebuild": [
         "python3 scripts/makenormal.py sources/Cairo.glyphs sources/CairoNormal.glyphs"
       ],
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected"
+      "failure_category": "master-incompatibility",
+      "failure_message": "Master compatibility check failed"
     },
     "cairoplay": {
       "enabled": true,
@@ -4350,11 +4348,9 @@
     "commissioner": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected"
+      "overrides": {}
     },
     "coralpixels": {
       "enabled": true,
@@ -4879,11 +4875,9 @@
     "dmmono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -5251,11 +5245,9 @@
     "elmssans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "timestamp-diff",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -6201,11 +6193,9 @@
     "geologica": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -6374,11 +6364,9 @@
     "gluten": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -7004,11 +6992,9 @@
     "hubotsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -7816,11 +7802,9 @@
     "jost": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -10042,11 +10026,9 @@
     "monasans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -13369,11 +13351,9 @@
     "nunito": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -14057,8 +14037,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
+      "failure_category": "master-incompatibility",
+      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -14070,8 +14050,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
+      "failure_category": "master-incompatibility",
+      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -16489,8 +16469,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
+      "failure_category": "source-file-missing",
+      "failure_message": "Missing feature file include: features/common.fea",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -16794,11 +16774,9 @@
     "robotoflex": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -17581,7 +17559,7 @@
     "sciencegothic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "metadata-stanza-wrong",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {}
     },
@@ -18007,11 +17985,9 @@
     "snpro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "timestamp-diff",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -19142,11 +19118,9 @@
     "urbanist": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19815,8 +19789,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
+      "failure_category": "gftools-fontsetter-bug",
+      "failure_message": "gftools-fontsetter called without config argument",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19828,8 +19802,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
+      "failure_category": "gftools-fontsetter-bug",
+      "failure_message": "gftools-fontsetter called without config argument",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19841,8 +19815,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "ninja-type-error",
-      "failure_message": "ninja TypeError: list where str expected",
+      "failure_category": "gftools-fontsetter-bug",
+      "failure_message": "gftools-fontsetter called without config argument",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19930,6 +19904,13 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "_test_nonexistent": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     }
