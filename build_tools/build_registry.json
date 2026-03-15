@@ -17041,7 +17041,7 @@
     "sawarabimincho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "legacy-no-modern-source",
       "notes": "SFD source requires FontForge for conversion. babelfont cannot read this format.",
       "overrides": {},
       "failure_category": "legacy-no-modern-source",
@@ -18210,7 +18210,7 @@
     "tiny5": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "legacy-no-modern-source",
       "notes": "SFD source requires FontForge for conversion. babelfont cannot read this format.",
       "overrides": {},
       "failure_category": "legacy-no-modern-source",
