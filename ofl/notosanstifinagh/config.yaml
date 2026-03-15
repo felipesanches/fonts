@@ -1,0 +1,5 @@
+sources:
+  - sources/NotoSansTifinagh.glyphs
+familyName: Noto Sans Tifinagh
+buildOTF: false
+buildVariable: false

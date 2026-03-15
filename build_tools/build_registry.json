@@ -12259,12 +12259,13 @@
     "notosanstifinagh": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Large build (109 steps) with many instances. Likely timeout.",
+      "reproducible_build": "compiler-version",
+      "notes": "Single master with degenerate wght/wdth axes and 12 subset instances. Only need main NotoSansTifinagh. Prebuild strips axes and extra instances.",
       "overrides": {},
-      "failure_category": "noto-infra-required",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
-      "build_timeout": 3600
+      "build_timeout": 3600,
+      "prebuild": [
+        "cd sources && python3 << 'PYEOF'\nfrom glyphsLib import GSFont\nf = GSFont('NotoSansTifinagh.glyphs')\nf.axes = []\nfor m in f.masters:\n    m.axes = []\nmain_inst = f.instances[0]\nmain_inst.axes = []\nf.instances = [main_inst]\nf.save('NotoSansTifinagh.glyphs')\nprint('Kept main instance [0], removed axes and 11 subset instances')\nPYEOF"
+      ]
     },
     "notosanstirhuta": {
       "enabled": true,
