@@ -539,7 +539,9 @@
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "failure_category": "instance-ufo-naming",
+      "failure_message": "fontmake splitInterpolable bug: no TTFs produced from .glyphs with discrete axis"
     },
     "alegreyasans": {
       "enabled": true,
@@ -2560,7 +2562,9 @@
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "failure_category": "no-build-log",
+      "failure_message": "No build log or built fonts found"
     },
     "bigshouldersinline": {
       "enabled": true,
@@ -2935,7 +2939,9 @@
       "isolation": "shared",
       "reproducible_build": "build-failure",
       "notes": "",
-      "overrides": {}
+      "overrides": {},
+      "failure_category": "no-build-log",
+      "failure_message": "No build log or built fonts found"
     },
     "bitcountsingle": {
       "enabled": true,
@@ -2946,14 +2952,18 @@
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
-      ]
+      ],
+      "failure_category": "no-build-log",
+      "failure_message": "No build log or built fonts found"
     },
     "bitcountsingleink": {
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
       "notes": "",
-      "overrides": {}
+      "overrides": {},
+      "failure_category": "no-build-log",
+      "failure_message": "No build log or built fonts found"
     },
     "bitter": {
       "enabled": true,
@@ -3016,7 +3026,9 @@
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "failure_category": "no-build-log",
+      "failure_message": "No build log or built fonts found"
     },
     "blackopsone": {
       "enabled": true,
