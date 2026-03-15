@@ -10589,11 +10589,11 @@
     "notosansduployan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Source file not found at expected path.",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "Procedurally generated font — sources are Python scripts, not .glyphs/.ufo. Fonts shipped from release archive (archive_url). No standard build pipeline possible.",
       "overrides": {},
-      "failure_category": "noto-infra-required",
-      "failure_message": "Procedurally generated font, no .glyphs in repo"
+      "failure_category": "procedural-generation",
+      "failure_message": "No .glyphs/.ufo sources in repo — font is procedurally generated"
     },
     "notosansegyptianhieroglyphs": {
       "enabled": true,
