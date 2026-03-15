@@ -3331,17 +3331,17 @@
     "bungeecolor": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Cmap collision fixed by prebuild, but source has open contour in AE.alt002 glyph that RemoveOverlaps fails on.",
+      "reproducible_build": "compiler-version",
+      "notes": "Two fixes: 1) close 33 open contours that break RemoveOverlaps, 2) remove U+0069 duplicate cmap from Idotaccent/I glyphs.",
       "overrides": {},
-      "failure_category": "source-error",
-      "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
       ],
       "prebuild": [
-        "python3 << 'EOF'\nimport os, glob, re\nfor ufo_dir in glob.glob('sources/2-build/Bungee_Color/*.ufo'):\n    for glif_name in ['Idotaccent_.glif', 'I_.glif']:\n        glif = os.path.join(ufo_dir, 'glyphs', glif_name)\n        if os.path.exists(glif):\n            data = open(glif).read()\n            if '<unicode hex=\"0069\"/>' in data:\n                data = data.replace('  <unicode hex=\"0069\"/>\\n', '')\n                open(glif, 'w').write(data)\n                print(f'Removed U+0069 from {glif}')\nEOF"
+        "python3 << 'PYEOF'\nimport os, glob\n\ncount = 0\nfor ufo in glob.glob('sources/2-build/Bungee_Color/*.ufo'):\n    glyphs_dir = os.path.join(ufo, 'glyphs')\n    if not os.path.isdir(glyphs_dir):\n        continue\n    for fname in os.listdir(glyphs_dir):\n        if not fname.endswith('.glif'):\n            continue\n        fpath = os.path.join(glyphs_dir, fname)\n        data = open(fpath).read()\n        if 'type=\"move\"' in data:\n            data = data.replace('type=\"move\"', 'type=\"line\"')\n            open(fpath, 'w').write(data)\n            count += 1\nprint(f'Closed open contours in {count} glyphs')\nPYEOF",
+        "python3 << 'PYEOF'\nimport os, plistlib, glob\n\nfor ufo in glob.glob('sources/2-build/Bungee_Color/*.ufo'):\n    fontinfo = os.path.join(ufo, 'fontinfo.plist')\n    if os.path.exists(fontinfo):\n        with open(fontinfo, 'rb') as f:\n            info = plistlib.load(f)\n        for key in ['familyName', 'openTypeNamePreferredFamilyName']:\n            if key in info and '_' in str(info[key]):\n                info[key] = info[key].replace('_', '')\n        with open(fontinfo, 'wb') as f:\n            plistlib.dump(info, f)\n    \n    # Only rename the UFO basename, keep parent dir\n    parent = os.path.dirname(ufo)\n    basename = os.path.basename(ufo)\n    new_basename = basename.replace('Bungee_Color', 'BungeeColor')\n    if new_basename != basename:\n        new_ufo = os.path.join(parent, new_basename)\n        os.rename(ufo, new_ufo)\n        print(f'Renamed {basename} -> {new_basename}')\nPYEOF",
+        "python3 << 'PYEOF'\nimport os, glob\nNL = chr(10)\nfor ufo_dir in glob.glob('sources/2-build/Bungee_Color/BungeeColor-Regular.ufo'):\n    for glif_name in ['Idotaccent_.glif', 'I_.glif']:\n        glif = os.path.join(ufo_dir, 'glyphs', glif_name)\n        if os.path.exists(glif):\n            data = open(glif).read()\n            target = '  <unicode hex=\"0069\"/>' + NL\n            if target in data:\n                data = data.replace(target, '')\n                open(glif, 'w').write(data)\n                print(f'Removed U+0069 from {glif}')\nPYEOF"
       ]
     },
     "bungeehairline": {
@@ -3415,17 +3415,17 @@
     "bungeespice": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Same source issues as bungeecolor (open contour in AE.alt002).",
+      "reproducible_build": "compiler-version",
+      "notes": "Same source as bungeecolor with different familyName. Three fixes: close contours, rename family, fix cmap.",
       "overrides": {},
-      "failure_category": "source-error",
-      "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
       ],
       "prebuild": [
-        "python3 << 'EOF'\nimport os, glob, re\nfor ufo_dir in glob.glob('sources/2-build/Bungee_Spice/*.ufo'):\n    for glif_name in ['Idotaccent_.glif', 'I_.glif']:\n        glif = os.path.join(ufo_dir, 'glyphs', glif_name)\n        if os.path.exists(glif):\n            data = open(glif).read()\n            if '<unicode hex=\"0069\"/>' in data:\n                data = data.replace('  <unicode hex=\"0069\"/>\\n', '')\n                open(glif, 'w').write(data)\n                print(f'Removed U+0069 from {glif}')\nEOF"
+        "python3 << 'PYEOF'\nimport os, glob\n\ncount = 0\nfor ufo in glob.glob('sources/2-build/Bungee_Color/*.ufo'):\n    glyphs_dir = os.path.join(ufo, 'glyphs')\n    if not os.path.isdir(glyphs_dir):\n        continue\n    for fname in os.listdir(glyphs_dir):\n        if not fname.endswith('.glif'):\n            continue\n        fpath = os.path.join(glyphs_dir, fname)\n        data = open(fpath).read()\n        if 'type=\"move\"' in data:\n            data = data.replace('type=\"move\"', 'type=\"line\"')\n            open(fpath, 'w').write(data)\n            count += 1\nprint(f'Closed open contours in {count} glyphs')\nPYEOF",
+        "python3 << 'PYEOF'\nimport os, plistlib, glob\n\nfor ufo in glob.glob('sources/2-build/Bungee_Color/*.ufo'):\n    fontinfo = os.path.join(ufo, 'fontinfo.plist')\n    if os.path.exists(fontinfo):\n        with open(fontinfo, 'rb') as f:\n            info = plistlib.load(f)\n        for key in ['familyName', 'openTypeNamePreferredFamilyName']:\n            if key in info:\n                info[key] = 'BungeeSpice'\n        with open(fontinfo, 'wb') as f:\n            plistlib.dump(info, f)\n    \n    parent = os.path.dirname(ufo)\n    new_ufo = os.path.join(parent, 'BungeeSpice-Regular.ufo')\n    if ufo != new_ufo:\n        os.rename(ufo, new_ufo)\n        print(f'Renamed to BungeeSpice-Regular.ufo')\nPYEOF",
+        "python3 << 'PYEOF'\nimport os, glob\nNL = chr(10)\nfor ufo_dir in glob.glob('sources/2-build/Bungee_Color/BungeeSpice-Regular.ufo'):\n    for glif_name in ['Idotaccent_.glif', 'I_.glif']:\n        glif = os.path.join(ufo_dir, 'glyphs', glif_name)\n        if os.path.exists(glif):\n            data = open(glif).read()\n            target = '  <unicode hex=\"0069\"/>' + NL\n            if target in data:\n                data = data.replace(target, '')\n                open(glif, 'w').write(data)\n                print(f'Removed U+0069 from {glif}')\nPYEOF"
       ]
     },
     "bytesized": {
@@ -17042,14 +17042,12 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "babelfont Instance.__init__() API changed. Needs older babelfont version.",
+      "notes": "SFD source requires FontForge for conversion. babelfont cannot read this format.",
       "overrides": {},
-      "failure_category": "tool-version-incompatibility",
+      "failure_category": "legacy-no-modern-source",
       "failure_message": "Instance.__init__() unexpected keyword styleName",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".glyphs"
-      ]
+      "source_format": "sfd"
     },
     "scheherazadenew": {
       "enabled": true,
@@ -18213,14 +18211,12 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "babelfont Instance.__init__() API changed. Needs older babelfont version.",
+      "notes": "SFD source requires FontForge for conversion. babelfont cannot read this format.",
       "overrides": {},
-      "failure_category": "tool-version-incompatibility",
+      "failure_category": "legacy-no-modern-source",
       "failure_message": "Instance.__init__() unexpected keyword styleName",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".sfd"
-      ]
+      "source_format": "sfd"
     },
     "tirobangla": {
       "enabled": true,
