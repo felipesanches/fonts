@@ -445,8 +445,16 @@ def run_build(source_dir: Path, config_path: Path, family: str,
             f"STDOUT:\n{result.stdout}\n\nSTDERR:\n{result.stderr}",
             encoding="utf-8",
         )
-    except subprocess.TimeoutExpired:
-        print(f"  Build timed out after 600s")
+    except subprocess.TimeoutExpired as e:
+        print(f"  Build timed out after {build_timeout}s")
+        # Save partial output for debugging
+        stdout = e.stdout or "" if hasattr(e, 'stdout') else ""
+        stderr = e.stderr or "" if hasattr(e, 'stderr') else ""
+        if stdout or stderr:
+            (family_ws / "build_log.txt").write_text(
+                f"TIMEOUT after {build_timeout}s\n\nSTDOUT:\n{stdout}\n\nSTDERR:\n{stderr}",
+                encoding="utf-8",
+            )
         return None
 
     return source_dir
@@ -866,7 +874,8 @@ def save_registry(registry: dict):
     )
 
 
-def process_family(family: str, registry: dict, force: bool = False) -> str:
+def process_family(family: str, registry: dict, force: bool = False,
+                   recompare: bool = False) -> str:
     """Process a single family. Returns the overall status string."""
     print(f"\n{'='*60}")
     print(f"Processing: {family}")
@@ -904,9 +913,24 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
         print(f"  Already processed: {existing.get('overall_status', 'unknown')}")
         return existing.get("overall_status", "unknown")
 
+    # Recompare mode: skip download + build, find existing source dir
+    if recompare:
+        family_ws = WORKSPACE_DIR / family
+        source_parent = family_ws / "source"
+        if not source_parent.exists():
+            print(f"  No existing source directory for recompare")
+            return "build-failure"
+        # Find the extracted source dir (first subdir matching repo-commit pattern)
+        source_dirs = [d for d in source_parent.iterdir() if d.is_dir()]
+        if not source_dirs:
+            print(f"  No source subdirectory found for recompare")
+            return "build-failure"
+        source_dir = source_dirs[0]
+        build_result = source_dir
+        build_elapsed = 0.0
+        print(f"  Recompare mode — using existing source: {source_dir}")
     # Monorepo support: share download + build across families in same group
-    monorepo_group = entry.get("monorepo_group")
-    if monorepo_group:
+    elif (monorepo_group := entry.get("monorepo_group")):
         shared_ws = WORKSPACE_DIR / f"_monorepo_{monorepo_group}"
         shared_source = shared_ws / "source" / f"{repo}-{commit}"
         shared_built_marker = shared_ws / "build_complete"
@@ -1109,7 +1133,7 @@ def process_family(family: str, registry: dict, force: bool = False) -> str:
     # Determine overall status
     if not file_results:
         overall_status = "build-failure"
-    elif all(r.get("byte_identical") for r in file_results.values() if "error" not in r):
+    elif (comparable := [r for r in file_results.values() if "error" not in r]) and all(r.get("byte_identical") for r in comparable):
         overall_status = "yes"
     elif "source-mismatch" in overall_categories:
         overall_status = "source-mismatch"
@@ -1180,12 +1204,18 @@ def main():
     group.add_argument("--batch", action="store_true",
                        help="Auto-discover all buildable families, add to registry, and process")
     parser.add_argument("--force", action="store_true", help="Rebuild even if output exists")
+    parser.add_argument("--recompare", action="store_true",
+                        help="Skip download/build, only re-run comparison on existing build output")
     parser.add_argument("--retry-category", type=str, default="",
                         help="Retry all families with this failure_category (implies --force for those families)")
     parser.add_argument("--limit", type=int, default=0,
                         help="Process at most N families (0=unlimited)")
 
     args = parser.parse_args()
+
+    # --recompare implies --force (need to overwrite existing reports)
+    if args.recompare:
+        args.force = True
 
     registry = load_registry()
 
@@ -1267,7 +1297,8 @@ def main():
     print(f"Processing {len(families_to_process)} family(ies)")
 
     for i, family in enumerate(families_to_process):
-        status = process_family(family, registry, force=args.force)
+        status = process_family(family, registry, force=args.force,
+                                recompare=args.recompare)
 
         # Update registry
         if family not in registry["families"]:

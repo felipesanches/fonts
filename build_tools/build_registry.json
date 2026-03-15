@@ -99,11 +99,9 @@
     "fraunces": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "name-table",
       "notes": "Phase 2. fontmake compatibility check failed on designspace. Current fontmake finds master incompatibilities that older version may have tolerated.",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -182,11 +180,9 @@
     "worksans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "Phase 2. fontmake error: 'naira.rvrn' glyph processing failure. glyphsLib/fontmake version incompatibility.",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -540,8 +536,6 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -576,11 +570,9 @@
     "alegreyasc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -718,11 +710,9 @@
     "alkatra": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -825,20 +815,16 @@
     "alumnisansinlineone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "alumnisanspinstripe": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "alumnisanssc": {
       "enabled": true,
@@ -903,11 +889,9 @@
     "amaticsc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -929,11 +913,9 @@
     "amiko": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "name-table",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -942,11 +924,9 @@
     "amiri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphspackage"
@@ -968,11 +948,9 @@
     "amita": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -1033,8 +1011,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_category": "source-file-missing",
+      "failure_message": "Tarball only contains build-env and docs, no source files"
     },
     "andika": {
       "enabled": true,
@@ -1163,38 +1141,30 @@
     "anekodia": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed"
+      "overrides": {}
     },
     "anektamil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed"
+      "overrides": {}
     },
     "anektelugu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed"
+      "overrides": {}
     },
     "angkor": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "annapurnasil": {
       "enabled": true,
@@ -1307,11 +1277,9 @@
     "aoboshione": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1320,11 +1288,9 @@
     "arapey": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -1341,16 +1307,15 @@
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 3600
     },
     "archivoblack": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1408,11 +1373,9 @@
     "arizonia": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "aronesans": {
       "enabled": true,
@@ -1436,11 +1399,9 @@
     "arsenal": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1477,11 +1438,9 @@
     "arya": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1528,11 +1487,9 @@
     "asar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -1610,11 +1567,9 @@
     "athiti": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1676,11 +1631,9 @@
     "atma": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -1742,11 +1695,9 @@
     "b612": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -1755,11 +1706,9 @@
     "b612mono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -1768,11 +1717,9 @@
     "babylonica": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "bacasimeantique": {
       "enabled": true,
@@ -1847,11 +1794,9 @@
     "bahiana": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1860,11 +1805,9 @@
     "bahianita": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "timestamp-diff",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1873,11 +1816,9 @@
     "baijamjuree": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1901,11 +1842,9 @@
     "ballet": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2102,11 +2041,9 @@
     "barlow": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-axis-error",
-      "failure_message": "Invalid designspace axis values",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2115,11 +2052,9 @@
     "barlowcondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-axis-error",
-      "failure_message": "Invalid designspace axis values",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2128,11 +2063,9 @@
     "barlowsemicondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-axis-error",
-      "failure_message": "Invalid designspace axis values",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2141,11 +2074,9 @@
     "barriecito": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "timestamp-diff",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2167,11 +2098,9 @@
     "basic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -2233,11 +2162,9 @@
     "bayon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "bbhbartle": {
       "enabled": true,
@@ -2299,20 +2226,16 @@
     "beaurivage": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "bebasneue": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2347,11 +2270,9 @@
     "bellefair": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2379,11 +2300,9 @@
     "bellota": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2392,11 +2311,9 @@
     "bellotatext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2589,11 +2506,9 @@
     "bhutukaexpandedone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error"
+      "overrides": {}
     },
     "bigshotone": {
       "enabled": true,
@@ -2639,7 +2554,7 @@
     "bigshouldersdisplaysc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
       "config_yaml_source": "override",
@@ -3018,14 +2933,14 @@
     "bitcountpropsingleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "bitcountsingle": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
       "config_yaml_source": "override",
@@ -3036,7 +2951,7 @@
     "bitcountsingleink": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
@@ -3062,11 +2977,9 @@
     "bizudgothic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -3075,11 +2988,9 @@
     "bizudmincho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -3088,11 +2999,9 @@
     "bizudpgothic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -3101,7 +3010,7 @@
     "bizudpmincho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
       "config_yaml_source": "override",
@@ -3176,11 +3085,9 @@
     "blinker": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -3227,11 +3134,9 @@
     "bokor": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "boldonse": {
       "enabled": true,
@@ -3443,11 +3348,9 @@
     "brygada1918": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -3545,11 +3448,9 @@
     "bungeeoutline": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -3609,11 +3510,9 @@
     "cabincondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-axis-error",
-      "failure_message": "Invalid designspace axis values",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -3622,11 +3521,9 @@
     "cabinsketch": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -3648,14 +3545,12 @@
     "cairo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "Prebuild: makenormal.py strips Color layers from .glyphs for non-color build",
       "overrides": {},
       "prebuild": [
         "python3 scripts/makenormal.py sources/Cairo.glyphs sources/CairoNormal.glyphs"
-      ],
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed"
+      ]
     },
     "cairoplay": {
       "enabled": true,
@@ -3672,11 +3567,9 @@
     "caladea": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -3830,11 +3723,9 @@
     "cascadiacode": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -3888,11 +3779,9 @@
     "caveat": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -3914,11 +3803,9 @@
     "changa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -4012,11 +3899,9 @@
     "cherrybombone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -4077,11 +3962,9 @@
     "chivo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -4237,11 +4120,9 @@
     "coiny": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "name-table",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -4449,11 +4330,9 @@
     "cormorantupright": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "timestamp-diff",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -4511,11 +4390,9 @@
     "crimsonpro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -4632,11 +4509,9 @@
     "danfo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -4645,11 +4520,9 @@
     "dangrek": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "darkergrotesque": {
       "enabled": true,
@@ -4908,8 +4781,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_category": "source-file-missing",
+      "failure_message": "config_yaml points to Sans/Source/config.yaml but family is Serif; no config.yaml exists in repo at that commit"
     },
     "dmseriftext": {
       "enabled": true,
@@ -4917,8 +4790,8 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_category": "source-file-missing",
+      "failure_message": "config_yaml points to Sans/Source/config.yaml but family is Serif; no config.yaml exists in repo at that commit"
     },
     "domine": {
       "enabled": true,
@@ -4955,11 +4828,9 @@
     "dosis": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -4968,11 +4839,9 @@
     "dotgothic16": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -5019,11 +4888,9 @@
     "ebgaramond": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -5232,11 +5099,9 @@
     "elmessiri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -5375,11 +5240,9 @@
     "exo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -5460,11 +5323,9 @@
     "fahkwang": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -5530,11 +5391,9 @@
     "farsan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -5562,11 +5421,9 @@
     "fasthand": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "faunaone": {
       "enabled": true,
@@ -5864,11 +5721,9 @@
     "freehand": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "freeman": {
       "enabled": true,
@@ -5911,11 +5766,9 @@
     "fuggles": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "funneldisplay": {
       "enabled": true,
@@ -5977,11 +5830,9 @@
     "fuzzybubbles": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "gabarito": {
       "enabled": true,
@@ -6075,11 +5926,9 @@
     "gantari": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -6272,11 +6121,9 @@
     "gidugu": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "duplicate-feature-def",
-      "failure_message": "Duplicate OpenType feature definition",
       "config_yaml_source": "upstream",
       "source_format": [
         ".ufo"
@@ -6464,11 +6311,9 @@
     "gowundodum": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -6506,17 +6351,15 @@
       "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_category": "source-file-missing",
+      "failure_message": "config_yaml path Sources/config.yaml does not exist; repo predates gftools-builder conventions"
     },
     "grapenuts": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "greatvibes": {
       "enabled": true,
@@ -6640,11 +6483,9 @@
     "gupter": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -6700,11 +6541,9 @@
     "hahmlet": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -6713,11 +6552,9 @@
     "handjet": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -7075,11 +6912,9 @@
     "ibmplexmono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7088,11 +6923,9 @@
     "ibmplexsanscondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7101,11 +6934,9 @@
     "ibmplexsansdevanagari": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7114,11 +6945,9 @@
     "ibmplexsanshebrew": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7127,11 +6956,9 @@
     "ibmplexsansjp": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -7153,11 +6980,9 @@
     "ibmplexsansthai": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7166,11 +6991,9 @@
     "ibmplexsansthailooped": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7179,11 +7002,9 @@
     "ibmplexserif": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -7237,11 +7058,9 @@
     "imperialscript": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "imprima": {
       "enabled": true,
@@ -7284,11 +7103,9 @@
     "inconsolata": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -7316,20 +7133,16 @@
     "ingriddarling": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "inspiration": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -7389,11 +7202,9 @@
     "inter": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphspackage"
@@ -7402,11 +7213,9 @@
     "intertight": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -7415,11 +7224,9 @@
     "islandmoments": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "italianno": {
       "enabled": true,
@@ -7556,29 +7363,23 @@
     "jaini": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "duplicate-feature-def",
-      "failure_message": "Duplicate OpenType feature definition"
+      "overrides": {}
     },
     "jainipurva": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "duplicate-feature-def",
-      "failure_message": "Duplicate OpenType feature definition"
+      "overrides": {}
     },
     "jaldi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -7851,11 +7652,9 @@
     "jura": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -7864,11 +7663,9 @@
     "k2d": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -7892,11 +7689,9 @@
     "kadwa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -8013,11 +7808,9 @@
     "kalniaglaze": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -8159,11 +7952,9 @@
     "kavivanar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -8172,11 +7963,9 @@
     "kavoon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -8270,11 +8059,9 @@
     "kleeone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -8302,11 +8089,9 @@
     "kodchasan": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -8362,11 +8147,9 @@
     "kolkerbrush": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "konkhmersleokchher": {
       "enabled": true,
@@ -8390,11 +8173,9 @@
     "koulen": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "kreon": {
       "enabled": true,
@@ -8584,11 +8365,9 @@
     "lavishlyyours": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "leaguegothic": {
       "enabled": true,
@@ -8650,11 +8429,9 @@
     "lemonada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -8840,11 +8617,9 @@
     "licorice": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "lifesavers": {
       "enabled": true,
@@ -8933,7 +8708,8 @@
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
-      ]
+      ],
+      "build_timeout": 1200
     },
     "lisubosa": {
       "enabled": true,
@@ -8984,16 +8760,15 @@
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "liujianmaocao": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -9078,11 +8853,9 @@
     "londrinasketch": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -9091,11 +8864,9 @@
     "londrinasolid": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -9104,11 +8875,9 @@
     "longcang": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -9136,11 +8905,9 @@
     "lovelight": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "loversquarrel": {
       "enabled": true,
@@ -9179,11 +8946,9 @@
     "lumanosimo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -9226,11 +8991,9 @@
     "luxuriousscript": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "lxgwmarkergothic": {
       "enabled": true,
@@ -9355,11 +9118,9 @@
     "mali": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -9550,11 +9311,9 @@
     "martel": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -9701,11 +9460,9 @@
     "meaculpa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "menbere": {
       "enabled": true,
@@ -9782,11 +9539,9 @@
     "metal": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "metrophobic": {
       "enabled": true,
@@ -9867,11 +9622,9 @@
     "mina": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -10094,11 +9847,9 @@
     "monomaniacone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -10175,11 +9926,9 @@
     "moolahlah": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "mooli": {
       "enabled": true,
@@ -10203,20 +9952,16 @@
     "moondance": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "moulpali": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "mozillaheadline": {
       "enabled": true,
@@ -10259,11 +10004,9 @@
     "msmadi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "mulish": {
       "enabled": true,
@@ -10332,11 +10075,9 @@
     "mysoul": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "nationalpark": {
       "enabled": true,
@@ -10360,11 +10101,9 @@
     "neonderthaw": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "nerkoone": {
       "enabled": true,
@@ -10401,11 +10140,9 @@
     "newsreader": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -11121,7 +10858,8 @@
       "notes": "",
       "overrides": {},
       "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_message": "No build log found (config.yaml not found or download failed)",
+      "build_timeout": 1800
     },
     "notosansgunjalagondi": {
       "enabled": true,
@@ -12329,7 +12067,8 @@
       "notes": "",
       "overrides": {},
       "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_message": "No build log found (config.yaml not found or download failed)",
+      "build_timeout": 1800
     },
     "notosanssogdian": {
       "enabled": true,
@@ -12800,7 +12539,8 @@
       "notes": "",
       "overrides": {},
       "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_message": "No build log found (config.yaml not found or download failed)",
+      "build_timeout": 1800
     },
     "notoserifahom": {
       "enabled": true,
@@ -13400,11 +13140,9 @@
     "odormeanchey": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "offside": {
       "enabled": true,
@@ -13466,11 +13204,9 @@
     "ole": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "onest": {
       "enabled": true,
@@ -13494,11 +13230,9 @@
     "ooohbaby": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "opensans": {
       "enabled": true,
@@ -13656,11 +13390,9 @@
     "oxanium": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -13669,11 +13401,9 @@
     "pacifico": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -13697,11 +13427,9 @@
     "palettemosaic": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -13710,11 +13438,9 @@
     "pangolin": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -16007,11 +15733,9 @@
     "plusjakartasans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -16039,11 +15763,9 @@
     "podkova": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -16052,11 +15774,9 @@
     "poiretone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -16156,11 +15876,9 @@
     "preahvihear": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "protestguerrilla": {
       "enabled": true,
@@ -16378,11 +16096,9 @@
     "radley": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".ufo"
@@ -16391,11 +16107,9 @@
     "rakkas": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -16434,11 +16148,9 @@
     "rampartone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -16466,11 +16178,9 @@
     "recursive": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Missing feature file include: features/common.fea",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -16695,11 +16405,9 @@
     "reggaeone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -16813,11 +16521,9 @@
     "rock3d": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -16826,11 +16532,9 @@
     "rocknrollone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -16919,7 +16623,8 @@
       "notes": "",
       "overrides": {},
       "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_message": "No build log found (config.yaml not found or download failed)",
+      "build_timeout": 600
     },
     "rubikbeastly": {
       "enabled": true,
@@ -17222,7 +16927,8 @@
       "notes": "",
       "overrides": {},
       "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)"
+      "failure_message": "No build log found (config.yaml not found or download failed)",
+      "build_timeout": 600
     },
     "rubikpuddles": {
       "enabled": true,
@@ -17336,11 +17042,9 @@
     "ruthie": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "ruwudu": {
       "enabled": true,
@@ -17366,7 +17070,8 @@
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "sairacondensed": {
       "enabled": true,
@@ -17379,7 +17084,8 @@
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "sairaextracondensed": {
       "enabled": true,
@@ -17392,7 +17098,8 @@
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "sairasemicondensed": {
       "enabled": true,
@@ -17405,7 +17112,8 @@
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "sancreek": {
       "enabled": true,
@@ -17467,11 +17175,9 @@
     "sarabun": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -17623,11 +17329,9 @@
     "sedgwickave": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17636,11 +17340,9 @@
     "sedgwickavedisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17687,11 +17389,9 @@
     "sendflowers": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "seymourone": {
       "enabled": true,
@@ -17715,11 +17415,9 @@
     "shafarik": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "duplicate-feature-def",
-      "failure_message": "Duplicate OpenType feature definition",
       "config_yaml_source": "upstream",
       "source_format": [
         ".ufo"
@@ -17775,11 +17473,9 @@
     "shipporiantique": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -17788,11 +17484,9 @@
     "shipporiantiqueb1": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -17916,11 +17610,9 @@
     "sixtyfour": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17929,11 +17621,9 @@
     "sixtyfourconvergence": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17961,11 +17651,9 @@
     "smooch": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "smoochsans": {
       "enabled": true,
@@ -18075,11 +17763,9 @@
     "solway": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -18234,11 +17920,9 @@
     "splash": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "splinesans": {
       "enabled": true,
@@ -18296,11 +17980,9 @@
     "srisakdi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -18309,11 +17991,9 @@
     "staatliches": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -18367,11 +18047,9 @@
     "stick": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -18533,20 +18211,16 @@
     "tapestry": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "taprom": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "tasaexplorer": {
       "enabled": true,
@@ -18651,11 +18325,9 @@
     "thasadith": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -18934,11 +18606,9 @@
     "tourney": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "master-incompatibility",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -18947,11 +18617,9 @@
     "trainone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19017,11 +18685,9 @@
     "turretroad": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19030,11 +18696,9 @@
     "twinklestar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "unbounded": {
       "enabled": true,
@@ -19109,11 +18773,9 @@
     "updock": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "urbanist": {
       "enabled": true,
@@ -19199,11 +18861,9 @@
     "viaodalibre": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19326,11 +18986,9 @@
     "vujahdayscript": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "warnes": {
       "enabled": true,
@@ -19354,11 +19012,9 @@
     "waterbrush": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "waterfall": {
       "enabled": true,
@@ -19391,11 +19047,9 @@
     "whisper": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "overrides": {}
     },
     "windsong": {
       "enabled": true,
@@ -19559,11 +19213,9 @@
     "yaldevicolombo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19651,11 +19303,9 @@
     "yomogi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19702,11 +19352,9 @@
     "ysabeau": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19715,11 +19363,9 @@
     "ysabeauinfant": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19728,11 +19374,9 @@
     "ysabeauoffice": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19741,11 +19385,9 @@
     "ysabeausc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "designspace-instance-error",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -19773,11 +19415,9 @@
     "zain": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "qcurve-unsupported",
-      "failure_message": "UFO contains qcurve segments (fontmake incompatible)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19786,41 +19426,38 @@
     "zalandosans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "gftools-fontsetter-bug",
-      "failure_message": "gftools-fontsetter called without config argument",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "zalandosansexpanded": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "gftools-fontsetter-bug",
-      "failure_message": "gftools-fontsetter called without config argument",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "zalandosanssemiexpanded": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "gftools-fontsetter-bug",
-      "failure_message": "gftools-fontsetter called without config argument",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
-      ]
+      ],
+      "build_timeout": 1800
     },
     "zcoolkuaile": {
       "enabled": true,
@@ -19844,11 +19481,9 @@
     "zcoolqingkehuangyou": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19857,11 +19492,9 @@
     "zcoolxiaowei": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -19914,5 +19547,14 @@
       "notes": "",
       "overrides": {}
     }
+  },
+  "zalandosans": {
+    "build_timeout": 1800
+  },
+  "zalandosansexpanded": {
+    "build_timeout": 1800
+  },
+  "zalandosanssemiexpanded": {
+    "build_timeout": 1800
   }
 }
