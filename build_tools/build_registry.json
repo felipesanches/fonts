@@ -536,7 +536,7 @@
       "source_format": [
         ".glyphs"
       ],
-      "failure_category": "feature-error",
+      "failure_category": "tool-version-incompatibility",
       "failure_message": "Feature syntax: Expected quote to terminate string",
       "prebuild": []
     },
@@ -2291,14 +2291,16 @@
     "benchnine": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Legacy UFO format: lib.plist has unexpected keys that current fontTools rejects.",
+      "reproducible_build": "compiler-version",
+      "notes": "Multiple corrupt plist structures (bare keys in arrays, missing values). Prebuild rewrites lib.plist with only glyphOrder.",
       "overrides": {},
-      "failure_category": "legacy-ufo-format",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
+      ],
+      "prebuild": [
+        "python3 << 'PYEOF'\nimport os, glob\nNL = chr(10)\n\nfor ufo in glob.glob('src/*.ufo'):\n    lib_path = os.path.join(ufo, 'lib.plist')\n    if not os.path.exists(lib_path):\n        continue\n    data = open(lib_path).read()\n    \n    glyph_order = []\n    in_glyph_order = False\n    in_array = False\n    for line in data.split(NL):\n        s = line.strip()\n        if 'public.glyphOrder' in s:\n            in_glyph_order = True\n            continue\n        if in_glyph_order and s == '<array>':\n            in_array = True\n            continue\n        if in_glyph_order and in_array:\n            if s == '</array>':\n                in_glyph_order = False\n                in_array = False\n                continue\n            if s.startswith('<string>'):\n                val = s.replace('<string>', '').replace('</string>', '')\n                glyph_order.append(val)\n    \n    lines = []\n    lines.append('<?xml version=\"1.0\" encoding=\"UTF-8\"?>')\n    lines.append('<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">')\n    lines.append('<plist version=\"1.0\">')\n    lines.append('<dict>')\n    if glyph_order:\n        lines.append('  <key>public.glyphOrder</key>')\n        lines.append('  <array>')\n        for g in glyph_order:\n            lines.append(f'    <string>{g}</string>')\n        lines.append('  </array>')\n    lines.append('</dict>')\n    lines.append('</plist>')\n    open(lib_path, 'w').write(NL.join(lines) + NL)\n    print(f'Rewrote {lib_path} ({len(glyph_order)} glyphOrder entries)')\nPYEOF",
+        "python3 << 'PYEOF'\nimport os, glob\n\ncount = 0\nfor ufo in glob.glob('src/*.ufo'):\n    glyphs_dir = os.path.join(ufo, 'glyphs')\n    if not os.path.isdir(glyphs_dir):\n        continue\n    for fname in os.listdir(glyphs_dir):\n        if not fname.endswith('.glif'):\n            continue\n        fpath = os.path.join(glyphs_dir, fname)\n        lines = open(fpath).readlines()\n        new_lines = [l for l in lines if 'com.typemytype.robofont.layerData' not in l]\n        if len(new_lines) != len(lines):\n            open(fpath, 'w').writelines(new_lines)\n            count += 1\nprint(f'Fixed {count} glyphs with empty layerData key')\nPYEOF"
       ]
     },
     "benne": {
@@ -2756,9 +2758,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Float/sequence type mismatch during interpolation in glyphsLib - deep compatibility issue",
+      "notes": "glyphsLib interpolation: can not multiply sequence by float. Deep tool incompatibility.",
       "overrides": {},
-      "failure_category": "interpolation-error",
+      "failure_category": "tool-version-incompatibility",
       "failure_message": "Can't multiply sequence by non-int of type float",
       "config_yaml_source": "override",
       "source_format": [
@@ -4124,7 +4126,7 @@
     "comicrelief": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "legacy-no-modern-source",
       "notes": "Config references .ufo files but only .sfd sources exist. Needs SFD->UFO conversion.",
       "overrides": {},
       "failure_category": "legacy-no-modern-source",
@@ -5535,9 +5537,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "maximum_color fails: NotImplementedError: 5 (COLR v1 paint format 5 unsupported)",
+      "notes": "maximum_color tool fails: NotImplementedError: 5 (COLR v1 paint format 5 unsupported by current tools).",
       "overrides": {},
-      "failure_category": "build-timeout",
+      "failure_category": "unsupported-color-format",
       "failure_message": "Unsupported COLR format 5",
       "config_yaml_source": "upstream",
       "source_format": [
@@ -17040,9 +17042,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "babelfont styleName kwarg error - trying older babelfont",
+      "notes": "babelfont Instance.__init__() API changed. Needs older babelfont version.",
       "overrides": {},
-      "failure_category": "babelfont-error",
+      "failure_category": "tool-version-incompatibility",
       "failure_message": "Instance.__init__() unexpected keyword styleName",
       "config_yaml_source": "upstream",
       "source_format": [
@@ -18159,7 +18161,7 @@
       "reproducible_build": "build-failure",
       "notes": "Axis mismatch: source produces [opsz,wdth,wght] but shipped font has [opsz,slnt,wdth,wght]. slnt axis not in source at this commit.",
       "overrides": {},
-      "failure_category": "custom-build-pipeline",
+      "failure_category": "axis-mismatch",
       "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
       "source_format": [
@@ -18211,9 +18213,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "babelfont styleName kwarg error - trying older babelfont",
+      "notes": "babelfont Instance.__init__() API changed. Needs older babelfont version.",
       "overrides": {},
-      "failure_category": "babelfont-error",
+      "failure_category": "tool-version-incompatibility",
       "failure_message": "Instance.__init__() unexpected keyword styleName",
       "config_yaml_source": "upstream",
       "source_format": [
