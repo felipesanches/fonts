@@ -895,11 +895,9 @@
     "amethysta": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "name-table",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -1770,11 +1768,9 @@
     "bagelfatone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -2074,11 +2070,9 @@
     "barrio": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -2233,11 +2227,9 @@
     "beiruti": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -3159,11 +3151,9 @@
     "bonbon": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "legacy-source-format",
-      "failure_message": "SFD/VFB source format not fully supported",
       "config_yaml_source": "override",
       "source_format": [
         ".vfb"
@@ -3510,14 +3500,12 @@
     "cairoplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "Prebuild: same as cairo (shared repo)",
       "overrides": {},
       "prebuild": [
         "python3 scripts/makenormal.py sources/Cairo.glyphs sources/CairoNormal.glyphs"
-      ],
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file"
+      ]
     },
     "caladea": {
       "enabled": true,
@@ -3702,11 +3690,9 @@
     "castoro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
@@ -3884,11 +3870,9 @@
     "chirongoroundtc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -3897,11 +3881,9 @@
     "chironheihk": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "upstream",
       "source_format": [
         ".designspace"
@@ -4656,11 +4638,9 @@
     "diphylleia": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -4729,20 +4709,16 @@
     "dmserifdisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "config_yaml points to Sans/Source/config.yaml but family is Serif; no config.yaml exists in repo at that commit"
+      "overrides": {}
     },
     "dmseriftext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "config_yaml points to Sans/Source/config.yaml but family is Serif; no config.yaml exists in repo at that commit"
+      "overrides": {}
     },
     "domine": {
       "enabled": true,
@@ -5886,11 +5862,9 @@
     "gasoekone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -6100,11 +6074,9 @@
     "girassol": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
@@ -6113,11 +6085,9 @@
     "glegoo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "legacy-source-format",
-      "failure_message": "SFD/VFB source format not fully supported",
       "config_yaml_source": "override",
       "source_format": [
         ".sfd"
@@ -6280,11 +6250,9 @@
     "grandifloraone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -6341,11 +6309,9 @@
     "grenze": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -6908,11 +6874,9 @@
     "ibmplexsanskr": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -8138,11 +8102,9 @@
     "krub": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-error-other",
-      "failure_message": "fontmake compilation error",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -8944,20 +8906,16 @@
     "lxgwwenkaimonotc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error"
+      "overrides": {}
     },
     "lxgwwenkaitc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error"
+      "overrides": {}
     },
     "mada": {
       "enabled": true,
@@ -9642,11 +9600,9 @@
     "moiraione": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "source-file-missing",
-      "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -13177,11 +13133,9 @@
     "orbit": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -15894,11 +15848,9 @@
     "qahiri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "fontmake-value-error",
-      "failure_message": "fontmake ValueError",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -17346,11 +17298,9 @@
     "shantellsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
