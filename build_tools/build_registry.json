@@ -530,14 +530,15 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "AddExtremes filter not available in current ufo2ft",
+      "notes": "Deep incompatibility with current tools - needs older fontmake/ufo2ft/glyphsLib",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
       ],
       "failure_category": "feature-error",
-      "failure_message": "Feature syntax: Expected quote to terminate string"
+      "failure_message": "Feature syntax: Expected quote to terminate string",
+      "prebuild": []
     },
     "alegreyasans": {
       "enabled": true,
@@ -2293,7 +2294,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "open_ufo crashes on legacy UFO format - trying older gftools/fonttools",
       "overrides": {},
       "failure_category": "ufolib-error",
       "failure_message": "UFOLib validation error",
@@ -2483,14 +2484,15 @@
     "bigshotone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "compiler-version",
+      "notes": "Prebuild: comment out references to undefined glyph classes in features.fea",
       "overrides": {},
-      "failure_category": "feature-error",
-      "failure_message": "Unknown glyph class @_A_1st in features.fea",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport os, re\n\nfea = 'src/BigshotOne.ufo/features.fea'\nif os.path.exists(fea):\n    data = open(fea).read()\n    \n    # Find all glyph class definitions (lines with @class = [...])\n    defined_classes = set()\n    for m in re.finditer(r'@(\\w+)\\s*=\\s*\\[', data):\n        defined_classes.add(m.group(1))\n    \n    # Find all glyph class references\n    referenced = set()\n    for m in re.finditer(r'@(\\w+)', data):\n        referenced.add(m.group(1))\n    \n    undefined = referenced - defined_classes\n    if undefined:\n        print(f'Undefined classes: {undefined}')\n        lines = data.split('\\n')\n        fixed = []\n        for line in lines:\n            should_comment = False\n            for cls in undefined:\n                if '@' + cls in line and not line.strip().startswith('#'):\n                    should_comment = True\n                    break\n            if should_comment:\n                fixed.append('# ' + line + '  # DISABLED: undefined glyph class')\n            else:\n                fixed.append(line)\n        open(fea, 'w').write('\\n'.join(fixed))\n        print(f'Commented out references to undefined classes')\nEOF"
       ]
     },
     "bigshoulders": {
@@ -2755,7 +2757,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Float/sequence type mismatch during interpolation",
+      "notes": "Float/sequence type mismatch during interpolation in glyphsLib - deep compatibility issue",
       "overrides": {},
       "failure_category": "interpolation-error",
       "failure_message": "Can't multiply sequence by non-int of type float",
@@ -3180,7 +3182,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "missing value for robofont.layerData - trying older fontmake",
       "overrides": {},
       "failure_category": "ufolib-error",
       "failure_message": "Missing value for key com.typemytype.robofont.layerData",
@@ -3328,13 +3330,16 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Idotaccent and I both map to U+0069",
+      "notes": "Prebuild: remove U+0069 duplicate cmap from Idotaccent and I glyphs",
       "overrides": {},
       "failure_category": "cmap-collision",
       "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport os, glob, re\nfor ufo_dir in glob.glob('sources/2-build/Bungee_Color/*.ufo'):\n    for glif_name in ['Idotaccent_.glif', 'I_.glif']:\n        glif = os.path.join(ufo_dir, 'glyphs', glif_name)\n        if os.path.exists(glif):\n            data = open(glif).read()\n            if '<unicode hex=\"0069\"/>' in data:\n                data = data.replace('  <unicode hex=\"0069\"/>\\n', '')\n                open(glif, 'w').write(data)\n                print(f'Removed U+0069 from {glif}')\nEOF"
       ]
     },
     "bungeehairline": {
@@ -3409,13 +3414,16 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Same Bungee Color source, same cmap collision",
+      "notes": "Prebuild: remove U+0069 duplicate cmap from Idotaccent and I glyphs",
       "overrides": {},
       "failure_category": "cmap-collision",
       "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport os, glob, re\nfor ufo_dir in glob.glob('sources/2-build/Bungee_Spice/*.ufo'):\n    for glif_name in ['Idotaccent_.glif', 'I_.glif']:\n        glif = os.path.join(ufo_dir, 'glyphs', glif_name)\n        if os.path.exists(glif):\n            data = open(glif).read()\n            if '<unicode hex=\"0069\"/>' in data:\n                data = data.replace('  <unicode hex=\"0069\"/>\\n', '')\n                open(glif, 'w').write(data)\n                print(f'Removed U+0069 from {glif}')\nEOF"
       ]
     },
     "bytesized": {
@@ -3543,13 +3551,16 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Prebuild: comment out all missing Devanagari glyph refs in features.fea",
       "overrides": {},
       "failure_category": "missing-glyph",
       "failure_message": "Missing glyph la-deva in features.fea",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport os, plistlib, re\n\nfor root, dirs, files in os.walk('.'):\n    if root.endswith('.ufo') and 'features.fea' in files:\n        fea_path = os.path.join(root, 'features.fea')\n        contents_path = os.path.join(root, 'glyphs', 'contents.plist')\n        \n        if not os.path.exists(contents_path):\n            continue\n        \n        with open(contents_path, 'rb') as f:\n            contents = plistlib.load(f)\n        glyph_names = set(contents.keys())\n        \n        data = open(fea_path).read()\n        lines = data.split('\\n')\n        fixed = []\n        modified = False\n        \n        for line in lines:\n            stripped = line.strip()\n            if stripped.startswith('#') or not stripped:\n                fixed.append(line)\n                continue\n            \n            # Check if this line references glyphs (sub X by Y patterns)\n            # Extract all potential glyph names from the line\n            has_missing = False\n            # Match \"word-word\" patterns that could be glyph names\n            for m in re.finditer(r'\\b([a-zA-Z][a-zA-Z0-9_.-]+(?:-[a-zA-Z][a-zA-Z0-9_.-]+)*)\\b', stripped):\n                name = m.group(1)\n                # Skip OpenType keywords\n                if name in ('by', 'from', 'sub', 'pos', 'lookup', 'feature', 'table',\n                           'include', 'script', 'language', 'subtable', 'name',\n                           'parameters', 'HorizAxis', 'VertAxis', 'position'):\n                    continue\n                if '-deva' in name or '_deva' in name or '-hindi' in name:\n                    if name not in glyph_names:\n                        has_missing = True\n                        break\n            \n            if has_missing:\n                fixed.append('# ' + line + '  # DISABLED: missing glyph')\n                modified = True\n            else:\n                fixed.append(line)\n        \n        if modified:\n            open(fea_path, 'w').write('\\n'.join(fixed))\n            print(f'Fixed {fea_path}')\nEOF"
       ]
     },
     "cantarell": {
@@ -3755,14 +3766,15 @@
     "charissil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "compiler-version",
+      "notes": "Prebuild: remove duplicate unicode from SngStory variant glyphs in source and JSON UFOs",
       "overrides": {},
-      "failure_category": "cmap-collision",
-      "failure_message": "Cannot map LtnSmAEgAlef.SngStory to U+A7BB",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport os, glob, re, json\n\n# Fix source UFOs (.glif files)\nfor root, dirs, files in os.walk('source'):\n    if root.endswith('/glyphs'):\n        for f in files:\n            if 'SngStory' in f and f.endswith('.glif'):\n                path = os.path.join(root, f)\n                data = open(path).read()\n                if '<unicode hex=' in data:\n                    new = re.sub(r'  <unicode hex=\"[0-9A-Fa-f]+\"/>\\n', '', data)\n                    if new != data:\n                        open(path, 'w').write(new)\n                        print(f'Fixed source UFO: {path}')\n\n# Fix JSON instance UFOs - these are single JSON files with nested structure\nfor json_ufo in glob.glob('source/instance_ufos/*.ufo.json'):\n    with open(json_ufo) as f:\n        data = f.read()\n    \n    # The JSON UFO stores glyphs with their unicodes\n    # We need to find SngStory glyphs and remove their unicode values\n    obj = json.loads(data)\n    modified = False\n    \n    # JSON UFO structure has \"glyphs\" at top level\n    if 'glyphs' in obj:\n        for glyph_name in list(obj['glyphs'].keys()):\n            if 'SngStory' in glyph_name:\n                glyph = obj['glyphs'][glyph_name]\n                if isinstance(glyph, dict) and 'unicodes' in glyph and glyph['unicodes']:\n                    glyph['unicodes'] = []\n                    modified = True\n    \n    # Also check layered structure\n    if 'layers' in obj:\n        for layer in obj['layers']:\n            if isinstance(layer, dict) and 'glyphs' in layer:\n                glyphs = layer['glyphs']\n                if isinstance(glyphs, dict):\n                    for glyph_name in list(glyphs.keys()):\n                        if 'SngStory' in glyph_name:\n                            glyph = glyphs[glyph_name]\n                            if isinstance(glyph, dict) and 'unicodes' in glyph:\n                                glyph['unicodes'] = []\n                                modified = True\n    \n    if modified:\n        with open(json_ufo, 'w') as f:\n            json.dump(obj, f)\n        print(f'Fixed JSON UFO: {json_ufo}')\n    else:\n        # If we couldn't find glyphs, just do string replacement\n        if 'SngStory' in data and '\"A7BB\"' in data.upper():\n            print(f'WARNING: Could not fix {json_ufo} programmatically')\nEOF"
       ]
     },
     "charm": {
@@ -4009,14 +4021,15 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Multiple missing glyph components (commaaccentcomb, dblgravecmb, etc.) and cmap collisions - deep source quality issue",
       "overrides": {},
       "failure_category": "cmap-collision",
       "failure_message": "Cannot map uni021A to U+021A; missing commaaccentcomb",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
-      ]
+      ],
+      "prebuild": []
     },
     "codystar": {
       "enabled": true,
@@ -4046,7 +4059,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Builds but output Comfortaa[wdth,wght] vs shipped Comfortaa[wght] - axis mismatch",
       "overrides": {},
       "failure_category": "axis-mismatch",
       "failure_message": "Designspace instance generation failed",
@@ -5524,7 +5537,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Build exceeds 600s timeout during VF compilation",
+      "notes": "maximum_color fails: NotImplementedError: 5 (COLR v1 paint format 5 unsupported)",
       "overrides": {},
       "failure_category": "build-timeout",
       "failure_message": "Unsupported COLR format 5",
@@ -5845,14 +5858,15 @@
     "gayathri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "compiler-version",
+      "notes": "Prebuild: add instances to designspace + symlink features dir for instance UFOs",
       "overrides": {},
-      "failure_category": "no-instances-defined",
-      "failure_message": "Master compatibility check failed",
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport xml.etree.ElementTree as ET\nimport os\n\nds_path = 'sources/Gayathri.designspace'\ntree = ET.parse(ds_path)\nroot = tree.getroot()\n\nif root.find('instances') is None:\n    instances = ET.SubElement(root, 'instances')\n    for name, weight in [('Gayathri-Thin', 100), ('Gayathri-Regular', 400), ('Gayathri-Bold', 700)]:\n        inst = ET.SubElement(instances, 'instance')\n        inst.set('familyname', 'Gayathri')\n        inst.set('stylename', name.split('-')[1])\n        inst.set('name', name)\n        inst.set('filename', f'instance_ufos/{name}.ufo')\n        loc = ET.SubElement(inst, 'location')\n        dim = ET.SubElement(loc, 'dimension')\n        dim.set('name', 'weight')\n        dim.set('xvalue', str(weight))\n    ET.indent(tree, space='\\t')\n    tree.write(ds_path, xml_declaration=True, encoding='utf-8')\n    print('Added 3 instances to designspace')\n\nos.makedirs('sources/instance_ufos', exist_ok=True)\nfor target, src in [('sources/instance_ufos/features', '../features'), ('features', 'sources/features')]:\n    if not os.path.exists(target):\n        os.symlink(src, target)\n        print(f'Created symlink {target}')\nEOF"
       ]
     },
     "geist": {
@@ -6375,14 +6389,15 @@
     "gurajada": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "compiler-version",
+      "notes": "Prebuild: remove LLa from contents.plist (glif file missing)",
       "overrides": {},
-      "failure_category": "missing-glyph",
-      "failure_message": "LLa_.glif referenced in contents.plist but missing",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport plistlib, os\ncontents_path = 'Gurajada.ufo/glyphs/contents.plist'\nif os.path.exists(contents_path):\n    with open(contents_path, 'rb') as f:\n        contents = plistlib.load(f)\n    # Remove LLa entry since the .glif file doesn't exist\n    if 'LLa' in contents:\n        glif_path = os.path.join('Gurajada.ufo/glyphs', contents['LLa'])\n        if not os.path.exists(glif_path):\n            del contents['LLa']\n            with open(contents_path, 'wb') as f:\n                plistlib.dump(contents, f)\n            print(f'Removed LLa from contents.plist (missing {glif_path})')\nEOF"
       ]
     },
     "gveretlevin": {
@@ -7650,13 +7665,16 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Integer styleName in .glyphs causes AttributeError in glyphsLib",
+      "notes": "Prebuild: fix integer instance name (50 -> \"Regular\") in .glyphs",
       "overrides": {},
       "failure_category": "glyphslib-bug",
       "failure_message": "int has no attribute replace in _to_filename",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
+      ],
+      "prebuild": [
+        "python3 << 'EOF'\nimport re, glob\n\nfor f in glob.glob('*.glyphs') + glob.glob('sources/*.glyphs'):\n    data = open(f).read()\n    # Fix: name = 50; -> name = \"Regular\"; (single instance with integer name)\n    # Also need to check for the actual instance pattern\n    if 'name = 50;' in data:\n        # Replace the integer name with \"Regular\" \n        data = data.replace('name = 50;', 'name = \"Regular\";')\n        open(f, 'w').write(data)\n        print(f'Fixed integer instance name in {f}')\nEOF"
       ]
     },
     "kalnia": {
@@ -17024,7 +17042,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "babelfont styleName kwarg error - trying older babelfont",
       "overrides": {},
       "failure_category": "babelfont-error",
       "failure_message": "Instance.__init__() unexpected keyword styleName",
@@ -18141,7 +18159,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Builds but output [opsz,wdth,wght] vs shipped [opsz,slnt,wdth,wght] - missing slnt axis",
       "overrides": {},
       "failure_category": "custom-build-pipeline",
       "failure_message": "UFOLib validation error",
@@ -18195,7 +18213,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "babelfont styleName kwarg error - trying older babelfont",
       "overrides": {},
       "failure_category": "babelfont-error",
       "failure_message": "Instance.__init__() unexpected keyword styleName",

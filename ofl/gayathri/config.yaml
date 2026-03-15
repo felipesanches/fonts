@@ -2,13 +2,3 @@ sources:
   - sources/Gayathri.designspace
 buildVariable: false
 buildOTF: false
-instances:
-  Gayathri-Thin.ttf:
-    coordinates:
-      wght: 100
-  Gayathri-Regular.ttf:
-    coordinates:
-      wght: 400
-  Gayathri-Bold.ttf:
-    coordinates:
-      wght: 700

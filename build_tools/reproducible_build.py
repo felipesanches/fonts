@@ -402,11 +402,15 @@ def run_build(source_dir: Path, config_path: Path, family: str,
 
     # Determine which builder to use
     if isolation == "custom" and "requirements" in overrides:
-        # Create custom venv
+        # Create custom venv — use Python 3.11 if available (older packages
+        # often lack Python 3.13 wheels and need system C libs to build)
         venv_dir = family_ws / "venv"
         if not venv_dir.exists():
-            subprocess.run([sys.executable, "-m", "venv", str(venv_dir)], check=True)
+            py311 = Path.home() / ".local" / "bin" / "python3.11"
+            venv_python = str(py311) if py311.exists() else sys.executable
+            subprocess.run([venv_python, "-m", "venv", str(venv_dir)], check=True)
             pip = str(venv_dir / "bin" / "pip")
+            subprocess.run([pip, "install", "--upgrade", "pip"], check=True)
             subprocess.run([pip, "install"] + overrides["requirements"], check=True)
         builder_cmd = str(venv_dir / "bin" / "gftools-builder")
     else:
