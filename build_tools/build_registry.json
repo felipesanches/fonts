@@ -5555,10 +5555,10 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "maximum_color tool fails: NotImplementedError: 5 (COLR v1 paint format 5 unsupported by current tools).",
+      "notes": "Build succeeds but gftools-fix crashes: fix_colr_v1_add_svg calls maximum_color (nanoemoji) which fails on COLR v1 Paint Format 5 (PaintLinearGradient). The shipped font has COLR v1 but no SVG table. No config option exists to skip the SVG fallback generation fix step.",
       "overrides": {},
       "failure_category": "unsupported-color-format",
-      "failure_message": "Unsupported COLR format 5",
+      "failure_message": "nanoemoji maximum_color fails on COLR v1 Paint Format 5 (PaintLinearGradient)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -18178,12 +18178,13 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Axis mismatch: source produces [opsz,wdth,wght] but shipped font has [opsz,slnt,wdth,wght]. slnt axis not in source at this commit.",
+      "notes": "Requires custom preprocessing: scripts/build/glyphsToUFO.py generates slanted (oblique) UFO masters and adjusts spacing before gftools-builder can use the designspace. Without preprocessing, gftools-builder falls back to the .glyphspackage which only produces [opsz,wdth,wght] (missing slnt axis). The designspace references build/ directory UFOs that do not exist in the repo.",
       "overrides": {},
-      "failure_category": "axis-mismatch",
-      "failure_message": "UFOLib validation error",
+      "failure_category": "requires-preprocessing",
+      "failure_message": "Source requires custom build script (glyphsToUFO.py) to generate slanted masters before gftools-builder",
       "config_yaml_source": "upstream",
       "source_format": [
+        ".glyphspackage",
         ".designspace"
       ]
     },
