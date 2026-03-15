@@ -162,7 +162,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -16911,12 +16911,10 @@
     "rubikpixels": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
-      "build_timeout": 600
+      "build_timeout": 1200
     },
     "rubikpuddles": {
       "enabled": true,
