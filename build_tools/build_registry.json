@@ -148,11 +148,9 @@
     "poppins": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "Phase 2. AssertionError: Default source not found in Devanagari .glyphs. glyphsLib version incompatibility.",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -7997,11 +7995,9 @@
     "koho": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -9182,11 +9178,9 @@
     "martelsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "splitInterpolable bug: roman instances lost",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"

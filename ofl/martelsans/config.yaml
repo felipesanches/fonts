@@ -1,3 +1,4 @@
-buildVariable: false
 sources:
-  - Martel Sans Source Files/Martel_Sans_20150305.glyphs
+  - Martel Sans Source Files/Martel_Sans_20150305-fixed.designspace
+buildVariable: false
+buildOTF: false

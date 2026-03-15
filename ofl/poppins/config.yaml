@@ -1,4 +1,5 @@
-buildVariable: true
 sources:
-  - masters/Poppins.glyphs
-  - masters/Poppins Devanagari.glyphs
+  - masters/Poppins-fixed.designspace
+  - masters/Poppins Devanagari-fixed.designspace
+buildVariable: false
+buildOTF: false

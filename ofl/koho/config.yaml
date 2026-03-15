@@ -1,3 +1,4 @@
-buildVariable: false
 sources:
-  - source/KoHo-Master.glyphs
+  - source/KoHo-Master-fixed.designspace
+buildVariable: false
+buildOTF: false
