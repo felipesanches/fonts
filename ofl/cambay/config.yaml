@@ -1,6 +1,7 @@
 sources:
-  - "Sources/Cambay Regular/Cambay Devanagari-Regular.ufo"
-  - "Sources/Cambay Oblique/Cambay Devanagari-Oblique.ufo"
-  - "Sources/Cambay Bold/Cambay Devanagari-Bold.ufo"
-  - "Sources/Cambay Bold Oblique/Cambay Devanagari-Bold Oblique.ufo"
+  - "Sources/Cambay Regular/Cambay-Regular.ufo"
+  - "Sources/Cambay Oblique/Cambay-Italic.ufo"
+  - "Sources/Cambay Bold/Cambay-Bold.ufo"
+  - "Sources/Cambay Bold Oblique/Cambay-BoldItalic.ufo"
 buildVariable: false
+familyName: Cambay

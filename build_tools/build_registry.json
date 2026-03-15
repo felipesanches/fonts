@@ -160,7 +160,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -995,11 +995,9 @@
     "andadapro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Recorded commit predates source file addition to repo",
-      "overrides": {},
-      "failure_category": "commit-predates-sources",
-      "failure_message": "Tarball only contains build-env and docs"
+      "reproducible_build": "compiler-version",
+      "notes": "Tarball bloated by build-env (python venv). Sources extracted from local git clone.",
+      "overrides": {}
     },
     "andika": {
       "enabled": true,
@@ -2294,9 +2292,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "open_ufo crashes on legacy UFO format - trying older gftools/fonttools",
+      "notes": "Legacy UFO format: lib.plist has unexpected keys that current fontTools rejects.",
       "overrides": {},
-      "failure_category": "ufolib-error",
+      "failure_category": "legacy-ufo-format",
       "failure_message": "UFOLib validation error",
       "config_yaml_source": "override",
       "source_format": [
@@ -2709,14 +2707,15 @@
     "biorhymeexpanded": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "compiler-version",
+      "notes": "Expanded instances deactivated in source. Prebuild: activate wdth=125 instances, deactivate wdth=100, rename family.",
       "overrides": {},
-      "failure_category": "output-filename-mismatch",
-      "failure_message": "Build succeeds but produces BioRhyme not BioRhymeExpanded",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
+      ],
+      "prebuild": [
+        "python3 << 'PYEOF'\nfrom glyphsLib import GSFont\nfont = GSFont('sources/BioRhyme.glyphs')\n\n# Activate expanded instances (wdth=125), deactivate normal (wdth=100)\nfor inst in font.instances:\n    if inst.axes[1] == 125:\n        inst.active = True\n        print(f'Activated expanded: {inst.name}')\n    else:\n        inst.active = False\n        print(f'Deactivated normal: {inst.name}')\n\n# Set family name to BioRhyme Expanded\nfont.familyName = 'BioRhyme Expanded'\nprint(f'Set familyName to: {font.familyName}')\n\nfont.save('sources/BioRhyme.glyphs')\nprint('Saved')\nPYEOF"
       ]
     },
     "birthstone": {
@@ -2866,7 +2865,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
+      "notes": "Template designspace has 0 sources/instances. Requires custom Bitcount build pipeline not supported by gftools-builder.",
       "overrides": {},
       "failure_category": "custom-build-pipeline",
       "failure_message": "Large repo 128MB tarball stalls over virtiofs"
@@ -2875,7 +2874,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
+      "notes": "Template designspace has 0 sources/instances. Requires custom Bitcount build pipeline not supported by gftools-builder.",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
@@ -2888,7 +2887,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
+      "notes": "Template designspace has 0 sources/instances. Requires custom Bitcount build pipeline not supported by gftools-builder.",
       "overrides": {},
       "failure_category": "custom-build-pipeline",
       "failure_message": "Large repo 128MB tarball stalls over virtiofs"
@@ -3181,14 +3180,15 @@
     "bowlbyonesc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "missing value for robofont.layerData - trying older fontmake",
+      "reproducible_build": "compiler-version",
+      "notes": "Glyphs have empty com.typemytype.robofont.layerData key (key without value). Prebuild removes them.",
       "overrides": {},
-      "failure_category": "ufolib-error",
-      "failure_message": "Missing value for key com.typemytype.robofont.layerData",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
+      ],
+      "prebuild": [
+        "python3 << 'PYEOF'\nimport os\n\nufo_dir = 'src/BowlbyOneSC-Regular.ufo/glyphs'\ncount = 0\nfor fname in os.listdir(ufo_dir):\n    if not fname.endswith('.glif'):\n        continue\n    fpath = os.path.join(ufo_dir, fname)\n    lines = open(fpath).readlines()\n    new_lines = []\n    skip = False\n    for line in lines:\n        if 'com.typemytype.robofont.layerData' in line:\n            skip = True\n            count += 1\n            continue\n        new_lines.append(line)\n    if skip:\n        open(fpath, 'w').writelines(new_lines)\nprint(f'Fixed {count} glyphs with empty layerData key')\nPYEOF"
       ]
     },
     "braahone": {
@@ -3330,9 +3330,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Prebuild: remove U+0069 duplicate cmap from Idotaccent and I glyphs",
+      "notes": "Cmap collision fixed by prebuild, but source has open contour in AE.alt002 glyph that RemoveOverlaps fails on.",
       "overrides": {},
-      "failure_category": "cmap-collision",
+      "failure_category": "source-error",
       "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
@@ -3414,9 +3414,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Prebuild: remove U+0069 duplicate cmap from Idotaccent and I glyphs",
+      "notes": "Same source issues as bungeecolor (open contour in AE.alt002).",
       "overrides": {},
-      "failure_category": "cmap-collision",
+      "failure_category": "source-error",
       "failure_message": "Unhandled open contour in glyph AE.alt002",
       "config_yaml_source": "override",
       "source_format": [
@@ -3550,24 +3550,23 @@
     "cambay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "Prebuild: comment out all missing Devanagari glyph refs in features.fea",
       "overrides": {},
-      "failure_category": "missing-glyph",
-      "failure_message": "Missing glyph la-deva in features.fea",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
       ],
       "prebuild": [
+        "python3 << 'PYEOF'\nimport plistlib, os, glob\n\n# Rename UFO directories and fix family/style names\nrenames = {\n    \"Cambay Devanagari-Regular.ufo\": \"Cambay-Regular.ufo\",\n    \"Cambay Devanagari-Oblique.ufo\": \"Cambay-Italic.ufo\",\n    \"Cambay Devanagari-Bold.ufo\": \"Cambay-Bold.ufo\",\n    \"Cambay Devanagari-Bold Oblique.ufo\": \"Cambay-BoldItalic.ufo\",\n}\n\nfor old_name, new_name in renames.items():\n    for d in glob.glob(\"Sources/*/\"):\n        old_path = os.path.join(d, old_name)\n        new_path = os.path.join(d, new_name)\n        if os.path.exists(old_path):\n            os.rename(old_path, new_path)\n            print(f\"Renamed: {old_path} -> {new_path}\")\n            \n            fontinfo = os.path.join(new_path, \"fontinfo.plist\")\n            if os.path.exists(fontinfo):\n                with open(fontinfo, \"rb\") as f:\n                    info = plistlib.load(f)\n                for key in [\"familyName\", \"openTypeNamePreferredFamilyName\"]:\n                    if key in info and \"Devanagari\" in str(info[key]):\n                        info[key] = info[key].replace(\" Devanagari\", \"\")\n                # Fix style names\n                if \"styleName\" in info:\n                    info[\"styleName\"] = info[\"styleName\"].replace(\"Oblique\", \"Italic\")\n                if \"openTypeNamePreferredSubfamilyName\" in info:\n                    info[\"openTypeNamePreferredSubfamilyName\"] = info[\"openTypeNamePreferredSubfamilyName\"].replace(\"Oblique\", \"Italic\")\n                if \"styleMapStyleName\" in info:\n                    info[\"styleMapStyleName\"] = info[\"styleMapStyleName\"].replace(\"oblique\", \"italic\")\n                with open(fontinfo, \"wb\") as f:\n                    plistlib.dump(info, f)\nPYEOF",
         "python3 << 'EOF'\nimport os, plistlib, re\n\nfor root, dirs, files in os.walk('.'):\n    if root.endswith('.ufo') and 'features.fea' in files:\n        fea_path = os.path.join(root, 'features.fea')\n        contents_path = os.path.join(root, 'glyphs', 'contents.plist')\n        \n        if not os.path.exists(contents_path):\n            continue\n        \n        with open(contents_path, 'rb') as f:\n            contents = plistlib.load(f)\n        glyph_names = set(contents.keys())\n        \n        data = open(fea_path).read()\n        lines = data.split('\\n')\n        fixed = []\n        modified = False\n        \n        for line in lines:\n            stripped = line.strip()\n            if stripped.startswith('#') or not stripped:\n                fixed.append(line)\n                continue\n            \n            # Check if this line references glyphs (sub X by Y patterns)\n            # Extract all potential glyph names from the line\n            has_missing = False\n            # Match \"word-word\" patterns that could be glyph names\n            for m in re.finditer(r'\\b([a-zA-Z][a-zA-Z0-9_.-]+(?:-[a-zA-Z][a-zA-Z0-9_.-]+)*)\\b', stripped):\n                name = m.group(1)\n                # Skip OpenType keywords\n                if name in ('by', 'from', 'sub', 'pos', 'lookup', 'feature', 'table',\n                           'include', 'script', 'language', 'subtable', 'name',\n                           'parameters', 'HorizAxis', 'VertAxis', 'position'):\n                    continue\n                if '-deva' in name or '_deva' in name or '-hindi' in name:\n                    if name not in glyph_names:\n                        has_missing = True\n                        break\n            \n            if has_missing:\n                fixed.append('# ' + line + '  # DISABLED: missing glyph')\n                modified = True\n            else:\n                fixed.append(line)\n        \n        if modified:\n            open(fea_path, 'w').write('\\n'.join(fixed))\n            print(f'Fixed {fea_path}')\nEOF"
       ]
     },
     "cantarell": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "SFD source only - gftools crashes at _do_smallcap trying to open .sfd with ufoLib2",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -3647,8 +3646,8 @@
     "carme": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "SFD source only - gftools crashes at _do_smallcap trying to open .sfd with ufoLib2",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -3672,9 +3671,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Microsoft uses custom build pipeline to create Mono variant from CascadiaCode sources. Missing glyphs in features. Needs custom build support.",
       "overrides": {},
-      "failure_category": "missing-glyph",
+      "failure_category": "custom-build-pipeline",
       "failure_message": "Missing glyph zhe-cy.loclBGR.alt",
       "config_yaml_source": "override",
       "source_format": [
@@ -4021,9 +4020,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Multiple missing glyph components (commaaccentcomb, dblgravecmb, etc.) and cmap collisions - deep source quality issue",
+      "notes": "Missing component glyphs (dblgravecmb etc.) referenced by Unicode characters. Source-level glyph additions needed.",
       "overrides": {},
-      "failure_category": "cmap-collision",
+      "failure_category": "missing-glyph",
       "failure_message": "Cannot map uni021A to U+021A; missing commaaccentcomb",
       "config_yaml_source": "override",
       "source_format": [
@@ -4034,8 +4033,8 @@
     "codystar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "VFB source only - gftools cannot build .vfb files (requires FontLab conversion)",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -4058,14 +4057,15 @@
     "comfortaa": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Builds but output Comfortaa[wdth,wght] vs shipped Comfortaa[wght] - axis mismatch",
+      "reproducible_build": "compiler-version",
+      "notes": "Source builds Comfortaa[wdth,wght] but shipped is Comfortaa[wght] - width axis needs to be removed or file mapping needed",
       "overrides": {},
-      "failure_category": "axis-mismatch",
-      "failure_message": "Designspace instance generation failed",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
+      ],
+      "prebuild": [
+        "python3 -c \"from glyphsLib import GSFont; f=GSFont('sources/Comfortaa.glyphs'); idx=next(i for i,a in enumerate(f.axes) if a.axisTag=='wdth'); del f.axes[idx]; [setattr(m,'axes',list(m.axes[:idx])+list(m.axes[idx+1:])) for m in f.masters]; [setattr(inst,'axes',list(inst.axes[:idx])+list(inst.axes[idx+1:])) for inst in f.instances]; f.save('sources/Comfortaa.glyphs'); print('Removed degenerate wdth axis')\""
       ]
     },
     "comforter": {
@@ -4125,14 +4125,12 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Config references .ufo files but only .sfd sources exist. Needs SFD->UFO conversion.",
       "overrides": {},
-      "failure_category": "legacy-source-format",
+      "failure_category": "legacy-no-modern-source",
       "failure_message": "UFOLib validation error",
       "config_yaml_source": "upstream",
-      "source_format": [
-        ".ufo"
-      ]
+      "source_format": "sfd"
     },
     "comme": {
       "enabled": true,
@@ -5034,8 +5032,8 @@
     "englebert": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "VFB source only - gftools cannot build .vfb files (requires FontLab conversion)",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -5379,8 +5377,8 @@
     "federo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "VFB source only - gftools cannot build .vfb files (requires FontLab conversion)",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -6550,7 +6548,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Duplicate master locations for smart components in Glyphs source (Locations must be unique).",
       "overrides": {},
       "failure_category": "master-incompatibility",
       "failure_message": "Designspace instance generation failed",
@@ -6903,8 +6901,8 @@
     "iceberg": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "VFB source only - gftools cannot build .vfb files (requires FontLab conversion)",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -6916,8 +6914,8 @@
     "iceland": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "VFB source only - gftools cannot build .vfb files (requires FontLab conversion)",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -7665,7 +7663,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Prebuild: fix integer instance name (50 -> \"Regular\") in .glyphs",
+      "notes": "Single instance at weight 50, needs Light+Bold instances added. Deep glyphsLib compat issue.",
       "overrides": {},
       "failure_category": "glyphslib-bug",
       "failure_message": "int has no attribute replace in _to_filename",
@@ -7674,7 +7672,7 @@
         ".glyphs"
       ],
       "prebuild": [
-        "python3 << 'EOF'\nimport re, glob\n\nfor f in glob.glob('*.glyphs') + glob.glob('sources/*.glyphs'):\n    data = open(f).read()\n    # Fix: name = 50; -> name = \"Regular\"; (single instance with integer name)\n    # Also need to check for the actual instance pattern\n    if 'name = 50;' in data:\n        # Replace the integer name with \"Regular\" \n        data = data.replace('name = 50;', 'name = \"Regular\";')\n        open(f, 'w').write(data)\n        print(f'Fixed integer instance name in {f}')\nEOF"
+        "python3 << 'PYEOF'\nimport glob\nfrom glyphsLib import GSFont\n\nfor f in glob.glob('*.glyphs') + glob.glob('sources/*.glyphs') + glob.glob('masters/*.glyphs'):\n    font = GSFont(f)\n    \n    # Remove degenerate wdth axis\n    wdth_idx = None\n    for i, axis in enumerate(font.axes):\n        if axis.axisTag == 'wdth':\n            wdth_idx = i\n            break\n    if wdth_idx is not None:\n        del font.axes[wdth_idx]\n        for master in font.masters:\n            master.axes = list(master.axes[:wdth_idx]) + list(master.axes[wdth_idx+1:])\n        for inst in font.instances:\n            inst.axes = list(inst.axes[:wdth_idx]) + list(inst.axes[wdth_idx+1:])\n        print(f'Removed degenerate wdth axis from {f}')\n    \n    # Fix integer instance name\n    for inst in font.instances:\n        if isinstance(inst.name, int):\n            inst.name = 'Regular'\n            print(f'Fixed integer instance name')\n    \n    font.save(f)\n    print(f'Saved {f}')\nPYEOF"
       ]
     },
     "kalnia": {
@@ -7884,8 +7882,8 @@
     "khula": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "SP3 source only - no modern build pipeline support",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "Superpolator .sp3 file, no designspace",
@@ -8205,8 +8203,8 @@
     "lancelot": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "",
+      "reproducible_build": "legacy-no-modern-source",
+      "notes": "VFB source only - gftools cannot build .vfb files (requires FontLab conversion)",
       "overrides": {},
       "failure_category": "legacy-source-format",
       "failure_message": "SFD/VFB source format not fully supported",
@@ -10164,9 +10162,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Massive build (599 steps) with includeSubsets. Likely timeout.",
       "overrides": {},
-      "failure_category": "broken-subset-ufo",
+      "failure_category": "noto-infra-required",
       "failure_message": "Missing metainfo.plist in subset-files UFOs"
     },
     "notosansadlam": {
@@ -10585,9 +10583,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Source file not found at expected path.",
       "overrides": {},
-      "failure_category": "procedural-source",
+      "failure_category": "noto-infra-required",
       "failure_message": "Procedurally generated font, no .glyphs in repo"
     },
     "notosansegyptianhieroglyphs": {
@@ -10970,9 +10968,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Single master, instance UFO generation fails.",
       "overrides": {},
-      "failure_category": "single-master-static",
+      "failure_category": "noto-infra-required",
       "failure_message": "Could not find master in Noto Sans for wdth:5.0"
     },
     "notosanskhudawadi": {
@@ -12256,9 +12254,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Requires full Noto build infrastructure for includeSubsets",
+      "notes": "Large build (109 steps) with many instances. Likely timeout.",
       "overrides": {},
-      "failure_category": "noto-build-infra",
+      "failure_category": "noto-infra-required",
       "failure_message": "Instance UFO not found (fontmake version mismatch)"
     },
     "notosanstirhuta": {
@@ -12780,9 +12778,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Large build (515 steps). Likely timeout.",
       "overrides": {},
-      "failure_category": "broken-subset-ufo",
+      "failure_category": "noto-infra-required",
       "failure_message": "Missing metainfo.plist in subset-files UFOs"
     },
     "notoseriftangut": {
@@ -13602,7 +13600,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Duplicate master locations + widespread glyph compatibility errors across masters.",
       "overrides": {},
       "failure_category": "master-incompatibility",
       "failure_message": "Master compatibility check failed",
@@ -13615,7 +13613,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "",
+      "notes": "Same issues as playfairdisplay - shared source files.",
       "overrides": {},
       "failure_category": "master-incompatibility",
       "failure_message": "Master compatibility check failed",
@@ -17955,9 +17953,9 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Italic source has incompatible masters",
+      "notes": "Italic source has ExtraBold master/instance weight mapping conflict. Source-level fix needed.",
       "overrides": {},
-      "failure_category": "interpolation-error",
+      "failure_category": "master-incompatibility",
       "failure_message": "Config.yaml references nonexistent source file",
       "config_yaml_source": "upstream",
       "source_format": [
@@ -18159,7 +18157,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "Builds but output [opsz,wdth,wght] vs shipped [opsz,slnt,wdth,wght] - missing slnt axis",
+      "notes": "Axis mismatch: source produces [opsz,wdth,wght] but shipped font has [opsz,slnt,wdth,wght]. slnt axis not in source at this commit.",
       "overrides": {},
       "failure_category": "custom-build-pipeline",
       "failure_message": "UFOLib validation error",
