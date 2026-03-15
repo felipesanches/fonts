@@ -160,7 +160,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -4021,16 +4021,18 @@
     "coda": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Missing component glyphs (dblgravecmb etc.) referenced by Unicode characters. Source-level glyph additions needed.",
+      "reproducible_build": "compiler-version",
+      "notes": "Heavy UFO: missing dblgravecmb + cmap collision on U+0326. Prebuild creates placeholder glyph and removes duplicate mapping.",
       "overrides": {},
-      "failure_category": "missing-glyph",
-      "failure_message": "Cannot map uni021A to U+021A; missing commaaccentcomb",
       "config_yaml_source": "override",
       "source_format": [
         ".ufo"
       ],
-      "prebuild": []
+      "prebuild": [
+        "python3 << 'PYEOF'\nimport os, plistlib\n\n# Rename Regular UFO\nreg_old = 'coda/in-progress/Regular/src/Coda.ufo'\nreg_new = 'coda/in-progress/Regular/src/Coda-Regular.ufo'\nif os.path.exists(reg_old):\n    os.rename(reg_old, reg_new)\n    fi = os.path.join(reg_new, 'fontinfo.plist')\n    if os.path.exists(fi):\n        with open(fi, 'rb') as f:\n            info = plistlib.load(f)\n        info['styleName'] = 'Regular'\n        with open(fi, 'wb') as f:\n            plistlib.dump(info, f)\n    print('Renamed Coda.ufo -> Coda-Regular.ufo')\n\n# Rename Heavy UFO\nheavy_old = 'coda/in-progress/Heavy/src/Coda-Heavy-IN.ufo'\nheavy_new = 'coda/in-progress/Heavy/src/Coda-ExtraBold.ufo'\nif os.path.exists(heavy_old):\n    os.rename(heavy_old, heavy_new)\n    fi = os.path.join(heavy_new, 'fontinfo.plist')\n    if os.path.exists(fi):\n        with open(fi, 'rb') as f:\n            info = plistlib.load(f)\n        info['styleName'] = 'ExtraBold'\n        info.pop('openTypeNamePreferredSubfamilyName', None)\n        with open(fi, 'wb') as f:\n            plistlib.dump(info, f)\n    print('Renamed Coda-Heavy-IN.ufo -> Coda-ExtraBold.ufo')\nPYEOF",
+        "python3 << 'PYEOF'\nimport os, plistlib\n\nufo = \"coda/in-progress/Heavy/src/Coda-ExtraBold.ufo\"\nglyphs_dir = os.path.join(ufo, \"glyphs\")\n\nglif_content = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>' + chr(10) + '<glyph name=\"dblgravecmb\" format=\"2\">' + chr(10) + '  <advance width=\"0\"/>' + chr(10) + '  <unicode hex=\"030F\"/>' + chr(10) + '  <outline/>' + chr(10) + '</glyph>' + chr(10)\n\nglif_path = os.path.join(glyphs_dir, \"dblgravecmb.glif\")\nopen(glif_path, \"w\").write(glif_content)\n\ncontents_path = os.path.join(glyphs_dir, \"contents.plist\")\nwith open(contents_path, \"rb\") as f:\n    contents = plistlib.load(f)\ncontents[\"dblgravecmb\"] = \"dblgravecmb.glif\"\nwith open(contents_path, \"wb\") as f:\n    plistlib.dump(contents, f)\nprint(\"Created empty dblgravecmb glyph\")\nPYEOF",
+        "python3 << 'PYEOF'\nimport os\n\nufo = \"coda/in-progress/Heavy/src/Coda-ExtraBold.ufo\"\nglif = os.path.join(ufo, \"glyphs\", \"commaaccentcomb.glif\")\nif os.path.exists(glif):\n    lines = open(glif).readlines()\n    new_lines = [l for l in lines if \"0326\" not in l]\n    if len(new_lines) != len(lines):\n        open(glif, \"w\").writelines(new_lines)\n        print(\"Removed U+0326 from commaaccentcomb\")\nPYEOF"
+      ]
     },
     "codystar": {
       "enabled": true,
