@@ -1300,7 +1300,8 @@ def main():
         status = process_family(family, registry, force=args.force,
                                 recompare=args.recompare)
 
-        # Update registry
+        # Re-read registry before updating to avoid overwriting concurrent changes
+        registry = load_registry()
         if family not in registry["families"]:
             registry["families"][family] = {
                 "enabled": True,

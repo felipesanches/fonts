@@ -56,7 +56,7 @@ json.dump(new_state, open('$STATE_FILE', 'w'))
 if new_builds:
     pct_building = total_building / 1266 * 100
     pct_identical = total_identical / 1266 * 100
-    msg = f'ANNOUNCE:{len(new_builds)} new families building correctly! {pct_building:.1f} percent building.'
+    msg = f'ANNOUNCE:{len(new_builds)} new families building correct-lee! {pct_building:.1f} percent building.'
     if new_identical:
         msg += f' {len(new_identical)} new byte-identical! {pct_identical:.1f} percent identical.'
     print(msg)
