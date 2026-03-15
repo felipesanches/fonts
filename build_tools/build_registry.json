@@ -160,7 +160,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -2760,13 +2760,16 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
-      "notes": "glyphsLib interpolation fails: a kern/position value is tuple instead of number. Source data issue.",
+      "notes": "Descender value was quoted string in .glyphs source, causing interpolation failure. Prebuild fixes it. Build succeeds but some instance names differ (Black/ExtraLight/SemiBold vs Heavy/UltraLight/DemiBold).",
       "overrides": {},
-      "failure_category": "source-data-corruption",
-      "failure_message": "Can't multiply sequence by non-int of type float",
+      "failure_category": "instance-naming-mismatch",
+      "failure_message": "built file not found for Biryani-Black.ttf, Biryani-ExtraLight.ttf, Biryani-SemiBold.ttf",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
+      ],
+      "prebuild": [
+        "python3 /mnt/shared/google/fonts/build_tools/prebuilds/biryani_prebuild.py"
       ]
     },
     "bitcount": {
@@ -2883,7 +2886,7 @@
     "bitcountsingle": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "untested",
+      "reproducible_build": "build-failure",
       "notes": "Prebuild: patch designspace rules processing from last to first",
       "overrides": {},
       "config_yaml_source": "override",
@@ -3688,14 +3691,24 @@
     "cascadiamono": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Microsoft uses custom build pipeline to create Mono variant from CascadiaCode sources. Missing glyphs in features. Needs custom build support.",
+      "reproducible_build": "compiler-version",
+      "notes": "Cascadia Mono is built from the same sources as Cascadia Code but with ligatures removed. Upstream uses a custom build.py; this prebuild transforms the sources for gftools-builder.",
       "overrides": {},
-      "failure_category": "custom-build-pipeline",
-      "failure_message": "Missing glyph zhe-cy.loclBGR.alt",
+      "prebuild": [
+        "python3 /mnt/shared/google/fonts/build_tools/prebuilds/cascadiamono_prebuild.py"
+      ],
+      "build_environment": {
+        "fontmake": "3.11.1",
+        "fonttools": "4.61.1",
+        "glyphsLib": "6.12.7",
+        "gftools": "0.9.100.dev4",
+        "ufo2ft": "3.7.0",
+        "ttfautohint-py": "0.6.0"
+      },
       "config_yaml_source": "override",
       "source_format": [
-        ".designspace"
+        ".designspace",
+        ".ufo"
       ]
     },
     "castoro": {
@@ -7687,9 +7700,9 @@
       "source_format": [
         ".glyphs"
       ],
-      "notes": "Prebuild: fix instances (integer name, broken axis mapping) and add proper Light/Regular/Bold with correct weight mapping",
+      "notes": "Prebuild: fix instances (integer name, missing Light/Bold, broken axis mapping) in Kalam.glyphs",
       "prebuild": [
-        "python3 << 'PYEOF2'\nfrom glyphsLib import GSFont, GSInstance, GSCustomParameter\n\nfont = GSFont('masters/Kalam.glyphs')\n\n# Remove degenerate wdth axis (both masters have same width value)\nwdth_idx = None\nfor i, axis in enumerate(font.axes):\n    if axis.axisTag == 'wdth':\n        wdth_idx = i\n        break\nif wdth_idx is not None:\n    del font.axes[wdth_idx]\n    for master in font.masters:\n        master.axes = list(master.axes[:wdth_idx]) + list(master.axes[wdth_idx+1:])\n    print('Removed degenerate wdth axis')\n\n# Replace instances with proper Light/Regular/Bold\n# Masters: Light=0, Bold=100 in design space\nfont.instances = []\nfor name, design_weight in [('Kalam Light', 0), ('Kalam Regular', 50), ('Kalam Bold', 100)]:\n    inst = GSInstance()\n    inst.name = name\n    inst.axes = [design_weight]\n    font.instances.append(inst)\n\n# Add axis mapping: design -> user coords\n# 0->300 (Light), 50->400 (Regular), 100->700 (Bold)\nfont.customParameters.append(GSCustomParameter('Axis Mappings', {\n    'wght': {'0': 300, '50': 400, '100': 700}\n}))\n\nfont.save('masters/Kalam.glyphs')\nprint('Patched Kalam.glyphs: fixed instances and axis mapping')\nPYEOF2"
+        "python3 << 'PYEOF2'\nfrom glyphsLib import GSFont, GSInstance, GSCustomParameter\n\nfont = GSFont('masters/Kalam.glyphs')\n\n# Remove degenerate wdth axis (both masters have same width value)\nwdth_idx = None\nfor i, axis in enumerate(font.axes):\n    if axis.axisTag == 'wdth':\n        wdth_idx = i\n        break\nif wdth_idx is not None:\n    del font.axes[wdth_idx]\n    for master in font.masters:\n        master.axes = list(master.axes[:wdth_idx]) + list(master.axes[wdth_idx+1:])\n    print('Removed degenerate wdth axis')\n\n# Fix existing instance (name is integer 50, should be string)\nfont.instances[0].name = \"Regular\"\nfont.instances[0].axes = [50]\n\n# Add Light instance\nlight = GSInstance()\nlight.name = \"Light\"\nlight.axes = [0]\nfont.instances.insert(0, light)\n\n# Add Bold instance\nbold = GSInstance()\nbold.name = \"Bold\"\nbold.axes = [100]\nfont.instances.append(bold)\n\n# Add weightClass to each instance\nfor inst in font.instances:\n    if inst.name == \"Light\":\n        inst.customParameters.append(GSCustomParameter('weightClass', 300))\n    elif inst.name == \"Regular\":\n        inst.customParameters.append(GSCustomParameter('weightClass', 400))\n    elif inst.name == \"Bold\":\n        inst.customParameters.append(GSCustomParameter('weightClass', 700))\n\n# Add axis mapping: user -> design coordinates\n# Design space: Light=0, Bold=100\n# User space: Light=300, Regular=400, Bold=700\nfont.customParameters.append(GSCustomParameter('Axis Mappings', {\n    'wght': {'300': 0, '400': 50, '700': 100}\n}))\n\nfont.save('masters/Kalam.glyphs')\nprint('Patched Kalam.glyphs: fixed instances and axis mapping')\nPYEOF2"
       ],
       "reproducible_build": "build-failure"
     },
@@ -10602,10 +10615,10 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "legacy-no-modern-source",
-      "notes": "Procedurally generated font — sources are Python scripts, not .glyphs/.ufo. Fonts shipped from release archive (archive_url). No standard build pipeline possible.",
+      "notes": "Procedurally generated font \u2014 sources are Python scripts, not .glyphs/.ufo. Fonts shipped from release archive (archive_url). No standard build pipeline possible.",
       "overrides": {},
       "failure_category": "procedural-generation",
-      "failure_message": "No .glyphs/.ufo sources in repo — font is procedurally generated"
+      "failure_message": "No .glyphs/.ufo sources in repo \u2014 font is procedurally generated"
     },
     "notosansegyptianhieroglyphs": {
       "enabled": true,
@@ -13636,7 +13649,7 @@
       "enabled": true,
       "isolation": "custom",
       "reproducible_build": "build-failure",
-      "notes": "Same source as playfairdisplay — same incompatibility issues.",
+      "notes": "Same source as playfairdisplay \u2014 same incompatibility issues.",
       "overrides": {},
       "failure_category": "master-incompatibility",
       "failure_message": "Master compatibility check failed",
