@@ -162,7 +162,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
       "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
@@ -539,9 +539,7 @@
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ],
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "fontmake splitInterpolable bug: no TTFs produced from .glyphs with discrete axis"
+      ]
     },
     "alegreyasans": {
       "enabled": true,
@@ -2562,9 +2560,7 @@
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ],
-      "failure_category": "no-build-log",
-      "failure_message": "No build log or built fonts found"
+      ]
     },
     "bigshouldersinline": {
       "enabled": true,
@@ -2939,9 +2935,7 @@
       "isolation": "shared",
       "reproducible_build": "build-failure",
       "notes": "",
-      "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log or built fonts found"
+      "overrides": {}
     },
     "bitcountsingle": {
       "enabled": true,
@@ -2952,18 +2946,14 @@
       "config_yaml_source": "override",
       "source_format": [
         ".designspace"
-      ],
-      "failure_category": "no-build-log",
-      "failure_message": "No build log or built fonts found"
+      ]
     },
     "bitcountsingleink": {
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "build-failure",
       "notes": "",
-      "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log or built fonts found"
+      "overrides": {}
     },
     "bitter": {
       "enabled": true,
@@ -3026,9 +3016,7 @@
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
-      ],
-      "failure_category": "no-build-log",
-      "failure_message": "No build log or built fonts found"
+      ]
     },
     "blackopsone": {
       "enabled": true,
@@ -8712,11 +8700,9 @@
     "lineseedjp": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -8764,11 +8750,9 @@
     "literata": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -10866,11 +10850,9 @@
     "notosansgujarati": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "build_timeout": 1800
     },
     "notosansgunjalagondi": {
@@ -12075,11 +12057,9 @@
     "notosanssinhala": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "build_timeout": 1800
     },
     "notosanssogdian": {
@@ -12547,11 +12527,9 @@
     "notoserif": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "build_timeout": 1800
     },
     "notoserifahom": {
@@ -16631,11 +16609,9 @@
     "rubik80sfade": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "build_timeout": 600
     },
     "rubikbeastly": {
@@ -17074,11 +17050,9 @@
     "saira": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17088,11 +17062,9 @@
     "sairacondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17102,11 +17074,9 @@
     "sairaextracondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -17116,11 +17086,9 @@
     "sairasemicondensed": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "no-build-log",
-      "failure_message": "No build log found (config.yaml not found or download failed)",
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
