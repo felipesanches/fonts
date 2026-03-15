@@ -1,8 +1,9 @@
-buildVariable: false
 sources:
-  - source/Maitree-200.glyphs
-  - source/Maitree-300.glyphs
-  - source/Maitree-400.glyphs
-  - source/Maitree-500.glyphs
-  - source/Maitree-600.glyphs
-  - source/Maitree-700.glyphs
+  - source/converted_ufos/Maitree-ExtraLight.ufo
+  - source/converted_ufos/Maitree-Light.ufo
+  - source/converted_ufos/Maitree-Regular.ufo
+  - source/converted_ufos/Maitree-Medium.ufo
+  - source/converted_ufos/Maitree-SemiBold.ufo
+  - source/converted_ufos/Maitree-Bold.ufo
+buildVariable: false
+buildOTF: false

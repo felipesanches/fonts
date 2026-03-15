@@ -1,2 +1,4 @@
 sources:
-  - source/Chakra Petch.glyphs
+  - source/ChakraPetch-fixed.designspace
+buildVariable: false
+buildOTF: false

@@ -3716,11 +3716,9 @@
     "chakrapetch": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -8931,11 +8929,9 @@
     "maitree": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -17307,11 +17303,9 @@
     "shizuru": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Default source not found (glyphsLib version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -18393,11 +18387,9 @@
     "tomorrow": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
-      "failure_category": "instance-ufo-naming",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)",
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"

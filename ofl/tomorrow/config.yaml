@@ -1,20 +1,21 @@
-buildVariable: false
 sources:
-  - src/Tomorrow-Black.glyphs
-  - src/Tomorrow-BlackItalic.glyphs
-  - src/Tomorrow-Bold.glyphs
-  - src/Tomorrow-BoldItalic.glyphs
-  - src/Tomorrow-ExtraBold.glyphs
-  - src/Tomorrow-ExtraBoldItalic.glyphs
-  - src/Tomorrow-ExtraLight.glyphs
-  - src/Tomorrow-ExtraLightItalic.glyphs
-  - src/Tomorrow-Italic.glyphs
-  - src/Tomorrow-Light.glyphs
-  - src/Tomorrow-LightItalic.glyphs
-  - src/Tomorrow-Medium.glyphs
-  - src/Tomorrow-MediumItalic.glyphs
-  - src/Tomorrow-Regular.glyphs
-  - src/Tomorrow-SemiBold.glyphs
-  - src/Tomorrow-SemiBoldItalic.glyphs
-  - src/Tomorrow-Thin.glyphs
-  - src/Tomorrow-ThinItalic.glyphs
+  - src/converted_ufos/Tomorrow-Black.ufo
+  - src/converted_ufos/Tomorrow-BlackItalic.ufo
+  - src/converted_ufos/Tomorrow-Bold.ufo
+  - src/converted_ufos/Tomorrow-BoldItalic.ufo
+  - src/converted_ufos/Tomorrow-ExtraBold.ufo
+  - src/converted_ufos/Tomorrow-ExtraBoldItalic.ufo
+  - src/converted_ufos/Tomorrow-ExtraLight.ufo
+  - src/converted_ufos/Tomorrow-ExtraLightItalic.ufo
+  - src/converted_ufos/Tomorrow-Italic.ufo
+  - src/converted_ufos/Tomorrow-Light.ufo
+  - src/converted_ufos/Tomorrow-LightItalic.ufo
+  - src/converted_ufos/Tomorrow-Medium.ufo
+  - src/converted_ufos/Tomorrow-MediumItalic.ufo
+  - src/converted_ufos/Tomorrow-Regular.ufo
+  - src/converted_ufos/Tomorrow-SemiBold.ufo
+  - src/converted_ufos/Tomorrow-SemiBoldItalic.ufo
+  - src/converted_ufos/Tomorrow-Thin.ufo
+  - src/converted_ufos/Tomorrow-ThinItalic.ufo
+buildVariable: false
+buildOTF: false

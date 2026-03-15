@@ -1,2 +1,4 @@
 sources:
-  - sources/ShizuruFont.glyphs
+  - sources/converted_ufos/ShizuruFont-Regular.ufo
+buildVariable: false
+buildOTF: false
