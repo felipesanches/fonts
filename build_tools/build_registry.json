@@ -2868,7 +2868,7 @@
       "reproducible_build": "build-failure",
       "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
       "overrides": {},
-      "failure_category": "download-stall",
+      "failure_category": "custom-build-pipeline",
       "failure_message": "Large repo 128MB tarball stalls over virtiofs"
     },
     "bitcountsingle": {
@@ -2881,7 +2881,7 @@
       "source_format": [
         ".designspace"
       ],
-      "failure_category": "download-stall",
+      "failure_category": "custom-build-pipeline",
       "failure_message": "Large repo 128MB tarball stalls over virtiofs"
     },
     "bitcountsingleink": {
@@ -2890,7 +2890,7 @@
       "reproducible_build": "build-failure",
       "notes": "Part of Bitcount family, likely same issue as other Bitcount variants",
       "overrides": {},
-      "failure_category": "download-stall",
+      "failure_category": "custom-build-pipeline",
       "failure_message": "Large repo 128MB tarball stalls over virtiofs"
     },
     "bitter": {
