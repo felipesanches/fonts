@@ -10169,7 +10169,8 @@
       "notes": "Massive build (599 steps) with includeSubsets. Likely timeout.",
       "overrides": {},
       "failure_category": "noto-infra-required",
-      "failure_message": "Missing metainfo.plist in subset-files UFOs"
+      "failure_message": "Missing metainfo.plist in subset-files UFOs",
+      "build_timeout": 3600
     },
     "notosansadlam": {
       "enabled": true,
@@ -10971,11 +10972,12 @@
     "notosanskhojki": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "build-failure",
-      "notes": "Single master, instance UFO generation fails.",
+      "reproducible_build": "compiler-version",
+      "notes": "Single master with degenerate wght+wdth axes. Prebuild removes axes.",
       "overrides": {},
-      "failure_category": "noto-infra-required",
-      "failure_message": "Could not find master in Noto Sans for wdth:5.0"
+      "prebuild": [
+        "python3 << 'PYEOF'\nfrom glyphsLib import GSFont\n\nfont = GSFont('sources/NotoSansKhojki.glyphs')\n# Remove all axes (single master, no variation)\nfont.axes = []\nfor m in font.masters:\n    m.axes = []\nfor inst in font.instances:\n    inst.axes = []\nfont.save('sources/NotoSansKhojki.glyphs')\nprint('Removed degenerate axes from single-master source')\nPYEOF"
+      ]
     },
     "notosanskhudawadi": {
       "enabled": true,
@@ -12261,7 +12263,8 @@
       "notes": "Large build (109 steps) with many instances. Likely timeout.",
       "overrides": {},
       "failure_category": "noto-infra-required",
-      "failure_message": "Instance UFO not found (fontmake version mismatch)"
+      "failure_message": "Instance UFO not found (fontmake version mismatch)",
+      "build_timeout": 3600
     },
     "notosanstirhuta": {
       "enabled": true,
@@ -12785,7 +12788,8 @@
       "notes": "Large build (515 steps). Likely timeout.",
       "overrides": {},
       "failure_category": "noto-infra-required",
-      "failure_message": "Missing metainfo.plist in subset-files UFOs"
+      "failure_message": "Missing metainfo.plist in subset-files UFOs",
+      "build_timeout": 3600
     },
     "notoseriftangut": {
       "enabled": true,
