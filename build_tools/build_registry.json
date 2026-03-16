@@ -159,7 +159,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) \u2014 closest to matching.",
+      "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -2758,7 +2758,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "Prebuild fixes quoted descender values. 4/7 instances match by name; 3 have different names (Heavy\u2192Black, UltraLight\u2192ExtraLight, DemiBold\u2192SemiBold) but build succeeds.",
+      "notes": "Prebuild fixes quoted descender values. 4/7 instances match by name; 3 have different names (Heavy→Black, UltraLight→ExtraLight, DemiBold→SemiBold) but build succeeds.",
       "overrides": {},
       "failure_message": "built file not found for Biryani-Black.ttf, Biryani-ExtraLight.ttf, Biryani-SemiBold.ttf",
       "config_yaml_source": "override",
@@ -5124,7 +5124,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "timestamp-diff",
-      "notes": "fonttools 4.56.0+ strips all-zero gvar variation tuples for composites (circumflex, caron, breve, etc.) \u2014 4.55.x preserves them, matching the reference. Boundary: 4.55.8 works, 4.56.0 breaks.",
+      "notes": "fonttools 4.56.0+ strips all-zero gvar variation tuples for composites (circumflex, caron, breve, etc.) — 4.55.x preserves them, matching the reference. Boundary: 4.55.8 works, 4.56.0 breaks.",
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -10621,10 +10621,10 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "legacy-no-modern-source",
-      "notes": "Procedurally generated font \u2014 sources are Python scripts, not .glyphs/.ufo. Fonts shipped from release archive (archive_url). No standard build pipeline possible.",
+      "notes": "Procedurally generated font — sources are Python scripts, not .glyphs/.ufo. Fonts shipped from release archive (archive_url). No standard build pipeline possible.",
       "overrides": {},
       "failure_category": "procedural-generation",
-      "failure_message": "No .glyphs/.ufo sources in repo \u2014 font is procedurally generated"
+      "failure_message": "No .glyphs/.ufo sources in repo — font is procedurally generated"
     },
     "notosansegyptianhieroglyphs": {
       "enabled": true,
