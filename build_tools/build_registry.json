@@ -911,7 +911,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphspackage"
@@ -6477,10 +6476,19 @@
     },
     "hanuman": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
+      "isolation": "custom",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.83",
+          "fontmake==3.10.0",
+          "fonttools==4.58.0",
+          "ufo2ft==3.4.3",
+          "glyphsLib==6.10.1",
+          "ttfautohint-py==0.5.1"
+        ]
+      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -17020,7 +17028,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
