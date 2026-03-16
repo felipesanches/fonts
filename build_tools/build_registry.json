@@ -255,7 +255,7 @@
     "abyssinicasil": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -307,7 +307,7 @@
     "afacad": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -326,7 +326,7 @@
     "afacadflux": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -400,7 +400,7 @@
     "akatab": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -419,7 +419,7 @@
     "akayakanadaka": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -438,7 +438,7 @@
     "akayatelivigala": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -510,9 +510,8 @@
     "albertsans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -531,7 +530,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Roman VF builds successfully. Italic excluded due to cu2qu master incompatibility (kaiSymbol, kappa.sups glyphs).",
-      "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -546,7 +544,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -555,9 +552,8 @@
     "alegreyasanssc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -566,9 +562,8 @@
     "alegreyasc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -705,9 +700,8 @@
     "alkatra": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -809,14 +803,13 @@
     "alumnisansinlineone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
-      "notes": "",
-      "overrides": {}
+      "reproducible_build": "compiler-version",
+      "notes": ""
     },
     "alumnisanspinstripe": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "yes",
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
@@ -19418,308 +19411,308 @@
     "enriqueta": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "federant": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "firacode": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "hachimarupop": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "hindcolombo": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "hindguntur": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "hindjalandhar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "hindsiliguri": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "hindvadodara": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "jacquesfrancois": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "jacquesfrancoisshadow": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "khmer": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "kosugi": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "kosugimaru": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "librecaslontext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "marmelad": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "moul": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "nabla": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "natasans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansarabicui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansbengaliui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansdevanagariui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansdisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansgujaratiui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansgurmukhiui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosanskannadaui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosanskhmerui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosanslaoui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansmalayalamui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansmyanmarui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansnko_todelist": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansoriyaui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosanssinhalaui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosanssyriacwestern": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "notosanstamilui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansteluguui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notosansthaiui": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notoserifdisplay": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "notoserifmyanmar": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "rubikmonoone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "rubikone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
     },
     "sairastencilone": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     },
     "signikanegativesc": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {}
     },
     "wixmadefortext": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": null,
+      "reproducible_build": "build-failure",
       "notes": "",
       "overrides": {}
     }
