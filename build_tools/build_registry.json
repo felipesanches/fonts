@@ -191,7 +191,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Prebuild: glyphs2ufo generates .ufo masters from .glyphspackage",
-      "overrides": {},
       "prebuild": [
         "glyphs2ufo sources/42dotSans.glyphspackage -m sources/masters"
       ],
@@ -380,10 +379,14 @@
     },
     "agudisplay": {
       "enabled": true,
-      "isolation": "shared",
+      "isolation": "custom",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.76"
+        ]
+      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -840,7 +843,7 @@
     "alyamama": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -1782,7 +1785,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "timestamp-diff",
-      "notes": "",
+      "notes": "Build fails with current toolchain (Illegal line segment point count). Needs older fonttools/ufo2ft version.",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
@@ -2051,7 +2054,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "timestamp-diff",
-      "notes": "",
+      "notes": "Build fails with current toolchain (Illegal line segment point count). Needs older fonttools/ufo2ft version.",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
@@ -2162,7 +2165,7 @@
     "bbhbogle": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -3312,10 +3315,14 @@
     },
     "buenard": {
       "enabled": true,
-      "isolation": "shared",
+      "isolation": "custom",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.76"
+        ]
+      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -4228,10 +4235,21 @@
     },
     "cormorantgaramond": {
       "enabled": true,
-      "isolation": "shared",
+      "isolation": "custom",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.74",
+          "fontmake==3.10.0",
+          "fonttools==4.54.1",
+          "ufo2ft==3.3.1",
+          "glyphsLib==6.9.4",
+          "babelfont==3.1.2",
+          "uharfbuzz==0.42.0",
+          "ttfautohint-py==0.5.1"
+        ]
+      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -4289,7 +4307,7 @@
     "cormorantupright": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "compiler-version",
       "notes": "",
       "overrides": {},
       "config_yaml_source": "override",
@@ -5055,7 +5073,7 @@
     "elmssans": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "config_yaml_source": "upstream",
@@ -5994,7 +6012,7 @@
     "geom": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -8482,7 +8500,7 @@
     "librebaskerville": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -9262,7 +9280,7 @@
     "mashanzheng": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -10352,7 +10370,7 @@
     "notosansbengali": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "build_environment": {
@@ -17542,7 +17560,7 @@
     "snpro": {
       "enabled": true,
       "isolation": "shared",
-      "reproducible_build": "timestamp-diff",
+      "reproducible_build": "yes",
       "notes": "",
       "overrides": {},
       "config_yaml_source": "upstream",

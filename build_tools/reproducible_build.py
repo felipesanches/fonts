@@ -386,7 +386,8 @@ def find_config_yaml(source_dir: Path, config_yaml_rel: str, family: str) -> Pat
 
 
 def run_build(source_dir: Path, config_path: Path, family: str,
-              isolation: str, overrides: dict, build_timeout: int = 600) -> Path | None:
+              isolation: str, overrides: dict, build_timeout: int = 600,
+              source_date_epoch: int | None = None) -> Path | None:
     """Run gftools-builder. Returns the build output directory or None."""
     family_ws = WORKSPACE_DIR / family
     build_dir = family_ws / "build"
@@ -411,9 +412,9 @@ def run_build(source_dir: Path, config_path: Path, family: str,
             subprocess.run([venv_python, "-m", "venv", str(venv_dir)], check=True)
             pip = str(venv_dir / "bin" / "pip")
             subprocess.run([pip, "install", "--upgrade", "pip"], check=True)
-            # Install gftools first (provides gftools-builder entry point),
-            # then override specific deps with pinned versions
-            subprocess.run([pip, "install", "gftools"], check=True)
+            # Install all pinned requirements in one step.
+            # If requirements include a pinned gftools version, it brings
+            # its own compatible fontmake/fonttools/etc. — no mixing.
             subprocess.run([pip, "install"] + overrides["requirements"], check=True)
         builder_cmd = str(venv_dir / "bin" / "gftools-builder")
     else:
@@ -428,6 +429,9 @@ def run_build(source_dir: Path, config_path: Path, family: str,
     # Ensure locally-built libraries (e.g. harfbuzz) are found
     local_lib = str(Path.home() / ".local" / "lib")
     env["LD_LIBRARY_PATH"] = local_lib + ":" + env.get("LD_LIBRARY_PATH", "")
+    # Set SOURCE_DATE_EPOCH to reproduce timestamps from the reference font
+    if source_date_epoch is not None:
+        env["SOURCE_DATE_EPOCH"] = str(source_date_epoch)
     try:
         result = subprocess.run(
             [builder_cmd, str(config_in_source)],
@@ -1128,6 +1132,22 @@ def process_family(family: str, registry: dict, force: bool = False,
             print(f"  No config.yaml found — cannot build")
             return "build-failure"
 
+        # Extract SOURCE_DATE_EPOCH from the reference font's head.modified
+        # This ensures fontTools writes the same timestamp as the original build
+        source_date_epoch = None
+        family_dir = GOOGLE_FONTS_DIR / "ofl" / family
+        ref_ttfs = list(family_dir.glob("*.ttf"))
+        if ref_ttfs:
+            try:
+                from fontTools.ttLib import TTFont
+                ref_font = TTFont(str(ref_ttfs[0]))
+                # Convert Mac epoch (1904-01-01) to Unix epoch (1970-01-01)
+                mac_to_unix = 2082844800  # seconds between 1904 and 1970
+                source_date_epoch = ref_font["head"].modified - mac_to_unix
+                ref_font.close()
+            except Exception:
+                pass
+
         # Build (timed) — or skip if upstream ships pre-built fonts
         if entry.get("skip_build"):
             print(f"  Skipping build (skip_build=true) — using pre-built fonts from source tree")
@@ -1138,7 +1158,8 @@ def process_family(family: str, registry: dict, force: bool = False,
             build_timeout = entry.get("build_timeout", 600)
             build_start = time.monotonic()
             build_result = run_build(source_dir, config_path, family, isolation, overrides,
-                                     build_timeout=build_timeout)
+                                     build_timeout=build_timeout,
+                                     source_date_epoch=source_date_epoch)
             build_elapsed = time.monotonic() - build_start
             print(f"  Build time: {build_elapsed:.1f}s")
     if build_result is None:
