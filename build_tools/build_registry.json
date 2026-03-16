@@ -109,19 +109,9 @@
     },
     "merriweather": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Phase 2. Variable 3-axis .glyphspackage. 12-13 differing tables.",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -167,18 +157,9 @@
     },
     "spectral": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Phase 2. Static 14 files .designspace+.ufo. Only 4-5 differing tables (OS/2, glyf, head, name) — closest to matching.",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.71",
-          "fonttools==4.54.1",
-          "fontmake==3.9.0",
-          "ufo2ft==3.3.1",
-          "glyphsLib==6.9.2"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -205,7 +186,7 @@
     },
     "42dotsans": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Prebuild: glyphs2ufo generates .ufo masters from .glyphspackage",
       "prebuild": [
@@ -218,16 +199,6 @@
         "gftools": "0.9.100.dev4",
         "ufo2ft": "3.7.0",
         "ttfautohint-py": "0.6.0"
-      },
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
       }
     },
     "abeezee": {
@@ -371,19 +342,9 @@
     },
     "agbalumo": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.85",
-          "fontmake==3.10.1",
-          "fonttools==4.58.2",
-          "ufo2ft==3.4.6",
-          "glyphsLib==6.10.2",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -417,14 +378,9 @@
     },
     "agudisplay": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -655,20 +611,9 @@
     },
     "alexbrush": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -801,20 +746,9 @@
     },
     "allura": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -1384,20 +1318,9 @@
     },
     "archivonarrow": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -1487,20 +1410,9 @@
     },
     "artifika": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -1621,19 +1533,9 @@
     },
     "astasans": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Prebuild: glyphs2ufo generates .ufo masters from .glyphspackage",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "prebuild": [
         "glyphs2ufo sources/AstaSans.glyphspackage -m sources/masters"
       ],
@@ -1674,19 +1576,9 @@
     },
     "atkinsonhyperlegiblemono": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -1702,19 +1594,9 @@
     },
     "atkinsonhyperlegiblenext": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -1841,19 +1723,9 @@
     },
     "badeendisplay": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -2212,19 +2084,9 @@
     },
     "baskervville": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -2240,19 +2102,9 @@
     },
     "baskervvillesc": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -2857,19 +2709,9 @@
     },
     "biorhymeexpanded": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Expanded instances deactivated in source. Prebuild: activate wdth=125 instances, deactivate wdth=100, rename family.",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphs"
@@ -3469,19 +3311,9 @@
     },
     "buenard": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -3531,18 +3363,9 @@
     },
     "bungeehairline": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.59",
-          "fonttools==4.53.0",
-          "fontmake==3.9.0",
-          "ufo2ft==3.2.5",
-          "glyphsLib==6.7.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -4105,20 +3928,9 @@
     },
     "chivomono": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -4425,19 +4237,9 @@
     },
     "cormorantinfant": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -4889,19 +4691,9 @@
     },
     "dmmono": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "config_yaml_source": "override",
       "source_format": [
         ".glyphs"
@@ -4994,18 +4786,9 @@
     },
     "doto": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.71",
-          "fonttools==4.54.1",
-          "fontmake==3.9.0",
-          "ufo2ft==3.3.1",
-          "glyphsLib==6.9.2"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -5320,18 +5103,9 @@
     },
     "epundasans": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "timestamp-diff",
       "notes": "fonttools 4.56.0+ strips all-zero gvar variation tuples for composites (circumflex, caron, breve, etc.) — 4.55.x preserves them, matching the reference. Boundary: 4.55.8 works, 4.56.0 breaks.",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.85",
-          "fonttools==4.55.3",
-          "fontmake==3.10.1",
-          "ufo2ft==3.4.6",
-          "glyphsLib==6.10.2"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -5494,19 +5268,9 @@
     },
     "familjengrotesk": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -5806,19 +5570,9 @@
     },
     "fragmentmono": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -6401,20 +6155,9 @@
     },
     "golostext": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -6720,20 +6463,9 @@
     },
     "hankengrotesk": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -7254,19 +6986,9 @@
     },
     "inclusivesans": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7442,19 +7164,9 @@
     },
     "jacquard12": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7466,19 +7178,9 @@
     },
     "jacquard12charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7490,19 +7192,9 @@
     },
     "jacquard24": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7514,19 +7206,9 @@
     },
     "jacquard24charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.79",
-          "fontmake==3.10.0",
-          "fonttools==4.56.0",
-          "ufo2ft==3.4.2",
-          "glyphsLib==6.10.1",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7538,19 +7220,9 @@
     },
     "jacquardabastarda9": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7566,19 +7238,9 @@
     },
     "jacquardabastarda9charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7638,19 +7300,9 @@
     },
     "jersey10": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7662,19 +7314,9 @@
     },
     "jersey10charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7686,19 +7328,9 @@
     },
     "jersey15": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7710,19 +7342,9 @@
     },
     "jersey15charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7734,19 +7356,9 @@
     },
     "jersey20": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7758,19 +7370,9 @@
     },
     "jersey20charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7782,19 +7384,9 @@
     },
     "jersey25": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7806,19 +7398,9 @@
     },
     "jersey25charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -7887,18 +7469,9 @@
     },
     "josefinslab": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.75",
-          "fonttools==4.55.0",
-          "fontmake==3.10.0",
-          "ufo2ft==3.3.1",
-          "glyphsLib==6.9.5"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -8577,20 +8150,9 @@
     },
     "labrada": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -9050,19 +8612,9 @@
     },
     "liter": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -9462,19 +9014,9 @@
     },
     "maname": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -9656,20 +9198,9 @@
     },
     "martianmono": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -9794,19 +9325,9 @@
     },
     "menbere": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.85",
-          "fontmake==3.10.1",
-          "fonttools==4.58.2",
-          "ufo2ft==3.4.6",
-          "glyphsLib==6.10.2",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -9920,19 +9441,9 @@
     },
     "micro5": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -10648,19 +10159,9 @@
     },
     "notosans": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "Massive build (599 steps) with includeSubsets. Likely timeout.",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_timeout": 3600
     },
     "notosansadlam": {
@@ -12849,19 +12350,9 @@
     },
     "notoserif": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_timeout": 1800
     },
     "notoserifahom": {
@@ -17997,20 +17488,9 @@
     },
     "sofiasans": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -18022,20 +17502,9 @@
     },
     "sofiasanscondensed": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -18047,20 +17516,9 @@
     },
     "sofiasansextracondensed": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -18072,20 +17530,9 @@
     },
     "sofiasanssemicondensed": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -18097,20 +17544,9 @@
     },
     "solitreo": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -18210,19 +17646,9 @@
     },
     "specialgothic": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.85",
-          "fontmake==3.10.1",
-          "fonttools==4.58.2",
-          "ufo2ft==3.4.6",
-          "glyphsLib==6.10.2",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -18276,18 +17702,9 @@
     },
     "spectralsc": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.71",
-          "fonttools==4.54.1",
-          "fontmake==3.9.0",
-          "ufo2ft==3.3.1",
-          "glyphsLib==6.9.2"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -18456,19 +17873,9 @@
     },
     "storyscript": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.85",
-          "fontmake==3.10.1",
-          "fonttools==4.58.2",
-          "ufo2ft==3.4.6",
-          "glyphsLib==6.10.2",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -18947,20 +18354,9 @@
     },
     "tirotelugu": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -19185,20 +18581,9 @@
     },
     "varelaround": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "gftools==0.9.21 cohort test",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.21",
-          "fontmake==3.5.1",
-          "fonttools==4.38.0",
-          "ufo2ft==2.31.0b2",
-          "glyphsLib==6.1.0",
-          "ttfautohint-py==0.5.1",
-          "glyphsets==0.5.4"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.5.1",
         "fonttools": "4.38.0",
@@ -19639,19 +19024,9 @@
     },
     "yarndings12": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -19663,19 +19038,9 @@
     },
     "yarndings12charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -19687,19 +19052,9 @@
     },
     "yarndings20": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -19711,19 +19066,9 @@
     },
     "yarndings20charted": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.76",
-          "fontmake==3.10.0",
-          "fonttools==4.55.3",
-          "ufo2ft==3.4.0",
-          "glyphsLib==6.9.5",
-          "ttfautohint-py==0.5.1"
-        ]
-      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
