@@ -267,21 +267,26 @@ def download_source(owner: str, repo: str, commit: str, family: str) -> Path | N
 # Pre-build
 # ---------------------------------------------------------------------------
 
-def run_prebuild(source_dir: Path, prebuild_commands: list[str], family: str) -> bool:
+def run_prebuild(source_dir: Path, prebuild_commands: list[str], family: str,
+                  custom_venv: Path | None = None) -> bool:
     """Run pre-build commands in the source directory.
 
     Each command is executed as a shell command in the source directory.
-    Commands have access to the gftools venv (on PATH).
+    Commands have access to the gftools venv (on PATH), or a custom venv
+    if one is provided (for custom-isolation builds).
     Returns True if all commands succeeded, False otherwise.
     """
     family_ws = WORKSPACE_DIR / family
 
     env = os.environ.copy()
-    venv_bin = str(Path(GFTOOLS_BUILDER).parent)
+    if custom_venv and custom_venv.exists():
+        venv_bin = str(custom_venv / "bin")
+        env["VIRTUAL_ENV"] = str(custom_venv)
+    else:
+        venv_bin = str(Path(GFTOOLS_BUILDER).parent)
+        env["VIRTUAL_ENV"] = str(Path(GFTOOLS_BUILDER).parent.parent)
     local_bin = str(Path.home() / ".local" / "bin")
     env["PATH"] = venv_bin + ":" + local_bin + ":" + env.get("PATH", "")
-    # Set VIRTUAL_ENV so tools that check it can find packages
-    env["VIRTUAL_ENV"] = str(Path(GFTOOLS_BUILDER).parent.parent)
     # Ensure locally-built libraries (e.g. harfbuzz) are found
     local_lib = str(Path.home() / ".local" / "lib")
     env["LD_LIBRARY_PATH"] = local_lib + ":" + env.get("LD_LIBRARY_PATH", "")
@@ -1107,11 +1112,27 @@ def process_family(family: str, registry: dict, force: bool = False,
 
         print(f"  Source dir: {source_dir}")
 
+        # For custom isolation with prebuild, set up the custom venv first
+        # so prebuild commands can use the pinned tool versions
+        custom_venv = None
+        isolation = entry.get("isolation", "shared")
+        if isolation == "custom" and "requirements" in overrides:
+            family_ws = WORKSPACE_DIR / family
+            custom_venv = family_ws / "venv"
+            if not custom_venv.exists():
+                py311 = Path.home() / ".local" / "bin" / "python3.11"
+                venv_python = str(py311) if py311.exists() else sys.executable
+                subprocess.run([venv_python, "-m", "venv", str(custom_venv)], check=True)
+                pip = str(custom_venv / "bin" / "pip")
+                subprocess.run([pip, "install", "--upgrade", "pip"], check=True)
+                subprocess.run([pip, "install"] + overrides["requirements"], check=True)
+
         # Run pre-build commands if specified in registry or auto-detected
         prebuild_commands = entry.get("prebuild", [])
         if prebuild_commands:
             print(f"  Running {len(prebuild_commands)} prebuild command(s)...")
-            if not run_prebuild(source_dir, prebuild_commands, family):
+            if not run_prebuild(source_dir, prebuild_commands, family,
+                                custom_venv=custom_venv):
                 report_path = WORKSPACE_DIR / family / "comparison_report.json"
                 report_path.parent.mkdir(parents=True, exist_ok=True)
                 report_path.write_text(json.dumps({
@@ -1430,12 +1451,12 @@ def main():
             registry["families"][family].pop("failure_message", None)
         save_registry(registry)
 
-        # Drop VFS caches every 5 families to prevent virtiofsd FD
-        # accumulation on virtiofs mounts.  This triggers FUSE FORGET
-        # messages so virtiofsd releases file descriptors for files
-        # that are no longer referenced by the guest kernel.
+        # Drop VFS caches every 5 families (or every family if processing
+        # fewer than 5) to prevent virtiofsd FD accumulation on virtiofs
+        # mounts.  This triggers FUSE FORGET messages so virtiofsd releases
+        # file descriptors for files no longer referenced by the guest kernel.
         # Requires /usr/local/sbin/drop-caches installed with NOPASSWD sudo.
-        if (i + 1) % 5 == 0:
+        if (i + 1) % 5 == 0 or len(families_to_process) < 5:
             try:
                 subprocess.run(
                     ["sudo", "-n", "/usr/local/sbin/drop-caches"],
