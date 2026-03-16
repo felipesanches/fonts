@@ -1613,7 +1613,7 @@
       "enabled": true,
       "isolation": "shared",
       "reproducible_build": "compiler-version",
-      "notes": "",
+      "notes": "Build fails with current toolchain (qcurve overlaps). Needs older fonttools.",
       "overrides": {},
       "config_yaml_source": "override",
       "source_format": [
