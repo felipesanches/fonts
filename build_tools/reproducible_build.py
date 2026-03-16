@@ -420,7 +420,20 @@ def run_build(source_dir: Path, config_path: Path, family: str,
             # Install all pinned requirements in one step.
             # If requirements include a pinned gftools version, it brings
             # its own compatible fontmake/fonttools/etc. — no mixing.
-            subprocess.run([pip, "install"] + overrides["requirements"], check=True)
+            # Use constraints to avoid building orjson from source (no cp311 wheels for <3.7)
+            constraints_file = venv_dir / "constraints.txt"
+            constraints_file.write_text("orjson>=3.7.7\n")
+            subprocess.run([pip, "install", "-c", str(constraints_file)] + overrides["requirements"], check=True)
+            # Older gftools versions use .py extension for scripts
+            builder_new = venv_dir / "bin" / "gftools-builder"
+            builder_py = venv_dir / "bin" / "gftools-builder.py"
+            if not builder_new.exists() and builder_py.exists():
+                builder_new.symlink_to("gftools-builder.py")
+        # Also handle symlink if venv already existed (created in process_family)
+        builder_new = venv_dir / "bin" / "gftools-builder"
+        builder_py = venv_dir / "bin" / "gftools-builder.py"
+        if not builder_new.exists() and builder_py.exists():
+            builder_new.symlink_to("gftools-builder.py")
         builder_cmd = str(venv_dir / "bin" / "gftools-builder")
     else:
         builder_cmd = GFTOOLS_BUILDER
@@ -1125,7 +1138,9 @@ def process_family(family: str, registry: dict, force: bool = False,
                 subprocess.run([venv_python, "-m", "venv", str(custom_venv)], check=True)
                 pip = str(custom_venv / "bin" / "pip")
                 subprocess.run([pip, "install", "--upgrade", "pip"], check=True)
-                subprocess.run([pip, "install"] + overrides["requirements"], check=True)
+                constraints_file = custom_venv / "constraints.txt"
+                constraints_file.write_text("orjson>=3.7.7\n")
+                subprocess.run([pip, "install", "-c", str(constraints_file)] + overrides["requirements"], check=True)
 
         # Run pre-build commands if specified in registry or auto-detected
         prebuild_commands = entry.get("prebuild", [])

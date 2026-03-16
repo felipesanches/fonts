@@ -386,7 +386,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -1779,7 +1778,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -3722,7 +3720,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -9138,7 +9135,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -9168,7 +9164,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
