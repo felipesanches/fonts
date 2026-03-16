@@ -19414,6 +19414,314 @@
       "reproducible_build": "missing-source",
       "notes": "",
       "overrides": {}
+    },
+    "enriqueta": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "federant": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "firacode": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "hachimarupop": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "hindcolombo": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "hindguntur": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "hindjalandhar": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "hindsiliguri": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "hindvadodara": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "jacquesfrancois": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "jacquesfrancoisshadow": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "khmer": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "kosugi": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "kosugimaru": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "librecaslontext": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "marmelad": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "moul": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "nabla": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "natasans": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansarabicui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansbengaliui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansdevanagariui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansdisplay": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansgujaratiui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansgurmukhiui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosanskannadaui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosanskhmerui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosanslaoui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansmalayalamui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansmyanmarui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansnko_todelist": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansoriyaui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosanssinhalaui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosanssyriacwestern": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosanstamilui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansteluguui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notosansthaiui": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notoserifdisplay": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "notoserifmyanmar": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "rubikmonoone": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "rubikone": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "sairastencilone": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "signikanegativesc": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
+    },
+    "wixmadefortext": {
+      "enabled": true,
+      "isolation": "shared",
+      "reproducible_build": null,
+      "notes": "",
+      "overrides": {}
     }
   },
   "zalandosans": {
