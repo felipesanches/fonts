@@ -3452,7 +3452,6 @@
       "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {},
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
@@ -11797,9 +11796,20 @@
     },
     "notosansoldpersian": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosansoldsogdian": {
       "enabled": true,
@@ -11818,9 +11828,20 @@
     },
     "notosansoldsoutharabian": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosansoldturkic": {
       "enabled": true,
@@ -11899,9 +11920,20 @@
     },
     "notosanspalmyrene": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanspaucinhau": {
       "enabled": true,
@@ -11935,9 +11967,20 @@
     },
     "notosansphoenician": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanspsalterpahlavi": {
       "enabled": true,
@@ -11971,15 +12014,37 @@
     },
     "notosansrunic": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanssamaritan": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanssaurashtra": {
       "enabled": true,
@@ -12013,9 +12078,20 @@
     },
     "notosansshavian": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanssiddham": {
       "enabled": true,
@@ -12057,9 +12133,20 @@
     },
     "notosanssogdian": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanssorasompeng": {
       "enabled": true,
@@ -12078,9 +12165,20 @@
     },
     "notosanssoyombo": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanssundanese": {
       "enabled": true,
@@ -12287,9 +12385,20 @@
     },
     "notosanstamilsupplement": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosanstangsa": {
       "enabled": true,
@@ -12372,15 +12481,37 @@
     },
     "notosanstirhuta": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosansugaritic": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notosansvai": {
       "enabled": true,
@@ -12720,9 +12851,20 @@
     },
     "notoserifkhitansmallscript": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notoserifkhmer": {
       "enabled": true,
@@ -12771,9 +12913,20 @@
     },
     "notoserifmakasar": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notoserifmalayalam": {
       "enabled": true,
@@ -12969,15 +13122,37 @@
     },
     "notoserifyezidi": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "nototraditionalnushu": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
-      "notes": "gftools==0.9.21 cohort test"
+      "isolation": "custom",
+      "reproducible_build": null,
+      "notes": "gftools==0.9.21 cohort test",
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.21",
+          "fontmake==3.5.1",
+          "fonttools==4.38.0",
+          "ufo2ft==2.31.0b2",
+          "glyphsLib==6.1.0",
+          "ttfautohint-py==0.5.1",
+          "glyphsets==0.5.4"
+        ]
+      }
     },
     "notoznamennymusicalnotation": {
       "enabled": true,
