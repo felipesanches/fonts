@@ -1,0 +1,2219 @@
+{
+  "0.9.76": {
+    "families": [
+      "42dotsans",
+      "atkinsonhyperlegiblemono",
+      "atkinsonhyperlegiblenext",
+      "badeendisplay",
+      "cormorantinfant",
+      "inclusivesans",
+      "jacquard12",
+      "jacquard12charted",
+      "jacquard24",
+      "jacquard24charted",
+      "jacquardabastarda9",
+      "jacquardabastarda9charted",
+      "jersey10",
+      "jersey10charted",
+      "jersey15",
+      "jersey15charted",
+      "jersey20",
+      "jersey20charted",
+      "jersey25",
+      "jersey25charted",
+      "liter",
+      "maname",
+      "merriweather",
+      "micro5",
+      "monomakh",
+      "notosans",
+      "notoserif",
+      "playfair",
+      "playwritear",
+      "playwritearguides",
+      "playwriteat",
+      "playwriteatguides",
+      "playwriteaunsw",
+      "playwriteaunswguides",
+      "playwriteauqld",
+      "playwriteauqldguides",
+      "playwriteausa",
+      "playwriteausaguides",
+      "playwriteautas",
+      "playwriteautasguides",
+      "playwriteauvic",
+      "playwriteauvicguides",
+      "playwritebevlgguides",
+      "playwritebewalguides",
+      "playwritebr",
+      "playwritebrguides",
+      "playwriteca",
+      "playwritecaguides",
+      "playwritecl",
+      "playwriteclguides",
+      "playwriteco",
+      "playwritecoguides",
+      "playwritecu",
+      "playwritecuguides",
+      "playwritecz",
+      "playwriteczguides",
+      "playwritedegrund",
+      "playwritedegrundguides",
+      "playwritedela",
+      "playwritedelaguides",
+      "playwritedesas",
+      "playwritedesasguides",
+      "playwritedeva",
+      "playwritedevaguides",
+      "playwritedkloopet",
+      "playwritedkloopetguides",
+      "playwritedkuloopet",
+      "playwritedkuloopetguides",
+      "playwritees",
+      "playwriteesdeco",
+      "playwriteesdecoguides",
+      "playwriteesguides",
+      "playwritefrmoderne",
+      "playwritefrmoderneguides",
+      "playwritefrtrad",
+      "playwritefrtradguides",
+      "playwritegbj",
+      "playwritegbjguides",
+      "playwritegbs",
+      "playwritegbsguides",
+      "playwritehr",
+      "playwritehrguides",
+      "playwritehrlijeva",
+      "playwritehrlijevaguides",
+      "playwritehu",
+      "playwritehuguides",
+      "playwriteid",
+      "playwriteidguides",
+      "playwriteie",
+      "playwriteieguides",
+      "playwritein",
+      "playwriteinguides",
+      "playwriteis",
+      "playwriteisguides",
+      "playwriteitmoderna",
+      "playwriteitmodernaguides",
+      "playwriteittrad",
+      "playwriteittradguides",
+      "playwritemx",
+      "playwritemxguides",
+      "playwritengmodern",
+      "playwritengmodernguides",
+      "playwritenl",
+      "playwritenlguides",
+      "playwriteno",
+      "playwritenoguides",
+      "playwritepe",
+      "playwritepeguides",
+      "playwritepl",
+      "playwriteplguides",
+      "playwritept",
+      "playwriteptguides",
+      "playwritero",
+      "playwriteroguides",
+      "playwritesk",
+      "playwriteskguides",
+      "playwritetz",
+      "playwritetzguides",
+      "playwriteusmodern",
+      "playwriteusmodernguides",
+      "playwriteustrad",
+      "playwriteustradguides",
+      "playwritevn",
+      "playwritevnguides",
+      "playwriteza",
+      "playwritezaguides",
+      "pochaevsk",
+      "ponomar",
+      "spacemono",
+      "tagesschrift",
+      "yarndings12",
+      "yarndings12charted",
+      "yarndings20",
+      "yarndings20charted"
+    ],
+    "median_date": "2025-01-14",
+    "requirements": [
+      "gftools==0.9.76",
+      "fontmake==3.10.0",
+      "fonttools==4.55.3",
+      "ufo2ft==3.4.0",
+      "glyphsLib==6.9.5",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 134
+  },
+  "0.8.7": {
+    "families": [
+      "abeezee",
+      "alumnisans",
+      "aubrey",
+      "brawler",
+      "wireone"
+    ],
+    "median_date": "2022-01-28",
+    "requirements": [
+      "gftools==0.8.7",
+      "fontmake==3.1.3",
+      "fonttools==4.29.0",
+      "ufo2ft==2.25.2",
+      "glyphsLib==6.0.4",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 5
+  },
+  "0.9.32": {
+    "families": [
+      "adlamdisplay",
+      "bricolagegrotesque",
+      "daibannasil",
+      "lisubosa",
+      "notosanshanifirohingya",
+      "notosansjavanese",
+      "notosanskawi",
+      "notosansnko",
+      "notosansnkounjoined",
+      "notosansoldhungarian",
+      "notosanssignwriting",
+      "notosanssylotinagri",
+      "notosanssymbols",
+      "notosanstifinagh",
+      "oswald",
+      "rem",
+      "robotoflex",
+      "ruwudu",
+      "signika"
+    ],
+    "median_date": "2023-06-28",
+    "requirements": [
+      "gftools==0.9.32",
+      "fontmake==3.6.0",
+      "fonttools==4.40.0",
+      "ufo2ft==2.32.0",
+      "glyphsLib==6.2.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 19
+  },
+  "0.9.21": {
+    "families": [
+      "adventpro",
+      "alexbrush",
+      "allura",
+      "archivonarrow",
+      "artifika",
+      "chivomono",
+      "gajrajone",
+      "gloock",
+      "golostext",
+      "hankengrotesk",
+      "labrada",
+      "martianmono",
+      "notosansanatolianhieroglyphs",
+      "notosansbhaiksuki",
+      "notosanscarian",
+      "notosanscuneiform",
+      "notosanscyprominoan",
+      "notosansdeseret",
+      "notosanselbasan",
+      "notosansgothic",
+      "notosanshatran",
+      "notosansindicsiyaqnumbers",
+      "notosanskharoshthi",
+      "notosanslinearb",
+      "notosansmahajani",
+      "notosansmayannumerals",
+      "notosansnabataean",
+      "notosansnushu",
+      "notosansogham",
+      "notosansoldnortharabian",
+      "notosansoldpermic",
+      "notosansoldpersian",
+      "notosansoldsoutharabian",
+      "notosanspalmyrene",
+      "notosansphoenician",
+      "notosansrunic",
+      "notosanssamaritan",
+      "notosansshavian",
+      "notosanssogdian",
+      "notosanssoyombo",
+      "notosanstamilsupplement",
+      "notosanstirhuta",
+      "notosansugaritic",
+      "notoserifkhitansmallscript",
+      "notoserifmakasar",
+      "notoserifyezidi",
+      "nototraditionalnushu",
+      "padyakkeexpandedone",
+      "rubik80sfade",
+      "rubikgemstones",
+      "rubikspraypaint",
+      "rubikstorm",
+      "rubikvinyl",
+      "sofiasans",
+      "sofiasanscondensed",
+      "sofiasansextracondensed",
+      "sofiasanssemicondensed",
+      "solitreo",
+      "tirotelugu",
+      "varelaround"
+    ],
+    "median_date": "2023-01-11",
+    "requirements": [
+      "gftools==0.9.21",
+      "fontmake==3.5.1",
+      "fonttools==4.38.0",
+      "ufo2ft==2.31.0b2",
+      "glyphsLib==6.1.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 60
+  },
+  "0.9.85": {
+    "families": [
+      "agbalumo",
+      "asap",
+      "bitcountgriddouble",
+      "epundasans",
+      "epundaslab",
+      "intelonemono",
+      "manufacturingconsent",
+      "menbere",
+      "notosanssunuwar",
+      "parastoo",
+      "reemkufifun",
+      "reemkufiink",
+      "specialgothic",
+      "storyscript",
+      "uoqmunthenkhung",
+      "vendsans"
+    ],
+    "median_date": "2025-06-06",
+    "requirements": [
+      "gftools==0.9.85",
+      "fontmake==3.10.1",
+      "fonttools==4.58.2",
+      "ufo2ft==3.4.6",
+      "glyphsLib==6.10.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 16
+  },
+  "0.9.30": {
+    "families": [
+      "agdasima",
+      "aleo",
+      "bacasimeantique",
+      "caprasimo",
+      "dmsans",
+      "francoisone",
+      "lugrasimo",
+      "lunasima",
+      "rubik"
+    ],
+    "median_date": "2023-06-14",
+    "requirements": [
+      "gftools==0.9.30",
+      "fontmake==3.6.0",
+      "fonttools==4.40.0",
+      "ufo2ft==2.32.0",
+      "glyphsLib==6.2.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 9
+  },
+  "0.9.88": {
+    "families": [
+      "alansans",
+      "googlesanscode",
+      "harmattan",
+      "lateef",
+      "scheherazadenew",
+      "susemono"
+    ],
+    "median_date": "2025-09-05",
+    "requirements": [
+      "gftools==0.9.88",
+      "fontmake==3.11.0",
+      "fonttools==4.59.2",
+      "ufo2ft==3.6.2",
+      "glyphsLib==6.11.6",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 6
+  },
+  "0.9.54": {
+    "families": [
+      "alata",
+      "anaheim",
+      "calistoga",
+      "damion",
+      "freeman",
+      "holtwoodonesc",
+      "miriamlibre",
+      "monda",
+      "notorashihebrew",
+      "notosansegyptianhieroglyphs",
+      "notoserifhebrew",
+      "pinyonscript",
+      "radiocanadabig",
+      "sankofadisplay",
+      "voltaire"
+    ],
+    "median_date": "2024-04-24",
+    "requirements": [
+      "gftools==0.9.54",
+      "fontmake==3.9.0",
+      "fonttools==4.51.0",
+      "ufo2ft==3.2.1",
+      "glyphsLib==6.7.0b1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 15
+  },
+  "0.9.55": {
+    "families": [
+      "alatsi"
+    ],
+    "median_date": "2024-05-03",
+    "requirements": [
+      "gftools==0.9.55",
+      "fontmake==3.9.0",
+      "fonttools==4.51.0",
+      "ufo2ft==3.2.1",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.6.1": {
+    "families": [
+      "alegreya",
+      "anton"
+    ],
+    "median_date": "2021-01-13",
+    "requirements": [
+      "gftools==0.6.1",
+      "fontmake==2.3.0",
+      "fonttools==4.18.2",
+      "ufo2ft==2.19.1",
+      "glyphsLib==5.3.1",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 2
+  },
+  "0.1.0": {
+    "families": [
+      "alegreyasans",
+      "bahianita",
+      "baijamjuree",
+      "barriecito",
+      "bebasneue",
+      "blinker",
+      "chakrapetch",
+      "charm",
+      "charmonman",
+      "fahkwang",
+      "farro",
+      "gayathri",
+      "grenze",
+      "k2d",
+      "kodchasan",
+      "koho",
+      "krub",
+      "mali",
+      "mina",
+      "notable",
+      "odibeesans",
+      "pacifico",
+      "sarabun",
+      "srisakdi",
+      "thasadith",
+      "tomorrow",
+      "vibes"
+    ],
+    "median_date": "2018-09-10",
+    "requirements": [
+      "gftools==0.1.0",
+      "fontmake==1.7.3",
+      "fonttools==3.29.1",
+      "ufo2ft==2.2.2",
+      "glyphsLib==3.1.0",
+      "ttfautohint-py==0.4.2"
+    ],
+    "count": 27
+  },
+  "0.9.20": {
+    "families": [
+      "alexandria",
+      "asapcondensed",
+      "chivo",
+      "fragmentmono",
+      "ibmplexmono",
+      "notosansbamum",
+      "notosansethiopic",
+      "notosanslepcha",
+      "notosansnewa",
+      "notosanssaurashtra",
+      "notosanssharada",
+      "notosanssorasompeng",
+      "notoserifethiopic"
+    ],
+    "median_date": "2022-11-02",
+    "requirements": [
+      "gftools==0.9.20",
+      "fontmake==3.5.0",
+      "fonttools==4.38.0",
+      "ufo2ft==2.29.0",
+      "glyphsLib==6.1.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 13
+  },
+  "0.8.4": {
+    "families": [
+      "alice",
+      "bevan",
+      "hubballi",
+      "leaguegothic",
+      "leaguespartan",
+      "smoochsans"
+    ],
+    "median_date": "2021-12-16",
+    "requirements": [
+      "gftools==0.8.4",
+      "fontmake==3.0.0",
+      "fonttools==4.28.4",
+      "ufo2ft==2.25.1",
+      "glyphsLib==6.0.1",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 6
+  },
+  "0.9.35": {
+    "families": [
+      "alike",
+      "alikeangular",
+      "hedvigletterssans",
+      "hedviglettersserif",
+      "kalnia",
+      "notosansgujarati",
+      "notosanssymbols2",
+      "notoserifgujarati"
+    ],
+    "median_date": "2023-10-26",
+    "requirements": [
+      "gftools==0.9.35",
+      "fontmake==3.7.1",
+      "fonttools==4.43.1",
+      "ufo2ft==2.33.4",
+      "glyphsLib==6.4.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 8
+  },
+  "0.9.25": {
+    "families": [
+      "alkalami"
+    ],
+    "median_date": "2023-03-02",
+    "requirements": [
+      "gftools==0.9.25",
+      "fontmake==3.5.1",
+      "fonttools==4.38.0",
+      "ufo2ft==2.31.0b2",
+      "glyphsLib==6.1.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.7.4": {
+    "families": [
+      "allison",
+      "andadapro",
+      "azeretmono",
+      "besley",
+      "bevietnampro",
+      "bonheurroyale",
+      "caramel",
+      "cherish",
+      "comfortaa",
+      "delagothicone",
+      "domine",
+      "ephesis",
+      "epilogue",
+      "explora",
+      "fraunces",
+      "grenzegotisch",
+      "jetbrainsmono",
+      "josefinsans",
+      "kleeone",
+      "kreon",
+      "manrope",
+      "manuale",
+      "markazitext",
+      "mohave",
+      "orbitron",
+      "saira",
+      "sansitaswashed",
+      "shizuru",
+      "stick",
+      "texturina",
+      "trainone"
+    ],
+    "median_date": "2021-08-16",
+    "requirements": [
+      "gftools==0.7.4",
+      "fontmake==2.4.1",
+      "fonttools==4.26.2",
+      "ufo2ft==2.24.0",
+      "glyphsLib==6.0.0b1",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 31
+  },
+  "0.9.98": {
+    "families": [
+      "allkin",
+      "bbhbartle",
+      "bbhhegarty",
+      "betaniapatmos",
+      "betaniapatmosgdl",
+      "betaniapatmosguideline",
+      "betaniapatmosin",
+      "betaniapatmosingdl",
+      "cause",
+      "notonaskharabic",
+      "roboto",
+      "zcoolkuaile"
+    ],
+    "median_date": "2026-01-23",
+    "requirements": [
+      "gftools==0.9.98",
+      "fontmake==3.11.1",
+      "fonttools==4.61.1",
+      "ufo2ft==3.7.0",
+      "glyphsLib==6.12.6",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 12
+  },
+  "0.9.14": {
+    "families": [
+      "alumnisanscollegiateone",
+      "dynapuff",
+      "notosansbuhid",
+      "notosanslisu",
+      "notosanssinhala",
+      "notoseriforiya",
+      "silkscreen",
+      "sono"
+    ],
+    "median_date": "2022-07-13",
+    "requirements": [
+      "gftools==0.9.14",
+      "fontmake==3.4.0",
+      "fonttools==4.34.4",
+      "ufo2ft==2.28.0",
+      "glyphsLib==6.0.6",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 8
+  },
+  "0.9.58": {
+    "families": [
+      "alumnisanscollegiateonesc",
+      "antonsc",
+      "arsenalsc",
+      "bigshouldersdisplaysc",
+      "bigshouldersinlinedisplaysc",
+      "bigshouldersinlinetextsc",
+      "bigshouldersstencildisplaysc",
+      "bigshouldersstenciltextsc",
+      "bigshoulderstextsc",
+      "bodonimodasc",
+      "bonanovasc",
+      "briemhand",
+      "bungee",
+      "bungeeinline",
+      "bungeeoutline",
+      "bungeeshade",
+      "bungeespice",
+      "notosansadlamunjoined",
+      "notosansbalinese",
+      "notosanscham",
+      "notosansdevanagari",
+      "notosansgrantha",
+      "notosansimperialaramaic",
+      "notosansinscriptionalpahlavi",
+      "notosansinscriptionalparthian",
+      "notosanskhudawadi",
+      "notoserifdevanagari",
+      "notoserifgrantha"
+    ],
+    "median_date": "2024-05-27",
+    "requirements": [
+      "gftools==0.9.58",
+      "fontmake==3.9.0",
+      "fonttools==4.52.4",
+      "ufo2ft==3.2.3",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 28
+  },
+  "0.9.59": {
+    "families": [
+      "alumnisanssc",
+      "bungeehairline",
+      "eduauvicwanthand",
+      "fragmentmonosc",
+      "gamaamli",
+      "notosanslimbu",
+      "notosansmandaic",
+      "notosansmarchen",
+      "wittgenstein"
+    ],
+    "median_date": "2024-06-06",
+    "requirements": [
+      "gftools==0.9.59",
+      "fontmake==3.9.0",
+      "fonttools==4.53.0",
+      "ufo2ft==3.2.5",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 9
+  },
+  "0.9.83": {
+    "families": [
+      "amiri",
+      "hanuman",
+      "savate"
+    ],
+    "median_date": "2025-05-16",
+    "requirements": [
+      "gftools==0.9.83",
+      "fontmake==3.10.0",
+      "fonttools==4.58.0",
+      "ufo2ft==3.4.3",
+      "glyphsLib==6.10.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 3
+  },
+  "0.9.86": {
+    "families": [
+      "amiriquran",
+      "chironheihk",
+      "matangi",
+      "mozillaheadline",
+      "mozillatext",
+      "notosansbatak",
+      "notoserifbengali",
+      "notoseriftangut",
+      "reemkufi",
+      "sirivennela",
+      "tiktoksans",
+      "tirra"
+    ],
+    "median_date": "2025-07-10",
+    "requirements": [
+      "gftools==0.9.86",
+      "fontmake==3.10.1",
+      "fonttools==4.58.5",
+      "ufo2ft==3.5.1",
+      "glyphsLib==6.11.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 12
+  },
+  "0.9.79": {
+    "families": [
+      "ancizarsans",
+      "ancizarserif",
+      "astasans",
+      "baskervville",
+      "baskervvillesc",
+      "bitter",
+      "boldonse",
+      "bytesized",
+      "calsans",
+      "cascadiamono",
+      "coralpixels",
+      "exile",
+      "figtree",
+      "gidole",
+      "huninn",
+      "iansui",
+      "nationalpark",
+      "nokora",
+      "notosansthailooped",
+      "playpensans",
+      "playpensansarabic",
+      "playpensansdeva",
+      "playpensanshebrew",
+      "playpensansthai",
+      "robotomono",
+      "specialgothiccondensedone",
+      "specialgothicexpandedone",
+      "winkyrough",
+      "winkysans"
+    ],
+    "median_date": "2025-03-19",
+    "requirements": [
+      "gftools==0.9.79",
+      "fontmake==3.10.0",
+      "fonttools==4.56.0",
+      "ufo2ft==3.4.2",
+      "glyphsLib==6.10.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 29
+  },
+  "0.9.9": {
+    "families": [
+      "andika",
+      "paprika",
+      "splinesans"
+    ],
+    "median_date": "2022-04-21",
+    "requirements": [
+      "gftools==0.9.9",
+      "fontmake==3.3.0",
+      "fonttools==4.33.0",
+      "ufo2ft==2.27.0",
+      "glyphsLib==6.0.4",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 3
+  },
+  "0.9.43": {
+    "families": [
+      "annapurnasil"
+    ],
+    "median_date": "2024-01-19",
+    "requirements": [
+      "gftools==0.9.43",
+      "fontmake==3.7.2",
+      "fonttools==4.47.2",
+      "ufo2ft==3.0.0a1",
+      "glyphsLib==6.6.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.44": {
+    "families": [
+      "anta"
+    ],
+    "median_date": "2024-01-25",
+    "requirements": [
+      "gftools==0.9.44",
+      "fontmake==3.7.2",
+      "fonttools==4.47.2",
+      "ufo2ft==3.0.0b1",
+      "glyphsLib==6.6.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.63": {
+    "families": [
+      "anuphan",
+      "moderustic",
+      "newamsterdam",
+      "notosansmongolian"
+    ],
+    "median_date": "2024-07-24",
+    "requirements": [
+      "gftools==0.9.63",
+      "fontmake==3.9.0",
+      "fonttools==4.53.1",
+      "ufo2ft==3.2.5",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.6.2": {
+    "families": [
+      "archivo",
+      "benne"
+    ],
+    "median_date": "2021-02-18",
+    "requirements": [
+      "gftools==0.6.2",
+      "fontmake==2.3.0",
+      "fonttools==4.20.0",
+      "ufo2ft==2.19.2",
+      "glyphsLib==5.3.2",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 2
+  },
+  "0.8.0": {
+    "families": [
+      "areyouserious",
+      "bigshouldersdisplay",
+      "bigshouldersinlinedisplay",
+      "bigshouldersinlinetext",
+      "bigshouldersstencildisplay",
+      "bigshouldersstenciltext",
+      "bigshoulderstext",
+      "birthstone",
+      "birthstonebounce",
+      "carattere",
+      "comforter",
+      "comforterbrush",
+      "corinthia",
+      "dancingscript",
+      "estonia",
+      "faustina",
+      "fleurdeleah",
+      "genos",
+      "gideonroman",
+      "grechenfuemen",
+      "greyqo",
+      "heptaslab",
+      "hurricane",
+      "montaguslab",
+      "mulish",
+      "passionsconflict",
+      "petemoss",
+      "praise",
+      "puppiesplay",
+      "rosario",
+      "rugeboogie",
+      "sassyfrass",
+      "shalimar",
+      "signikanegative"
+    ],
+    "median_date": "2021-09-22",
+    "requirements": [
+      "gftools==0.8.0",
+      "fontmake==2.4.1",
+      "fonttools==4.27.0",
+      "ufo2ft==2.24.0",
+      "glyphsLib==6.0.0b1",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 34
+  },
+  "0.9.23": {
+    "families": [
+      "arima",
+      "commissioner",
+      "diplomata",
+      "diplomatasc",
+      "konkhmersleokchher",
+      "librebodoni",
+      "metrophobic",
+      "notosansavestan",
+      "paytoneone",
+      "phudu",
+      "rokkitt"
+    ],
+    "median_date": "2023-02-03",
+    "requirements": [
+      "gftools==0.9.23",
+      "fontmake==3.5.1",
+      "fonttools==4.38.0",
+      "ufo2ft==2.31.0b2",
+      "glyphsLib==6.1.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 11
+  },
+  "0.9.34": {
+    "families": [
+      "aronesans",
+      "biorhyme",
+      "blaka",
+      "blakahollow",
+      "blakaink",
+      "gabarito",
+      "kameron",
+      "linefont",
+      "notonastaliqurdu",
+      "notosansarmenian",
+      "notosanscaucasianalbanian",
+      "notosanscoptic",
+      "notosanscypriot",
+      "notosanselymaic",
+      "notosanskhmer",
+      "notosanskhojki",
+      "notosansmanichaean",
+      "notosansmeroitic",
+      "notosansnewtailue",
+      "notosanssundanese",
+      "notosanstakri",
+      "notosanstangsa",
+      "notosanstelugu",
+      "notosansthaana",
+      "notosansthai",
+      "notoserifahom",
+      "notoserifarmenian",
+      "notoserifdogra",
+      "notoserifgeorgian",
+      "notoserifkannada",
+      "notoserifkhmer",
+      "notoserifkhojki",
+      "notoseriftelugu",
+      "notoserifthai",
+      "onest",
+      "pixelifysans",
+      "pontanosans",
+      "rethinksans",
+      "shanti",
+      "sometypemono"
+    ],
+    "median_date": "2023-09-25",
+    "requirements": [
+      "gftools==0.9.34",
+      "fontmake==3.7.1",
+      "fonttools==4.42.1",
+      "ufo2ft==2.33.4",
+      "glyphsLib==6.4.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 40
+  },
+  "0.9.41": {
+    "families": [
+      "asset",
+      "lora",
+      "notosanschorasmian",
+      "notosansphagspa",
+      "notoznamennymusicalnotation",
+      "protestguerrilla",
+      "protestrevolution",
+      "protestriot",
+      "proteststrike",
+      "yanonekaffeesatz"
+    ],
+    "median_date": "2023-12-13",
+    "requirements": [
+      "gftools==0.9.41",
+      "fontmake==3.7.1",
+      "fonttools==4.46.0",
+      "ufo2ft==2.33.4",
+      "glyphsLib==6.6.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 10
+  },
+  "0.7.1": {
+    "families": [
+      "atkinsonhyperlegible",
+      "bilbo",
+      "festive",
+      "georama",
+      "italianno",
+      "loversquarrel",
+      "montecarlo",
+      "qwigley",
+      "stylescript",
+      "windsong"
+    ],
+    "median_date": "2021-05-21",
+    "requirements": [
+      "gftools==0.7.1",
+      "fontmake==2.4.0",
+      "fonttools==4.24.3",
+      "ufo2ft==2.21.0",
+      "glyphsLib==5.3.2",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 10
+  },
+  "0.9.74": {
+    "families": [
+      "badscript",
+      "parkinsans"
+    ],
+    "median_date": "2024-11-08",
+    "requirements": [
+      "gftools==0.9.74",
+      "fontmake==3.10.0",
+      "fonttools==4.54.1",
+      "ufo2ft==3.3.1",
+      "glyphsLib==6.9.4",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 2
+  },
+  "0.8.6": {
+    "families": [
+      "bakbakone",
+      "piazzolla"
+    ],
+    "median_date": "2022-01-13",
+    "requirements": [
+      "gftools==0.8.6",
+      "fontmake==3.1.1",
+      "fonttools==4.28.5",
+      "ufo2ft==2.25.2",
+      "glyphsLib==6.0.2",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 2
+  },
+  "0.8.3": {
+    "families": [
+      "baloo2",
+      "baloochettan2",
+      "balooda2",
+      "baloothambi2",
+      "battambang",
+      "bokor",
+      "dangrek",
+      "expletussans",
+      "fasthand",
+      "freehand",
+      "kohsantepheap",
+      "luxuriousroman",
+      "metal",
+      "moulpali",
+      "odormeanchey",
+      "preahvihear",
+      "qwitchergrypen",
+      "redacted",
+      "suwannaphum",
+      "taprom",
+      "thenautigal",
+      "vollkorn",
+      "waterfall"
+    ],
+    "median_date": "2021-12-07",
+    "requirements": [
+      "gftools==0.8.3",
+      "fontmake==3.0.0",
+      "fonttools==4.28.3",
+      "ufo2ft==2.25.1",
+      "glyphsLib==6.0.0",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 23
+  },
+  "0.8.2": {
+    "families": [
+      "baloobhai2",
+      "baloobhaina2",
+      "baloopaaji2",
+      "balootamma2",
+      "balootammudu2",
+      "gwendolyn",
+      "kaiseidecol",
+      "kaiseiharunoumi",
+      "kaiseiopti",
+      "kaiseitokumin",
+      "kings",
+      "meowscript",
+      "murecho",
+      "redactedscript",
+      "roadrage",
+      "urbanist"
+    ],
+    "median_date": "2021-10-29",
+    "requirements": [
+      "gftools==0.8.2",
+      "fontmake==3.0.0b2",
+      "fonttools==4.27.1",
+      "ufo2ft==2.25.1",
+      "glyphsLib==6.0.0b4",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 16
+  },
+  "0.9.17": {
+    "families": [
+      "baloobhaijaan2",
+      "ibmplexsansjp",
+      "notosanscherokee",
+      "notosansmeeteimayek",
+      "notosansmendekikakui",
+      "notosansmiao",
+      "notosansvai",
+      "notosanswancho",
+      "notosanswarangciti",
+      "notoseriftibetan"
+    ],
+    "median_date": "2022-09-15",
+    "requirements": [
+      "gftools==0.9.17",
+      "fontmake==3.4.0",
+      "fonttools==4.37.2",
+      "ufo2ft==2.29.0b1",
+      "glyphsLib==6.0.7",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 10
+  },
+  "0.9.28": {
+    "families": [
+      "balsamiqsans",
+      "darkergrotesque",
+      "instrumentsans",
+      "kablammo",
+      "mada",
+      "radiocanada",
+      "unbounded"
+    ],
+    "median_date": "2023-04-21",
+    "requirements": [
+      "gftools==0.9.28",
+      "fontmake==3.5.1",
+      "fonttools==4.39.3",
+      "ufo2ft==2.31.1",
+      "glyphsLib==6.2.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 7
+  },
+  "0.9.31": {
+    "families": [
+      "bangers",
+      "joan",
+      "notomusic",
+      "notosansgunjalagondi",
+      "notosanshanunoo",
+      "notosanslao",
+      "notosanslaolooped",
+      "notosansmodi",
+      "notosanssiddham",
+      "notosanstagalog",
+      "notosanstaiviet",
+      "notosanszanabazarsquare",
+      "notoseriflao",
+      "victormono"
+    ],
+    "median_date": "2023-06-22",
+    "requirements": [
+      "gftools==0.9.31",
+      "fontmake==3.6.0",
+      "fonttools==4.40.0",
+      "ufo2ft==2.32.0",
+      "glyphsLib==6.2.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 14
+  },
+  "0.9.89": {
+    "families": [
+      "bitcountpropsingleink",
+      "bitcountsingleink",
+      "momotrustdisplay",
+      "momotrustsans",
+      "suse"
+    ],
+    "median_date": "2025-09-11",
+    "requirements": [
+      "gftools==0.9.89",
+      "fontmake==3.11.0",
+      "fonttools==4.59.2",
+      "ufo2ft==3.6.3",
+      "glyphsLib==6.11.6",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 5
+  },
+  "0.9.48": {
+    "families": [
+      "bodonimoda",
+      "davidlibre",
+      "gelasio",
+      "notoserifhentaigana",
+      "redditmono",
+      "redditsans",
+      "redditsanscondensed",
+      "tacone"
+    ],
+    "median_date": "2024-02-22",
+    "requirements": [
+      "gftools==0.9.48",
+      "fontmake==3.8.1",
+      "fonttools==4.49.0",
+      "ufo2ft==3.1.0",
+      "glyphsLib==6.6.5",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 8
+  },
+  "0.7.0": {
+    "families": [
+      "bonanova",
+      "karantina",
+      "zendots"
+    ],
+    "median_date": "2021-03-15",
+    "requirements": [
+      "gftools==0.7.0",
+      "fontmake==2.3.1",
+      "fonttools==4.21.1",
+      "ufo2ft==2.19.2",
+      "glyphsLib==5.3.2",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 3
+  },
+  "0.9.93": {
+    "families": [
+      "borel",
+      "capriola"
+    ],
+    "median_date": "2025-10-23",
+    "requirements": [
+      "gftools==0.9.93",
+      "fontmake==3.11.0",
+      "fonttools==4.60.1",
+      "ufo2ft==3.6.8",
+      "glyphsLib==6.12.1",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 2
+  },
+  "0.9.27": {
+    "families": [
+      "brunoace",
+      "brunoacesc",
+      "chilanka",
+      "comme",
+      "delicioushandrawn",
+      "gabriela",
+      "instrumentserif",
+      "notosansgurmukhi",
+      "notosansmalayalam",
+      "notosanstamil",
+      "notoserifgurmukhi",
+      "notoserifmalayalam",
+      "notoserifsinhala",
+      "notoseriftamil",
+      "nunitosans",
+      "outfit",
+      "pathwayextreme",
+      "poltawskinowy"
+    ],
+    "median_date": "2023-03-27",
+    "requirements": [
+      "gftools==0.9.27",
+      "fontmake==3.5.1",
+      "fonttools==4.39.2",
+      "ufo2ft==2.31.0",
+      "glyphsLib==6.2.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 18
+  },
+  "0.9.15": {
+    "families": [
+      "bungeecolor",
+      "fruktur",
+      "notosansadlam",
+      "notosansmyanmar"
+    ],
+    "median_date": "2022-08-18",
+    "requirements": [
+      "gftools==0.9.15",
+      "fontmake==3.4.0",
+      "fonttools==4.36.0",
+      "ufo2ft==2.29.0b1",
+      "glyphsLib==6.0.7",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.9.10": {
+    "families": [
+      "charissil",
+      "cormorant",
+      "kantumruypro",
+      "kdamthmorpro"
+    ],
+    "median_date": "2022-05-18",
+    "requirements": [
+      "gftools==0.9.10",
+      "fontmake==3.4.0a1",
+      "fonttools==4.33.3",
+      "ufo2ft==2.28.0a1",
+      "glyphsLib==6.0.5",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.9.991": {
+    "families": [
+      "climatecrisis"
+    ],
+    "median_date": "2026-02-20",
+    "requirements": [
+      "gftools==0.9.991",
+      "fontmake==3.11.1",
+      "fonttools==4.61.1",
+      "ufo2ft==3.7.0",
+      "glyphsLib==6.12.7",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 1
+  },
+  "0.3.5": {
+    "families": [
+      "comicneue"
+    ],
+    "median_date": "2020-03-12",
+    "requirements": [
+      "gftools==0.3.5",
+      "fontmake==2.0.10",
+      "fonttools==4.4.2",
+      "ufo2ft==2.12.2",
+      "glyphsLib==5.1.7",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 1
+  },
+  "0.9.91": {
+    "families": [
+      "cossettetexte",
+      "cossettetitre",
+      "momosignature",
+      "stacksansheadline",
+      "stacksanstext"
+    ],
+    "median_date": "2025-09-30",
+    "requirements": [
+      "gftools==0.9.91",
+      "fontmake==3.11.0",
+      "fonttools==4.60.1",
+      "ufo2ft==3.6.6",
+      "glyphsLib==6.11.6",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 5
+  },
+  "0.9.4": {
+    "families": [
+      "crimsontext",
+      "squarepeg"
+    ],
+    "median_date": "2022-03-30",
+    "requirements": [
+      "gftools==0.9.4",
+      "fontmake==3.2.0",
+      "fonttools==4.31.2",
+      "ufo2ft==2.26.0",
+      "glyphsLib==6.0.4",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 2
+  },
+  "0.9.65": {
+    "families": [
+      "cutive"
+    ],
+    "median_date": "2024-08-01",
+    "requirements": [
+      "gftools==0.9.65",
+      "fontmake==3.9.0",
+      "fonttools==4.53.1",
+      "ufo2ft==3.2.5",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.56": {
+    "families": [
+      "cutivemono"
+    ],
+    "median_date": "2024-05-08",
+    "requirements": [
+      "gftools==0.9.56",
+      "fontmake==3.9.0",
+      "fonttools==4.51.0",
+      "ufo2ft==3.2.1",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.24": {
+    "families": [
+      "denkone",
+      "mate",
+      "matesc",
+      "robotoserif"
+    ],
+    "median_date": "2023-02-28",
+    "requirements": [
+      "gftools==0.9.24",
+      "fontmake==3.5.1",
+      "fonttools==4.38.0",
+      "ufo2ft==2.31.0b2",
+      "glyphsLib==6.1.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.9.29": {
+    "families": [
+      "diphylleia",
+      "grandifloraone",
+      "literata",
+      "michroma",
+      "notosanslineara",
+      "secularone",
+      "vinasans"
+    ],
+    "median_date": "2023-05-24",
+    "requirements": [
+      "gftools==0.9.29",
+      "fontmake==3.5.1",
+      "fonttools==4.39.4",
+      "ufo2ft==2.31.1",
+      "glyphsLib==6.2.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 7
+  },
+  "0.3.7": {
+    "families": [
+      "dmmono",
+      "inconsolata"
+    ],
+    "median_date": "2020-04-15",
+    "requirements": [
+      "gftools==0.3.7",
+      "fontmake==2.1.0",
+      "fonttools==4.7.0",
+      "ufo2ft==2.13.0",
+      "glyphsLib==5.1.9",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 2
+  },
+  "0.9.71": {
+    "families": [
+      "doto",
+      "eduauvicwantarrows",
+      "exo2",
+      "facultyglyphic",
+      "geist",
+      "geistmono",
+      "hostgrotesk",
+      "hubotsans",
+      "montserrat",
+      "notosansnandinagari",
+      "oi",
+      "spectral",
+      "spectralsc"
+    ],
+    "median_date": "2024-10-18",
+    "requirements": [
+      "gftools==0.9.71",
+      "fontmake==3.9.0",
+      "fonttools==4.54.1",
+      "ufo2ft==3.3.1",
+      "glyphsLib==6.9.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 13
+  },
+  "0.9.66": {
+    "families": [
+      "eduauvicwantdots",
+      "eduauvicwantguides"
+    ],
+    "median_date": "2024-08-13",
+    "requirements": [
+      "gftools==0.9.66",
+      "fontmake==3.9.0",
+      "fonttools==4.53.1",
+      "ufo2ft==3.2.7",
+      "glyphsLib==6.8.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 2
+  },
+  "0.9.70": {
+    "families": [
+      "eduauvicwantpre",
+      "funneldisplay",
+      "funnelsans",
+      "monasans"
+    ],
+    "median_date": "2024-09-27",
+    "requirements": [
+      "gftools==0.9.70",
+      "fontmake==3.9.0",
+      "fonttools==4.54.1",
+      "ufo2ft==3.3.0",
+      "glyphsLib==6.9.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.9.13": {
+    "families": [
+      "eduqldbeginner",
+      "edusabeginner",
+      "edutasbeginner",
+      "eduvicwantbeginner",
+      "familjengrotesk",
+      "rubikburned",
+      "rubikdirt",
+      "rubikdistressed",
+      "rubikiso",
+      "rubikmarkerhatch",
+      "rubikmaze"
+    ],
+    "median_date": "2022-06-16",
+    "requirements": [
+      "gftools==0.9.13",
+      "fontmake==3.4.0a2",
+      "fonttools==4.33.3",
+      "ufo2ft==2.28.0a1",
+      "glyphsLib==6.0.5",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 11
+  },
+  "0.9.18": {
+    "families": [
+      "finlandica",
+      "notosansbassavah",
+      "notosansbuginese",
+      "notosanschakma",
+      "notosanskayahli",
+      "notosansmedefaidrin",
+      "notosansmro",
+      "notosanspahawhhmong",
+      "notosanstaile",
+      "notosanstaitham"
+    ],
+    "median_date": "2022-09-28",
+    "requirements": [
+      "gftools==0.9.18",
+      "fontmake==3.4.0",
+      "fonttools==4.37.3",
+      "ufo2ft==2.29.0b1",
+      "glyphsLib==6.0.7",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 10
+  },
+  "0.8.1": {
+    "families": [
+      "flowblock",
+      "flowcircular",
+      "flowrounded"
+    ],
+    "median_date": "2021-10-22",
+    "requirements": [
+      "gftools==0.8.1",
+      "fontmake==3.0.0b2",
+      "fonttools==4.27.1",
+      "ufo2ft==2.25.1",
+      "glyphsLib==6.0.0b4",
+      "ttfautohint-py==0.4.3.post1"
+    ],
+    "count": 3
+  },
+  "0.9.49": {
+    "families": [
+      "frankruhllibre"
+    ],
+    "median_date": "2024-02-28",
+    "requirements": [
+      "gftools==0.9.49",
+      "fontmake==3.8.1",
+      "fonttools==4.49.0",
+      "ufo2ft==3.1.0",
+      "glyphsLib==6.6.6",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.0": {
+    "families": [
+      "fredoka"
+    ],
+    "median_date": "2022-03-03",
+    "requirements": [
+      "gftools==0.9.0",
+      "fontmake==3.2.0",
+      "fonttools==4.29.1",
+      "ufo2ft==2.25.3",
+      "glyphsLib==6.0.4",
+      "ttfautohint-py==0.5.0"
+    ],
+    "count": 1
+  },
+  "0.9.81": {
+    "families": [
+      "fustat",
+      "lxgwmarkergothic"
+    ],
+    "median_date": "2025-05-08",
+    "requirements": [
+      "gftools==0.9.81",
+      "fontmake==3.10.0",
+      "fonttools==4.57.0",
+      "ufo2ft==3.4.3",
+      "glyphsLib==6.10.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 2
+  },
+  "0.7.2": {
+    "families": [
+      "gemunulibre",
+      "glory",
+      "ibmplexsansthai",
+      "playball",
+      "sticknobills",
+      "yaldevi",
+      "yomogi"
+    ],
+    "median_date": "2021-06-28",
+    "requirements": [
+      "gftools==0.7.2",
+      "fontmake==2.4.0",
+      "fonttools==4.24.4",
+      "ufo2ft==2.21.0",
+      "glyphsLib==5.3.2",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 7
+  },
+  "0.9.52": {
+    "families": [
+      "greatvibes"
+    ],
+    "median_date": "2024-03-28",
+    "requirements": [
+      "gftools==0.9.52",
+      "fontmake==3.9.0",
+      "fonttools==4.50.0",
+      "ufo2ft==3.2.0",
+      "glyphsLib==6.7.0b1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.95": {
+    "families": [
+      "gveretlevin",
+      "notosansrejang",
+      "sekuya"
+    ],
+    "median_date": "2025-11-14",
+    "requirements": [
+      "gftools==0.9.95",
+      "fontmake==3.11.0",
+      "fonttools==4.60.1",
+      "ufo2ft==3.6.8",
+      "glyphsLib==6.12.3",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 3
+  },
+  "0.9.39": {
+    "families": [
+      "heebo",
+      "kumbhsans",
+      "rubikbrokenfax",
+      "rubikdoodleshadow",
+      "rubikdoodletriangles",
+      "rubikglitchpop",
+      "rubiklines",
+      "rubikmaps",
+      "rubikscribble",
+      "sancreek",
+      "sixtyfour",
+      "workbench"
+    ],
+    "median_date": "2023-11-23",
+    "requirements": [
+      "gftools==0.9.39",
+      "fontmake==3.7.1",
+      "fonttools==4.45.1",
+      "ufo2ft==2.33.4",
+      "glyphsLib==6.5.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 12
+  },
+  "0.9.51": {
+    "families": [
+      "jaro",
+      "platypi",
+      "teachers"
+    ],
+    "median_date": "2024-03-15",
+    "requirements": [
+      "gftools==0.9.51",
+      "fontmake==3.8.1",
+      "fonttools==4.50.0",
+      "ufo2ft==3.1.0",
+      "glyphsLib==6.6.6",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 3
+  },
+  "0.9.75": {
+    "families": [
+      "josefinslab",
+      "redhatdisplay",
+      "redhatmono",
+      "redhattext"
+    ],
+    "median_date": "2024-11-15",
+    "requirements": [
+      "gftools==0.9.75",
+      "fontmake==3.10.0",
+      "fonttools==4.55.0",
+      "ufo2ft==3.3.1",
+      "glyphsLib==6.9.5",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.9.60": {
+    "families": [
+      "kalniaglaze",
+      "notosanshebrew",
+      "notosanskaithi",
+      "notosansmasaramgondi",
+      "notosansnagmundari",
+      "notosansolditalic",
+      "notosansoldsogdian",
+      "notosansoldturkic",
+      "notosanspsalterpahlavi",
+      "notoserifolduyghur",
+      "notoseriftoto",
+      "rammettoone"
+    ],
+    "median_date": "2024-06-11",
+    "requirements": [
+      "gftools==0.9.60",
+      "fontmake==3.9.0",
+      "fonttools==4.53.0",
+      "ufo2ft==3.2.5",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 12
+  },
+  "0.9.33": {
+    "families": [
+      "karla",
+      "mako",
+      "mooli",
+      "norican",
+      "notosanslycian",
+      "notoserifottomansiyaq",
+      "seymourone",
+      "teko",
+      "wixmadefordisplay",
+      "youngserif"
+    ],
+    "median_date": "2023-08-04",
+    "requirements": [
+      "gftools==0.9.33",
+      "fontmake==3.7.0",
+      "fonttools==4.42.0",
+      "ufo2ft==2.33.4",
+      "glyphsLib==6.3.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 10
+  },
+  "0.9.45": {
+    "families": [
+      "kodemono",
+      "notosansbrahmi"
+    ],
+    "median_date": "2024-02-01",
+    "requirements": [
+      "gftools==0.9.45",
+      "fontmake==3.7.2",
+      "fonttools==4.47.2",
+      "ufo2ft==3.0.0b1",
+      "glyphsLib==6.6.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 2
+  },
+  "0.9.993": {
+    "families": [
+      "kurale"
+    ],
+    "median_date": "2026-02-27",
+    "requirements": [
+      "gftools==0.9.993",
+      "fontmake==3.11.1",
+      "fonttools==4.61.1",
+      "ufo2ft==3.7.0",
+      "glyphsLib==6.12.7",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 1
+  },
+  "0.5.2": {
+    "families": [
+      "langar"
+    ],
+    "median_date": "2020-11-26",
+    "requirements": [
+      "gftools==0.5.2",
+      "fontmake==2.2.1",
+      "fonttools==4.17.1",
+      "ufo2ft==2.18.1",
+      "glyphsLib==5.2.0",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 1
+  },
+  "0.9.68": {
+    "families": [
+      "librefranklin",
+      "notoseriftodhri",
+      "sourgummy"
+    ],
+    "median_date": "2024-09-11",
+    "requirements": [
+      "gftools==0.9.68",
+      "fontmake==3.9.0",
+      "fonttools==4.53.1",
+      "ufo2ft==3.2.8",
+      "glyphsLib==6.8.2",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 3
+  },
+  "0.9.61": {
+    "families": [
+      "lifesavers"
+    ],
+    "median_date": "2024-06-14",
+    "requirements": [
+      "gftools==0.9.61",
+      "fontmake==3.9.0",
+      "fonttools==4.53.0",
+      "ufo2ft==3.2.5",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.96": {
+    "families": [
+      "lineseedjp"
+    ],
+    "median_date": "2025-11-20",
+    "requirements": [
+      "gftools==0.9.96",
+      "fontmake==3.11.0",
+      "fonttools==4.60.1",
+      "ufo2ft==3.6.8",
+      "glyphsLib==6.12.4",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 1
+  },
+  "0.9.47": {
+    "families": [
+      "madimione",
+      "notosanscanadianaboriginal",
+      "notosansgeorgian",
+      "ojuju"
+    ],
+    "median_date": "2024-02-14",
+    "requirements": [
+      "gftools==0.9.47",
+      "fontmake==3.8.1",
+      "fonttools==4.48.1",
+      "ufo2ft==3.0.1",
+      "glyphsLib==6.6.3",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.9.19": {
+    "families": [
+      "mansalva",
+      "marhey",
+      "merienda",
+      "notosansmultani",
+      "notosansolchiki",
+      "notosansosage",
+      "notosansosmanya",
+      "notosanspaucinhau",
+      "notosanstagbanwa",
+      "notosansyi"
+    ],
+    "median_date": "2022-10-13",
+    "requirements": [
+      "gftools==0.9.19",
+      "fontmake==3.4.0",
+      "fonttools==4.37.4",
+      "ufo2ft==2.29.0b1",
+      "glyphsLib==6.1.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 10
+  },
+  "0.9.62": {
+    "families": [
+      "matemasie",
+      "notosansmath",
+      "notoserifbalinese",
+      "philosopher"
+    ],
+    "median_date": "2024-07-09",
+    "requirements": [
+      "gftools==0.9.62",
+      "fontmake==3.9.0",
+      "fonttools==4.53.1",
+      "ufo2ft==3.2.5",
+      "glyphsLib==6.7.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.9.78": {
+    "families": [
+      "mavenpro"
+    ],
+    "median_date": "2025-02-07",
+    "requirements": [
+      "gftools==0.9.78",
+      "fontmake==3.10.0",
+      "fonttools==4.56.0",
+      "ufo2ft==3.4.1",
+      "glyphsLib==6.10.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.11": {
+    "families": [
+      "mingzat",
+      "splinesansmono"
+    ],
+    "median_date": "2022-06-01",
+    "requirements": [
+      "gftools==0.9.11",
+      "fontmake==3.4.0a2",
+      "fonttools==4.33.3",
+      "ufo2ft==2.28.0a1",
+      "glyphsLib==6.0.5",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 2
+  },
+  "0.9.36": {
+    "families": [
+      "notosansarabic",
+      "notosansglagolitic",
+      "notosanslydian"
+    ],
+    "median_date": "2023-11-07",
+    "requirements": [
+      "gftools==0.9.36",
+      "fontmake==3.7.1",
+      "fonttools==4.44.0",
+      "ufo2ft==2.33.4",
+      "glyphsLib==6.4.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 3
+  },
+  "0.9.992": {
+    "families": [
+      "notosanskannada"
+    ],
+    "median_date": "2026-02-25",
+    "requirements": [
+      "gftools==0.9.992",
+      "fontmake==3.11.1",
+      "fonttools==4.61.1",
+      "ufo2ft==3.7.0",
+      "glyphsLib==6.12.7",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 1
+  },
+  "0.9.99": {
+    "families": [
+      "notosansoriya"
+    ],
+    "median_date": "2026-02-03",
+    "requirements": [
+      "gftools==0.9.99",
+      "fontmake==3.11.1",
+      "fonttools==4.61.1",
+      "ufo2ft==3.7.0",
+      "glyphsLib==6.12.6",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 1
+  },
+  "0.9.77": {
+    "families": [
+      "notoserifdivesakuru",
+      "playwritebevlg",
+      "playwritebewal",
+      "triodion"
+    ],
+    "median_date": "2025-02-06",
+    "requirements": [
+      "gftools==0.9.77",
+      "fontmake==3.10.0",
+      "fonttools==4.55.8",
+      "ufo2ft==3.4.1",
+      "glyphsLib==6.10.1",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  },
+  "0.8.8": {
+    "families": [
+      "nunito",
+      "rubikbeastly",
+      "rubikbubbles",
+      "rubikglitch",
+      "rubikmicrobe",
+      "rubikmoonrocks",
+      "rubikpuddles",
+      "rubikwetpaint"
+    ],
+    "median_date": "2022-02-23",
+    "requirements": [
+      "gftools==0.8.8",
+      "fontmake==3.2.0",
+      "fonttools==4.29.1",
+      "ufo2ft==2.25.2",
+      "glyphsLib==6.0.4",
+      "ttfautohint-py==0.5.0"
+    ],
+    "count": 8
+  },
+  "0.3.13": {
+    "families": [
+      "poppins"
+    ],
+    "median_date": "2020-06-23",
+    "requirements": [
+      "gftools==0.3.13",
+      "fontmake==2.2.0",
+      "fonttools==4.12.1",
+      "ufo2ft==2.15.0",
+      "glyphsLib==5.1.10",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 1
+  },
+  "0.3.14": {
+    "families": [
+      "questrial"
+    ],
+    "median_date": "2020-07-06",
+    "requirements": [
+      "gftools==0.3.14",
+      "fontmake==2.2.0",
+      "fonttools==4.12.1",
+      "ufo2ft==2.15.0",
+      "glyphsLib==5.1.10",
+      "ttfautohint-py==0.4.3"
+    ],
+    "count": 1
+  },
+  "0.9.26": {
+    "families": [
+      "schibstedgrotesk"
+    ],
+    "median_date": "2023-03-03",
+    "requirements": [
+      "gftools==0.9.26",
+      "fontmake==3.5.1",
+      "fonttools==4.38.1.dev0",
+      "ufo2ft==2.31.0b2",
+      "glyphsLib==6.1.0",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 1
+  },
+  "0.9.50": {
+    "families": [
+      "sedan",
+      "sedansc"
+    ],
+    "median_date": "2024-03-01",
+    "requirements": [
+      "gftools==0.9.50",
+      "fontmake==3.8.1",
+      "fonttools==4.49.0",
+      "ufo2ft==3.1.0",
+      "glyphsLib==6.6.6",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 2
+  },
+  "0.9.92": {
+    "families": [
+      "stacksansnotch"
+    ],
+    "median_date": "2025-10-16",
+    "requirements": [
+      "gftools==0.9.92",
+      "fontmake==3.11.0",
+      "fonttools==4.60.1",
+      "ufo2ft==3.6.8",
+      "glyphsLib==6.12.0",
+      "ttfautohint-py==0.6.0b2"
+    ],
+    "count": 1
+  },
+  "0.9.87": {
+    "families": [
+      "tasaexplorer",
+      "tasaorbiter",
+      "zalandosans",
+      "zalandosansexpanded",
+      "zalandosanssemiexpanded"
+    ],
+    "median_date": "2025-07-23",
+    "requirements": [
+      "gftools==0.9.87",
+      "fontmake==3.10.1",
+      "fonttools==4.59.0",
+      "ufo2ft==3.5.1",
+      "glyphsLib==6.11.3",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 5
+  },
+  "0.9.8": {
+    "families": [
+      "tirobangla",
+      "tirogurmukhi",
+      "tirokannada",
+      "tirotamil"
+    ],
+    "median_date": "2022-04-15",
+    "requirements": [
+      "gftools==0.9.8",
+      "fontmake==3.3.0",
+      "fonttools==4.32.0",
+      "ufo2ft==2.27.0",
+      "glyphsLib==6.0.4",
+      "ttfautohint-py==0.5.1"
+    ],
+    "count": 4
+  }
+}
