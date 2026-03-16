@@ -8628,19 +8628,10 @@
     },
     "lineseedjp": {
       "enabled": true,
-      "isolation": "custom",
+      "isolation": "shared",
       "reproducible_build": "compiler-version",
       "notes": "",
-      "overrides": {
-        "requirements": [
-          "gftools==0.9.96",
-          "fontmake==3.11.0",
-          "fonttools==4.60.1",
-          "ufo2ft==3.6.8",
-          "glyphsLib==6.12.4",
-          "ttfautohint-py==0.6.0b2"
-        ]
-      },
+      "overrides": {},
       "config_yaml_source": "upstream",
       "source_format": [
         ".glyphspackage"
@@ -11691,10 +11682,19 @@
     },
     "notosansoriya": {
       "enabled": true,
-      "isolation": "shared",
-      "reproducible_build": "compiler-version",
+      "isolation": "custom",
+      "reproducible_build": "yes",
       "notes": "",
-      "overrides": {},
+      "overrides": {
+        "requirements": [
+          "gftools==0.9.99",
+          "fontmake==3.11.1",
+          "fonttools==4.61.1",
+          "ufo2ft==3.7.0",
+          "glyphsLib==6.12.6",
+          "ttfautohint-py==0.6.0b2"
+        ]
+      },
       "build_environment": {
         "fontmake": "3.11.1",
         "fonttools": "4.61.1",
